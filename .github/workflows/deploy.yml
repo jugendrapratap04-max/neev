@@ -1,0 +1,47 @@
+# Every push to main rebuilds the site and puts it on Cloudflare Pages.
+#
+# The Pages project was created as a Direct Upload, and Cloudflare does not
+# allow one of those to be converted to a Git-connected project. Rather than
+# throw the project away and take a new URL, the deploy runs here instead:
+# same project, same address, still automatic.
+#
+# It needs two repository secrets:
+#   CLOUDFLARE_API_TOKEN   a token with Account -> Cloudflare Pages -> Edit
+#   CLOUDFLARE_ACCOUNT_ID  the account id (not secret, kept here for tidiness)
+
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:        # lets you run it by hand from the Actions tab
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # Without this the job can hang for six hours on a bad day.
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Rebuild rather than trusting the committed dist/. If someone edits
+      # src/ and forgets to run the build, this catches it — and a build that
+      # fails stops the deploy instead of shipping a stale site.
+      - run: npm run build
+
+      - name: Fail if dist/ is empty
+        run: test -f dist/index.html || { echo "dist/index.html missing"; exit 1; }
+
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=neev --branch=main --commit-dirty=true
