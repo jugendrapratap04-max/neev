@@ -12,3 +12,7 @@ photos/
 # ...but these two are real, shipped assets.
 !og-image.png
 !favicon*.png
+
+# leftover from a wrangler login attempt
+.wrangler-login.log
+.wrangler/
