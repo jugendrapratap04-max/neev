@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo · Shreenath Residency — Guest House &amp; Rooms, Vrindavan Road, Mathura</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23020812%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%226%22%20fill%3D%22none%22%20stroke%3D%22%23F6F3ED%22%20stroke-width%3D%222.5%22%2F%3E%3C%2Fsvg%3E">
+<meta name="robots" content="noindex">
+<meta name="description" content="Shreenath Residency, Vrindavan Road, Mathura. Clean air-conditioned rooms from ₹1,899 a night, pure-veg kitchen, free parking, 24×7 front desk. Book on WhatsApp.">
+<meta name="theme-color" content="#0F2B26">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Shreenath Residency — NEEV template "hotel"
+   Palette : deep forest-teal ink, warm sand paper, brass accent
+   Type    : Fraunces (display) + Inter (text)
+   ============================================================ */
+
+:root{
+  --ink:#0F2B26;          /* deepest green-black          */
+  --ink-2:#16382F;        /* section band                 */
+  --ink-3:#26473E;        /* hairlines on dark            */
+  --sand:#F6F1E8;         /* page paper                   */
+  --sand-2:#EFE8DB;       /* alt band                     */
+  --card:#FFFDF8;         /* card surface                 */
+  --brass:#B07C22;        /* the one accent               */
+  --brass-soft:#E9D9B6;
+  --text:#1E3A33;
+  --muted:#5D7069;
+  --line:rgba(15,43,38,.13);
+  --line-soft:rgba(15,43,38,.08);
+  --shadow:0 18px 44px -28px rgba(15,43,38,.55);
+  --r:16px;
+  --r-lg:22px;
+  --pad:clamp(1.15rem,4vw,2.25rem);
+  --gap:clamp(1.1rem,2.4vw,1.75rem);
+  --sect:clamp(3.5rem,7vw,6.5rem);
+  --wrap:1180px;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--sand);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  overflow-wrap:break-word;
+  padding-bottom:0;
+}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;color:var(--ink);margin:0;line-height:1.1;letter-spacing:-.015em}
+h1{font-size:clamp(2.35rem,7.4vw,4.35rem);line-height:1.03;letter-spacing:-.028em}
+h2{font-size:clamp(1.85rem,3.9vw,2.85rem)}
+h3{font-size:clamp(1.2rem,2vw,1.42rem);letter-spacing:-.01em}
+h4{font-size:1.06rem;font-family:var(--sans);font-weight:600;letter-spacing:0}
+p{margin:0 0 1rem;font-size:1.0625rem;line-height:1.68}
+p:last-child{margin-bottom:0}
+ul{margin:0;padding:0;list-style:none}
+a{color:inherit}
+strong{font-weight:600}
+
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding-inline:clamp(1.15rem,4vw,2.5rem)}
+section{padding-block:var(--sect)}
+.eyebrow{
+  font-size:.75rem;font-weight:600;letter-spacing:.19em;text-transform:uppercase;
+  color:var(--brass);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--brass);flex:none;display:block}
+.on-dark .eyebrow{color:var(--brass-soft)}
+.lede{font-size:clamp(1.06rem,1.6vw,1.2rem);color:var(--muted);max-width:56ch}
+.sect-head{max-width:62ch;margin-bottom:clamp(2rem,4vw,3rem)}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:52px;padding:.85rem 1.5rem;border-radius:999px;
+  font-family:var(--sans);font-size:1rem;font-weight:600;line-height:1.2;
+  text-decoration:none;border:1px solid transparent;cursor:pointer;
+  transition:background-color .18s ease,color .18s ease,border-color .18s ease;
+}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-primary{background:var(--ink);color:#FBF8F1;border-color:var(--ink)}
+.btn-primary:hover{background:#0a1f1b}
+.btn-brass{background:var(--brass);color:#1A1206;border-color:var(--brass)}
+.btn-brass:hover{background:#9c6c1a;color:#FDF7EA}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--ink);background:rgba(15,43,38,.04)}
+.on-dark .btn-ghost{color:#EDE6D8;border-color:rgba(237,230,216,.32)}
+.on-dark .btn-ghost:hover{border-color:#EDE6D8;background:rgba(255,255,255,.06)}
+.btn-block{width:100%}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--brass);outline-offset:2px
+}
+
+/* ---------- photo placeholders ---------- */
+.ph{
+  position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.5rem;text-align:center;padding:1.1rem;min-height:150px;
+  background:
+    radial-gradient(120% 100% at 22% 8%, rgba(255,255,255,.72) 0%, rgba(255,255,255,0) 58%),
+    linear-gradient(148deg,#E9E1D2 0%,#DED6C6 46%,#D3DCD5 100%);
+  border-radius:var(--r);
+  box-shadow:inset 0 0 0 1px rgba(15,43,38,.12);
+  color:#6A7A72;overflow:hidden;
+}
+.ph::after{
+  content:attr(data-ph);
+  font-size:.78rem;letter-spacing:.055em;text-transform:uppercase;font-weight:500;
+  line-height:1.45;max-width:24ch;
+}
+.ph svg{width:26px;height:26px;opacity:.5;flex:none}
+.ph-dark{
+  background:
+    radial-gradient(120% 100% at 20% 6%, rgba(255,255,255,.10) 0%, rgba(255,255,255,0) 60%),
+    linear-gradient(148deg,#1D4238 0%,#173A31 50%,#22463B 100%);
+  box-shadow:inset 0 0 0 1px rgba(233,217,182,.20);
+  color:#9DB3A9;
+}
+
+/* ---------- header ---------- */
+.topbar{
+  position:sticky;top:0;z-index:60;background:rgba(15,43,38,.97);
+  border-bottom:1px solid var(--ink-3);color:#EDE6D8;
+}
+.topbar-in{display:flex;align-items:center;gap:.75rem;min-height:66px;padding-block:.4rem}
+.brand{
+  display:flex;align-items:center;gap:.65rem;min-height:48px;
+  text-decoration:none;color:#F3EDE0;margin-right:auto;
+}
+.mark{
+  width:38px;height:38px;flex:none;border-radius:11px;display:grid;place-items:center;
+  background:linear-gradient(145deg,#C99A3C,#8E6317);color:#12241F;
+  font-family:var(--serif);font-size:1.15rem;font-weight:600;line-height:1;
+}
+.brand-name{font-family:var(--serif);font-size:1.15rem;letter-spacing:-.01em;line-height:1.1;display:block}
+.brand-sub{font-size:.68rem;letter-spacing:.17em;text-transform:uppercase;color:#9DB3A9;display:block}
+.nav{display:none;gap:.15rem}
+.nav a{
+  display:flex;align-items:center;min-height:44px;padding:.4rem .8rem;border-radius:999px;
+  font-size:.95rem;font-weight:500;color:#CFDBD4;text-decoration:none;transition:color .16s,background-color .16s;
+}
+.nav a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.top-call{
+  display:none;align-items:center;gap:.55rem;min-height:46px;padding:.4rem 1.1rem;
+  border:1px solid rgba(233,217,182,.36);border-radius:999px;text-decoration:none;
+  color:#F3EDE0;font-weight:600;font-size:.98rem;transition:background-color .16s,border-color .16s;
+}
+.top-call:hover{background:rgba(233,217,182,.12);border-color:var(--brass-soft)}
+.top-call svg{width:17px;height:17px;color:var(--brass-soft)}
+.top-call-sm{
+  display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
+  min-height:44px;padding:.4rem .95rem;border-radius:999px;
+  background:var(--brass);color:#1A1206;font-weight:600;font-size:.92rem;text-decoration:none;flex:none;
+}
+.top-call-sm svg{width:16px;height:16px}
+@media (min-width:900px){
+  .nav{display:flex}
+  .top-call{display:inline-flex}
+  .top-call-sm{display:none}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  background:var(--ink);color:#E7E0D2;padding-block:clamp(2.75rem,6vw,5rem) clamp(3rem,6vw,5rem);
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(90% 62% at 78% 0%, rgba(176,124,34,.20) 0%, rgba(176,124,34,0) 62%);
+}
+.hero .wrap{position:relative}
+.hero h1{color:#F7F2E7}
+.hero-grid{display:grid;gap:clamp(2rem,4vw,3.25rem)}
+.hero-copy p{color:#BCCCC4;max-width:52ch;font-size:clamp(1.05rem,1.5vw,1.18rem)}
+.hero h1 em{font-style:normal;color:var(--brass-soft)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.9rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem .65rem;margin-top:1.9rem}
+.chip{
+  display:inline-flex;align-items:center;gap:.45rem;padding:.42rem .85rem;border-radius:999px;
+  border:1px solid rgba(233,217,182,.26);font-size:.86rem;color:#C9D8D0;letter-spacing:.01em;
+}
+.chip .dot{width:5px;height:5px;border-radius:50%;background:var(--brass);flex:none}
+.hero-frame{border-radius:var(--r-lg);padding:10px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(233,217,182,.14)}
+.hero-frame .ph{min-height:270px;border-radius:14px}
+@media (min-width:960px){
+  .hero-grid{grid-template-columns:1.02fr .98fr;align-items:center}
+  .hero-frame .ph{min-height:430px}
+}
+
+/* ---------- booking bar ---------- */
+.booking{
+  background:var(--card);border-radius:var(--r-lg);border:1px solid var(--line);
+  box-shadow:var(--shadow);padding:var(--pad);margin-top:clamp(2rem,4vw,3rem);position:relative;
+}
+.booking h2{font-size:clamp(1.15rem,1.9vw,1.35rem);margin-bottom:.25rem}
+.booking .booking-note{font-size:.95rem;color:var(--muted);margin-bottom:1.35rem}
+.fields{display:grid;gap:1rem}
+.field{display:flex;flex-direction:column;gap:.4rem;min-width:0}
+.field label{font-size:.98rem;font-weight:600;color:var(--ink);letter-spacing:.005em}
+.field input,.field select{
+  width:100%;min-width:0;min-height:52px;padding:.7rem .9rem;
+  font-family:var(--sans);font-size:1rem;color:var(--text);
+  background:#FFFEFB;border:1px solid var(--line);border-radius:12px;
+  appearance:none;-webkit-appearance:none;
+}
+.field select{
+  background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);
+  background-position:calc(100% - 18px) 23px,calc(100% - 13px) 23px;
+  background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:2.4rem;
+}
+.field input:focus,.field select:focus{border-color:var(--ink)}
+.booking-submit{margin-top:1.2rem;display:grid;gap:.7rem}
+.booking-small{font-size:1rem;color:var(--muted);line-height:1.55}
+span.booking-small{font-size:.95rem}
+@media (min-width:720px){
+  .fields{grid-template-columns:repeat(4,1fr)}
+  .booking-submit{grid-template-columns:auto 1fr;align-items:center;gap:1.2rem}
+  .booking-submit .btn{justify-self:start}
+}
+
+/* ---------- facts strip ---------- */
+.facts{background:var(--ink-2);color:#D8E2DC;padding-block:clamp(1.6rem,3vw,2.2rem)}
+.facts ul{display:grid;gap:1.1rem}
+.facts li{display:flex;gap:.75rem;align-items:flex-start;font-size:1rem;line-height:1.5;color:#CBD9D2}
+.facts svg{width:20px;height:20px;flex:none;margin-top:2px;color:var(--brass-soft)}
+@media (min-width:700px){.facts ul{grid-template-columns:repeat(2,1fr);gap:1.1rem 2rem}}
+@media (min-width:1000px){.facts ul{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- rooms ---------- */
+.rooms-grid{display:grid;gap:var(--gap)}
+@media (min-width:640px){.rooms-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1080px){.rooms-grid{grid-template-columns:repeat(4,1fr)}}
+.room{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);
+  overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s ease;
+}
+.room:hover{border-color:rgba(15,43,38,.28)}
+.room .ph{border-radius:0;min-height:190px;box-shadow:inset 0 -1px 0 rgba(15,43,38,.12)}
+.room-body{padding:var(--pad);display:flex;flex-direction:column;gap:.9rem;flex:1}
+.room-top{display:flex;align-items:baseline;justify-content:space-between;gap:.75rem;flex-wrap:wrap}
+.room-cap{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.price{font-family:var(--serif);font-size:1.65rem;color:var(--ink);line-height:1;white-space:nowrap}
+.price span{font-family:var(--sans);font-size:.82rem;font-weight:500;color:var(--muted);letter-spacing:.02em}
+.room ul{display:grid;gap:.5rem;margin-top:.1rem}
+.room li{display:flex;gap:.6rem;font-size:1rem;line-height:1.5;color:var(--muted)}
+.room li svg{width:16px;height:16px;flex:none;margin-top:5px;color:var(--brass)}
+.room .btn{margin-top:auto}
+.tariff-note{margin-top:var(--gap);padding:1.15rem 1.35rem;border:1px dashed var(--line);border-radius:var(--r);background:var(--sand-2)}
+.tariff-note p{font-size:1rem;color:var(--muted)}
+
+/* ---------- split feature ---------- */
+.band{background:var(--sand-2)}
+.split{display:grid;gap:clamp(1.75rem,4vw,3.25rem);align-items:center}
+@media (min-width:900px){.split{grid-template-columns:1fr 1fr}}
+.split-media{display:grid;gap:.9rem;grid-template-columns:1fr 1fr}
+.split-media .ph:first-child{grid-column:1 / -1;min-height:230px}
+.split-media .ph{min-height:150px}
+.split-list{display:grid;gap:.85rem;margin-top:1.5rem}
+.split-list li{display:flex;gap:.7rem;font-size:1.0625rem;line-height:1.6;color:var(--muted)}
+.split-list svg{width:18px;height:18px;flex:none;margin-top:5px;color:var(--brass)}
+
+/* ---------- amenities ---------- */
+.amen{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+@media (min-width:560px){.amen{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:900px){.amen{grid-template-columns:repeat(4,1fr)}}
+.amen li{background:var(--card);padding:clamp(1.3rem,2.4vw,1.75rem);display:flex;flex-direction:column;gap:.6rem}
+.amen svg{width:24px;height:24px;color:var(--brass)}
+.amen b{display:block;font-size:1.02rem;font-weight:600;color:var(--ink);line-height:1.35}
+.amen span{font-size:.97rem;color:var(--muted);line-height:1.55}
+
+/* ---------- gallery ---------- */
+.gallery{display:grid;gap:.85rem;grid-template-columns:repeat(2,1fr)}
+.gallery .ph{min-height:135px}
+.gallery .g-wide{grid-column:span 2;min-height:200px}
+@media (min-width:760px){
+  .gallery{grid-template-columns:repeat(4,1fr);gap:1rem}
+  .gallery .ph{min-height:180px}
+  .gallery .g-wide{grid-column:span 2;min-height:180px}
+  .gallery .g-tall{grid-row:span 2;min-height:376px}
+}
+
+/* ---------- location ---------- */
+.loc{display:grid;gap:clamp(1.75rem,4vw,3rem)}
+@media (min-width:900px){.loc{grid-template-columns:1fr 1fr}}
+.loc-map .ph{min-height:300px}
+.landmarks{display:grid;gap:0;margin-top:1.5rem;border-top:1px solid var(--line)}
+.landmarks li{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  padding:.85rem 0;border-bottom:1px solid var(--line-soft);font-size:1.0625rem;color:var(--text);
+}
+.landmarks b{font-weight:500}
+.landmarks .dist{color:var(--brass);font-weight:600;font-size:1rem;white-space:nowrap}
+.addr{margin-top:1.6rem;padding:1.25rem 1.4rem;background:var(--card);border:1px solid var(--line);border-radius:var(--r)}
+.addr p{font-size:1.0625rem;color:var(--muted)}
+.addr .addr-line{color:var(--text)}
+.addr .btn{margin-top:1rem}
+
+/* ---------- guest information ---------- */
+.info-grid{display:grid;gap:var(--gap)}
+@media (min-width:760px){.info-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1080px){.info-grid{grid-template-columns:repeat(3,1fr)}}
+.info-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--pad)}
+.info-card h3{margin-bottom:1rem}
+.info-card dl{margin:0;display:grid;gap:.7rem}
+.info-card .row{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;border-bottom:1px solid var(--line-soft);padding-bottom:.7rem}
+.info-card .row:last-child{border-bottom:0;padding-bottom:0}
+.info-card dt{font-size:1rem;color:var(--muted);flex:1}
+.info-card dd{margin:0;font-size:1rem;font-weight:600;color:var(--ink);text-align:right}
+.info-card ul{display:grid;gap:.7rem}
+.info-card ul li{display:flex;gap:.65rem;font-size:1rem;line-height:1.55;color:var(--muted)}
+.info-card ul svg{width:16px;height:16px;flex:none;margin-top:5px;color:var(--brass)}
+
+/* ---------- placeholder quotes ---------- */
+.quotes-head{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-bottom:1.5rem}
+.tag{
+  display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .8rem;border-radius:999px;
+  background:var(--brass-soft);color:#5C4310;font-size:.78rem;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;
+}
+.quotes{display:grid;gap:var(--gap)}
+@media (min-width:820px){.quotes{grid-template-columns:repeat(3,1fr)}}
+.quote{
+  border:1px dashed var(--line);border-radius:var(--r-lg);padding:var(--pad);
+  background:var(--card);display:flex;flex-direction:column;gap:1rem;
+}
+.quote p{font-family:var(--serif);font-size:1.14rem;line-height:1.55;color:var(--ink)}
+.quote .who{font-size:.95rem;color:var(--muted);letter-spacing:.02em}
+
+/* ---------- closing CTA ---------- */
+.cta{background:var(--ink);color:#E7E0D2}
+.cta h2{color:#F7F2E7}
+.cta .lede{color:#BCCCC4}
+.cta-inner{display:grid;gap:2rem;align-items:center}
+@media (min-width:900px){.cta-inner{grid-template-columns:1.25fr .75fr}}
+.cta-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.cta-phone{
+  display:inline-flex;flex-direction:column;gap:.15rem;text-decoration:none;color:#F7F2E7;
+  padding:1.25rem 1.5rem;border:1px solid rgba(233,217,182,.28);border-radius:var(--r);min-height:88px;
+  justify-content:center;transition:border-color .18s,background-color .18s;
+}
+.cta-phone:hover{border-color:var(--brass-soft);background:rgba(255,255,255,.05)}
+.cta-phone .k{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:#9DB3A9}
+.cta-phone .v{font-family:var(--serif);font-size:1.7rem;line-height:1.2}
+
+/* ---------- footer ---------- */
+.foot{background:#0B211D;color:#A9BDB5;padding-block:clamp(2.75rem,5vw,4rem) 2rem}
+.foot-grid{display:grid;gap:2.25rem}
+@media (min-width:820px){.foot-grid{grid-template-columns:1.5fr 1fr 1fr}}
+.foot h4{color:#EDE6D8;margin-bottom:.9rem;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.foot p{font-size:1rem;color:#A9BDB5;max-width:44ch}
+.foot a{color:#CFDBD4;text-decoration:none}
+.foot ul{display:grid;gap:.1rem}
+.foot ul a{display:flex;align-items:center;min-height:44px;font-size:1rem;transition:color .16s}
+.foot ul a:hover{color:#fff}
+.foot-brand{display:flex;align-items:center;gap:.7rem;min-height:48px;margin-bottom:1rem;text-decoration:none}
+.foot-brand .brand-name{color:#F3EDE0}
+.foot-bottom{
+  margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(233,217,182,.14);
+  display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;align-items:center;justify-content:space-between;
+  font-size:.93rem;color:#8AA096;
+}
+.foot-bottom a{min-height:44px;display:inline-flex;align-items:center}
+
+/* ---------- mobile sticky call bar ---------- */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:80;display:grid;grid-template-columns:1fr 1fr;
+  gap:1px;background:rgba(15,43,38,.22);
+  border-top:1px solid rgba(15,43,38,.18);
+  box-shadow:0 -10px 30px -22px rgba(15,43,38,.9);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.bar a{
+  min-height:64px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:1px;text-decoration:none;font-weight:600;font-size:1rem;line-height:1.2;
+}
+.bar .b-call{background:var(--ink);color:#F3EDE0}
+.bar .b-wa{background:var(--brass);color:#1A1206}
+.bar .b-k{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;opacity:.72;font-weight:600}
+.bar .b-v{font-size:1.02rem;letter-spacing:.01em}
+.bar svg{display:none}
+@media (min-width:900px){.bar{display:none}}
+@media (max-width:899px){body{padding-bottom:70px}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation-duration:.001ms !important;transition-duration:.001ms !important}
+}
+</style>
+<style>/* photo-filled */
+  [data-ph-id]:has(> img)::before, [data-ph-id]:has(> img)::after { content: none !important; }
+  [data-ph-id]:has(> img) { background-image: none !important; }
+</style>
+</head>
+<body>
+<!-- neev-demo-ribbon: added by scripts/demo-ribbon.mjs, not by hand -->
+<style>
+  .neev-demo-ribbon{position:relative;z-index:2147483647;display:flex;flex-wrap:wrap;align-items:center;
+    justify-content:center;gap:.5rem 1rem;padding:.75rem 1rem;background:#020812;color:#fff;
+    font:500 14px/1.45 Inter,ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif;text-align:center}
+  .neev-demo-ribbon b{background:#0051d5;color:#fff;border-radius:999px;padding:.15rem .55rem;
+    font-size:11px;letter-spacing:.08em;font-weight:700}
+  .neev-demo-ribbon span{opacity:.75}
+  .neev-demo-ribbon a{display:inline-flex;align-items:center;min-height:44px;padding:0 1rem;
+    border-radius:8px;background:#0f7b45;color:#fff;text-decoration:none;font-weight:600}
+  .neev-demo-ribbon a.ghost{background:transparent;border:1px solid rgba(255,255,255,.25)}
+  @media (max-width:520px){.neev-demo-ribbon{font-size:13px}}
+</style>
+<div class="neev-demo-ribbon">
+  <b>DEMO</b>
+  <span>A sample design by NEEV. This is not a real business &mdash; the name, prices and photos are placeholders.</span>
+  <a href="https://wa.me/918439305810?text=Hello%20Jugendra%2C%20I%20like%20this%20demo%20design.%20My%20business%20is%20______.">Get this design</a>
+  <a class="ghost" href="../../index.html">All templates</a>
+</div>
+
+
+
+
+
+
+<!-- icon sprite (inline, no external assets) -->
+<svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-photo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16.5 16 11.5 6.5 19"/>
+  </symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 18v-8M3 14h18v4M21 18v-5a3 3 0 0 0-3-3h-7v4"/><circle cx="7" cy="11.5" r="2"/>
+  </symbol>
+  <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 3 3 5.5v15L9 18l6 2.5 6-2.5v-15L15 5.5 9 3z"/><path d="M9 3v15M15 5.5v15"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 12.5 9 17.5 20 6.5"/>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6.5 3h3l1.5 4.5-2.2 1.4a12.5 12.5 0 0 0 6.3 6.3l1.4-2.2L21 14.5v3a2.5 2.5 0 0 1-2.7 2.5C10.4 19.4 4.6 13.6 4 5.7A2.5 2.5 0 0 1 6.5 3z"/>
+  </symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3.5 20.5 5 16.6A8.2 8.2 0 1 1 8.2 19.6l-4.7.9z"/><path d="M9 9.2c.3 2.6 3.2 5.5 5.8 5.8l1.1-1.5 1.9.9v1.4c0 .6-.5 1.1-1.2 1a9 9 0 0 1-7.6-7.6c-.1-.7.4-1.2 1-1.2h1.4l.9 1.9L9 9.2z"/>
+  </symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2.5 8.5a15 15 0 0 1 19 0M5.5 12a10.5 10.5 0 0 1 13 0M8.5 15.5a6 6 0 0 1 7 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 16v2.5M20 16v2.5M3 16v-3.2L5 8h14l2 4.8V16H3z"/><circle cx="7.5" cy="16" r="1.5"/><circle cx="16.5" cy="16" r="1.5"/>
+  </symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5z"/>
+  </symbol>
+  <symbol id="i-pot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 10h16v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-5zM4 12H2.5M20 12H21.5M9 7c0-1.2 3-1.5 3-3M14.5 7c0-1 1.5-1.4 1.5-2.5"/>
+  </symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3s6 6.4 6 10.4a6 6 0 0 1-12 0C6 9.4 12 3 12 3z"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M12 7v5.3l3.4 2"/>
+  </symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3 4.5 6v6c0 4.6 3.1 8 7.5 9.3 4.4-1.3 7.5-4.7 7.5-9.3V6L12 3z"/><path d="M9 12l2.2 2.2L15.5 10"/>
+  </symbol>
+  <symbol id="i-lift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="3" width="16" height="18" rx="2"/><path d="M12 3v18M8.5 9.5 7 7.5 5.5 9.5M8.5 14.5 7 16.5 5.5 14.5M17 8v8"/>
+  </symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 4c0 9-5.5 13-11 13a5 5 0 0 1 0-10c4 0 5-3 11-3z"/><path d="M4 20c2.5-5 6-7.5 10-9"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h13M13 6.5 18.5 12 13 17.5"/>
+  </symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true">SR</span>
+      <span>
+        <span class="brand-name">Shreenath Residency</span>
+        <span class="brand-sub">Vrindavan Road, Mathura</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#rooms">Rooms &amp; tariff</a>
+      <a href="#amenities">Facilities</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#location">Location</a>
+      <a href="#guest-info">Guest info</a>
+    </nav>
+    <a class="top-call" href="tel:+918439305810">
+      <svg aria-hidden="true"><use href="#i-phone"/></svg>
+      +91 84393 05810
+    </a>
+    <a class="top-call-sm" href="tel:+918439305810" aria-label="Call Shreenath Residency on +91 84393 05810">
+      <svg aria-hidden="true"><use href="#i-phone"/></svg>
+      Call
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Guest house &amp; rooms · Mathura</div>
+          <h1>A quiet, clean place to stay <em>ten minutes from the temples</em>.</h1>
+          <p>Twelve air-conditioned rooms on Vrindavan Road, run by the Agarwal family since 1998. Hot water round the clock, a pure-veg kitchen, parking inside the gate, and a front desk that actually answers at 2 a.m.</p>
+          <div class="hero-actions">
+            <a class="btn btn-brass" href="https://wa.me/918439305810?text=Hello%2C%20I%20would%20like%20to%20check%20room%20availability%20at%20Shreenath%20Residency." target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-wa"/></svg>
+              Enquire on WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="tel:+918439305810">
+              <svg aria-hidden="true"><use href="#i-phone"/></svg>
+              +91 84393 05810
+            </a>
+          </div>
+          <ul class="hero-meta">
+            <li class="chip"><span class="dot"></span>Rooms from ₹1,899 a night</li>
+            <li class="chip"><span class="dot"></span>Check-in 12:00 noon</li>
+            <li class="chip"><span class="dot"></span>Free parking inside</li>
+          </ul>
+        </div>
+        <div class="hero-frame">
+          <div class="ph ph-dark" data-ph="Front of the building, evening, wide shot" data-ph-id="hotel-01" style="position:relative">
+            <svg aria-hidden="true"><use href="#i-photo"/></svg>
+          <img src="img/hotel-01.webp" alt="Front of the building, evening, wide shot" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit"></div>
+        </div>
+      </div>
+
+      <!-- booking bar -->
+      <div class="booking">
+        <h2>Check availability</h2>
+        <p class="booking-note">Fill this in and it opens a ready-written WhatsApp message to the front desk. We usually reply within an hour, 8 a.m. to 11 p.m.</p>
+        <form id="bookingForm" novalidate>
+          <div class="fields">
+            <div class="field">
+              <label for="checkin">Check-in</label>
+              <input type="date" id="checkin" name="checkin">
+            </div>
+            <div class="field">
+              <label for="checkout">Check-out</label>
+              <input type="date" id="checkout" name="checkout">
+            </div>
+            <div class="field">
+              <label for="guests">Guests</label>
+              <select id="guests" name="guests">
+                <option>1 guest</option>
+                <option selected>2 guests</option>
+                <option>3 guests</option>
+                <option>4 guests</option>
+                <option>5 or more guests</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="roomtype">Room type</label>
+              <select id="roomtype" name="roomtype">
+                <option selected>Any available room</option>
+                <option>Deluxe Double</option>
+                <option>Twin-bed AC</option>
+                <option>Family Room</option>
+                <option>Executive Suite</option>
+              </select>
+            </div>
+          </div>
+          <div class="booking-submit">
+            <button class="btn btn-primary" type="submit">
+              <svg aria-hidden="true"><use href="#i-wa"/></svg>
+              Send enquiry on WhatsApp
+            </button>
+            <p class="booking-small">No payment here. We confirm the room on WhatsApp, you pay at the desk by UPI or cash.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FACTS ================= -->
+  <div class="facts">
+    <div class="wrap">
+      <ul>
+        <li><svg aria-hidden="true"><use href="#i-clock"/></svg><span>Front desk staffed 24×7, every day of the year</span></li>
+        <li><svg aria-hidden="true"><use href="#i-bolt"/></svg><span>Full power backup — lights, fans and lift on inverter</span></li>
+        <li><svg aria-hidden="true"><use href="#i-leaf"/></svg><span>Pure-vegetarian property, kitchen open 7 a.m. to 10 p.m.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-car"/></svg><span>Parking for eight cars and a tempo traveller inside the gate</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ================= ROOMS ================= -->
+  <section id="rooms">
+    <div class="wrap">
+      <div class="sect-head">
+        <div class="eyebrow">Rooms &amp; tariff</div>
+        <h2>Four kinds of room. Plain rates, no hidden extras.</h2>
+        <p class="lede">Every room is air-conditioned, has an attached bathroom with a geyser, clean bed linen changed daily, and a window that opens. Rates below are for two people per night.</p>
+      </div>
+
+      <div class="rooms-grid">
+
+        <article class="room">
+          <div class="ph" data-ph="Deluxe Double room, bed made, from the doorway" data-ph-id="hotel-02">
+            <svg aria-hidden="true"><use href="#i-bed"/></svg>
+          </div>
+          <div class="room-body">
+            <div class="room-cap">Sleeps 2</div>
+            <h3>Deluxe Double</h3>
+            <div class="room-top"><div class="price">₹1,899 <span>/ night</span></div></div>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Queen bed, split AC, 32" TV</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Attached bath, 24-hour hot water</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Wi-Fi, kettle, bottled water daily</span></li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="https://wa.me/918439305810?text=Hello%2C%20is%20the%20Deluxe%20Double%20room%20available%20at%20Shreenath%20Residency%3F" target="_blank" rel="noopener">Ask about this room</a>
+          </div>
+        </article>
+
+        <article class="room">
+          <div class="ph" data-ph="Twin-bed room, two single beds, window light" data-ph-id="hotel-03">
+            <svg aria-hidden="true"><use href="#i-bed"/></svg>
+          </div>
+          <div class="room-body">
+            <div class="room-cap">Sleeps 2</div>
+            <h3>Twin-bed AC</h3>
+            <div class="room-top"><div class="price">₹2,199 <span>/ night</span></div></div>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Two single beds, split AC</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Work table and reading lamp</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Good for colleagues or two friends</span></li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="https://wa.me/918439305810?text=Hello%2C%20is%20the%20Twin-bed%20AC%20room%20available%20at%20Shreenath%20Residency%3F" target="_blank" rel="noopener">Ask about this room</a>
+          </div>
+        </article>
+
+        <article class="room">
+          <div class="ph" data-ph="Family room, double bed plus extra bed, wide" data-ph-id="hotel-04">
+            <svg aria-hidden="true"><use href="#i-bed"/></svg>
+          </div>
+          <div class="room-body">
+            <div class="room-cap">Sleeps 4</div>
+            <h3>Family Room</h3>
+            <div class="room-top"><div class="price">₹2,899 <span>/ night</span></div></div>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Double bed plus two singles</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Larger bathroom, extra towels</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Fridge and two-seater sofa</span></li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="https://wa.me/918439305810?text=Hello%2C%20is%20the%20Family%20Room%20available%20at%20Shreenath%20Residency%3F" target="_blank" rel="noopener">Ask about this room</a>
+          </div>
+        </article>
+
+        <article class="room">
+          <div class="ph" data-ph="Executive suite, sitting area and balcony" data-ph-id="hotel-05">
+            <svg aria-hidden="true"><use href="#i-bed"/></svg>
+          </div>
+          <div class="room-body">
+            <div class="room-cap">Sleeps 3</div>
+            <h3>Executive Suite</h3>
+            <div class="room-top"><div class="price">₹4,499 <span>/ night</span></div></div>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Separate sitting room and balcony</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>King bed, wardrobe, mini fridge</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Breakfast for two included</span></li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="https://wa.me/918439305810?text=Hello%2C%20is%20the%20Executive%20Suite%20available%20at%20Shreenath%20Residency%3F" target="_blank" rel="noopener">Ask about this room</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="tariff-note">
+        <p><strong>Extra bed ₹500 per night.</strong> Children under five stay free with parents. Rates go up during Janmashtami, Holi and Diwali week — please ask us for those dates. GST is charged as applicable on the tariff.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT / DINING ================= -->
+  <section class="band">
+    <div class="wrap">
+      <div class="split">
+        <div class="split-media">
+          <div class="ph" data-ph="Dining hall with tables laid for breakfast" data-ph-id="hotel-06">
+            <svg aria-hidden="true"><use href="#i-photo"/></svg>
+          </div>
+          <div class="ph" data-ph="Thali being served, close up" data-ph-id="hotel-07">
+            <svg aria-hidden="true"><use href="#i-photo"/></svg>
+          </div>
+          <div class="ph" data-ph="Owner or manager at the front desk, portrait" data-ph-id="hotel-08">
+            <svg aria-hidden="true"><use href="#i-photo"/></svg>
+          </div>
+        </div>
+        <div>
+          <div class="eyebrow">The house &amp; the kitchen</div>
+          <h2>Home food, at the hour you actually reach.</h2>
+          <p class="lede">Most of our guests arrive late — off the night bus, off the Yamuna Expressway, off the last train into Mathura Junction. So the kitchen keeps working and someone is always at the desk.</p>
+          <ul class="split-list">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Pure-veg thali, ₹180 — dal, two sabzi, roti, rice, salad, one sweet</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Breakfast 7 to 10 a.m. — poha, paratha, bread-butter, chai and coffee</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Jain food on request if you tell us a few hours ahead</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Room service to your door until 10 p.m., no extra charge</span></li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/918439305810?text=Hello%2C%20please%20share%20the%20food%20menu%20and%20timings%20at%20Shreenath%20Residency." target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-wa"/></svg>
+              Ask for the menu
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AMENITIES ================= -->
+  <section id="amenities">
+    <div class="wrap">
+      <div class="sect-head">
+        <div class="eyebrow">Facilities</div>
+        <h2>The things that matter when you are tired.</h2>
+        <p class="lede">Nothing fancy on this list. Just what has to work, working.</p>
+      </div>
+      <ul class="amen">
+        <li><svg aria-hidden="true"><use href="#i-drop"/></svg><b>24-hour hot water</b><span>Geyser in every attached bathroom, no fixed timing.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-bolt"/></svg><b>Power backup</b><span>Inverter takes over in seconds; the lift stays on.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-wifi"/></svg><b>Free Wi-Fi</b><span>Fibre line, works in the rooms and the dining hall.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-car"/></svg><b>Parking inside</b><span>Gated compound, space for cars and one tempo traveller.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-pot"/></svg><b>In-house kitchen</b><span>Pure-veg, home-style, served in the hall or your room.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-lift"/></svg><b>Lift to all floors</b><span>Three floors, helpful if you are travelling with elders.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-shield"/></svg><b>CCTV &amp; night guard</b><span>Cameras in the corridors and gate, guard from 9 p.m.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-clock"/></svg><b>Laundry &amp; cabs</b><span>Same-day laundry, and we book your taxi or auto.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <section id="gallery" class="band">
+    <div class="wrap">
+      <div class="sect-head">
+        <div class="eyebrow">Gallery</div>
+        <h2>Have a look around.</h2>
+        <p class="lede">Every photo on this page will be a real photograph of the property — no stock images, no other hotel's rooms.</p>
+      </div>
+      <div class="gallery">
+        <div class="ph g-wide" data-ph="Reception and lobby, wide" data-ph-id="hotel-09"><svg aria-hidden="true"><use href="#i-photo"/></svg></div>
+        <div class="ph g-tall" data-ph="Corridor looking towards the rooms" data-ph-id="hotel-10"><svg aria-hidden="true"><use href="#i-photo"/></svg></div>
+        <div class="ph" data-ph="Deluxe room, bed detail" data-ph-id="hotel-11"><svg aria-hidden="true"><use href="#i-photo"/></svg></div>
+        <div class="ph" data-ph="Bathroom, clean and lit" data-ph-id="hotel-12"><svg aria-hidden="true"><use href="#i-photo"/></svg></div>
+        <div class="ph" data-ph="Balcony view over the road" data-ph-id="hotel-13"><svg aria-hidden="true"><use href="#i-photo"/></svg></div>
+        <div class="ph" data-ph="Rooftop seating in the evening" data-ph-id="hotel-14"><svg aria-hidden="true"><use href="#i-photo"/></svg></div>
+        <div class="ph g-wide" data-ph="Courtyard and parking from the gate" data-ph-id="hotel-15"><svg aria-hidden="true"><use href="#i-photo"/></svg></div>
+        <div class="ph" data-ph="Breakfast table laid out" data-ph-id="hotel-16"><svg aria-hidden="true"><use href="#i-photo"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LOCATION ================= -->
+  <section id="location">
+    <div class="wrap">
+      <div class="loc">
+        <div>
+          <div class="eyebrow">Where we are</div>
+          <h2>On Vrindavan Road, before the bypass turn.</h2>
+          <p class="lede">Auto and e-rickshaw from the gate to all the main temples. Tell the driver "Shreenath Residency, near Krishna Kunj crossing" — everyone on this stretch knows it.</p>
+          <ul class="landmarks">
+            <li><b>Banke Bihari Temple, Vrindavan</b><span class="dist">6.2 km</span></li>
+            <li><b>Prem Mandir</b><span class="dist">4.8 km</span></li>
+            <li><b>ISKCON Vrindavan</b><span class="dist">5.1 km</span></li>
+            <li><b>Shri Krishna Janmasthan, Mathura</b><span class="dist">7.4 km</span></li>
+            <li><b>Mathura Junction railway station</b><span class="dist">9.0 km</span></li>
+            <li><b>Yamuna Expressway exit</b><span class="dist">11.5 km</span></li>
+          </ul>
+          <div class="addr">
+            <p class="addr-line"><strong>Shreenath Residency</strong><br>
+            42, Vrindavan Road, near Krishna Kunj crossing,<br>
+            Mathura, Uttar Pradesh 281001</p>
+            <p style="margin-top:.75rem">Front desk: <a href="tel:+918439305810" style="color:var(--brass);font-weight:600;text-decoration:none">+91 84393 05810</a> · open 24 hours</p>
+            <a class="btn btn-primary" href="https://wa.me/918439305810?text=Hello%2C%20please%20send%20me%20the%20location%20pin%20for%20Shreenath%20Residency." target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              Get the location pin on WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="loc-map">
+          <div class="ph" data-ph="Map screenshot or street view of the entrance" data-ph-id="hotel-17">
+            <svg aria-hidden="true"><use href="#i-map"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GUEST INFORMATION ================= -->
+  <section id="guest-info" class="band">
+    <div class="wrap">
+      <div class="sect-head">
+        <div class="eyebrow">Guest information</div>
+        <h2>Everything you would otherwise have to phone and ask.</h2>
+      </div>
+      <div class="info-grid">
+
+        <div class="info-card">
+          <h3>Timings</h3>
+          <dl>
+            <div class="row"><dt>Check-in</dt><dd>12:00 noon</dd></div>
+            <div class="row"><dt>Check-out</dt><dd>10:00 a.m.</dd></div>
+            <div class="row"><dt>Early check-in</dt><dd>On request</dd></div>
+            <div class="row"><dt>Kitchen</dt><dd>7 a.m. – 10 p.m.</dd></div>
+            <div class="row"><dt>Front desk</dt><dd>24 hours</dd></div>
+            <div class="row"><dt>Quiet hours</dt><dd>10 p.m. – 6 a.m.</dd></div>
+          </dl>
+        </div>
+
+        <div class="info-card">
+          <h3>House rules</h3>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>A government photo ID is required for every adult guest at check-in — Aadhaar, driving licence or passport.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>This is a pure-vegetarian property. No non-veg food or alcohol on the premises.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>No smoking inside the rooms or corridors. There is a marked spot in the courtyard.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Visitors are welcome in the lobby until 9 p.m., not in the rooms.</span></li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>Booking &amp; payment</h3>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Book by WhatsApp or phone. We hold the room once we confirm the dates back to you.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Pay at the desk by UPI, card or cash. Advance is asked only for festival dates and group bookings.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Free cancellation up to 24 hours before check-in on normal dates.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Groups of three rooms or more — call us, we work out a rate.</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PLACEHOLDER QUOTES ================= -->
+  <section>
+    <div class="wrap">
+      <div class="quotes-head">
+        <span class="tag">Placeholder text</span>
+        <span class="booking-small">These three cards are sample layout only. Replace each one with a real message from a real guest before this site goes live.</span>
+      </div>
+      <div class="quotes">
+        <div class="quote">
+          <p>“Sample quote. Paste a real guest's words here — two or three lines is plenty.”</p>
+          <span class="who">Guest name, city — sample</span>
+        </div>
+        <div class="quote">
+          <p>“Sample quote. Something specific works best: the late check-in, the food, the parking.”</p>
+          <span class="who">Guest name, city — sample</span>
+        </div>
+        <div class="quote">
+          <p>“Sample quote. Keep it in the guest's own words, do not polish it too much.”</p>
+          <span class="who">Guest name, city — sample</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CLOSING CTA ================= -->
+  <section class="cta on-dark">
+    <div class="wrap">
+      <div class="cta-inner">
+        <div>
+          <div class="eyebrow">Book a room</div>
+          <h2>Tell us your dates. We will tell you in one message.</h2>
+          <p class="lede">Available or not, what it costs, and whether we can hold it for you. No forms, no app, no advance for normal dates.</p>
+          <div class="cta-actions" style="margin-top:1.75rem">
+            <a class="btn btn-brass" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20book%20a%20room%20at%20Shreenath%20Residency.%20My%20dates%20are%3A" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-wa"/></svg>
+              WhatsApp the front desk
+            </a>
+            <a class="btn btn-ghost" href="tel:+918439305810">
+              <svg aria-hidden="true"><use href="#i-phone"/></svg>
+              Call now
+            </a>
+          </div>
+        </div>
+        <a class="cta-phone" href="tel:+918439305810">
+          <span class="k">Front desk · 24 hours</span>
+          <span class="v">+91 84393 05810</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="foot-brand" href="#top">
+          <span class="mark" aria-hidden="true">SR</span>
+          <span class="brand-name">Shreenath Residency</span>
+        </a>
+        <p>42, Vrindavan Road, near Krishna Kunj crossing, Mathura, Uttar Pradesh 281001. Run by the Agarwal family. Pure-vegetarian property.</p>
+      </div>
+      <div>
+        <h4>On this page</h4>
+        <ul>
+          <li><a href="#rooms">Rooms &amp; tariff</a></li>
+          <li><a href="#amenities">Facilities</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#guest-info">Guest information</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <ul>
+          <li><a href="tel:+918439305810">Call +91 84393 05810</a></li>
+          <li><a href="https://wa.me/918439305810?text=Hello%2C%20I%20have%20a%20question%20about%20Shreenath%20Residency." target="_blank" rel="noopener">WhatsApp the front desk</a></li>
+          <li><a href="mailto:stay@shreenathresidency.in">stay@shreenathresidency.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Shreenath Residency, Mathura. All rights reserved.</span>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a class="b-call" href="tel:+918439305810">
+    <span class="b-k">Call</span>
+    <span class="b-v">84393 05810</span>
+  </a>
+  <a class="b-wa" href="https://wa.me/918439305810?text=Hello%2C%20I%20would%20like%20to%20check%20room%20availability%20at%20Shreenath%20Residency." target="_blank" rel="noopener">
+    <span class="b-k">Chat</span>
+    <span class="b-v">WhatsApp</span>
+  </a>
+</nav>
+
+<script>
+(function () {
+  var form = document.getElementById('bookingForm');
+  if (!form) return;
+
+  var PHONE = '918439305810';
+
+  function pretty(v) {
+    if (!v) return '';
+    var p = v.split('-');
+    if (p.length !== 3) return v;
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var m = parseInt(p[1], 10);
+    if (!m || m < 1 || m > 12) return v;
+    return parseInt(p[2], 10) + ' ' + months[m - 1] + ' ' + p[0];
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var inDate = pretty(document.getElementById('checkin').value);
+    var outDate = pretty(document.getElementById('checkout').value);
+    var guests = document.getElementById('guests').value;
+    var room = document.getElementById('roomtype').value;
+
+    var lines = ['Hello, I would like to check availability at Shreenath Residency.'];
+    if (inDate) lines.push('Check-in: ' + inDate);
+    if (outDate) lines.push('Check-out: ' + outDate);
+    lines.push('Guests: ' + guests);
+    lines.push('Room: ' + room);
+    lines.push('Please confirm the rate and availability.');
+
+    var url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(lines.join('\n'));
+    window.open(url, '_blank', 'noopener');
+  });
+
+  // keep check-out on or after check-in
+  var ci = document.getElementById('checkin');
+  var co = document.getElementById('checkout');
+  if (ci && co) {
+    ci.addEventListener('change', function () {
+      if (ci.value) {
+        co.min = ci.value;
+        if (co.value && co.value < ci.value) co.value = ci.value;
+      }
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

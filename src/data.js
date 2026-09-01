@@ -17,7 +17,7 @@ const CONFIG = {
   phone: '918439305810',
   phoneDisplay: '+91 84393 05810',
   city: 'Mathura, UP',
-  siteUrl: 'https://neev-web.pages.dev',
+  siteUrl: 'https://neev.pages.dev',
   waBase: 'https://wa.me/918439305810',
   /* Which template fills the browser frame in the homepage hero. */
   heroDesign: 'restaurant',
