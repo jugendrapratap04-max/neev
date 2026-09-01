@@ -1,0 +1,29 @@
+{
+  "name": "neev",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NEEV — hand-built websites for small businesses",
+  "scripts": {
+    "build:html": "node scripts/build.js",
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/neev.css --minify",
+    "build": "npm run build:html && npm run build:css",
+    "dev": "npm run build:html && tailwindcss -i ./src/input.css -o ./assets/css/neev.css --watch",
+    "shots": "node scripts/shots.mjs && node scripts/shots-templates.mjs && node scripts/images.mjs",
+    "serve": "node scripts/serve.js",
+    "audit": "node scripts/audit.mjs",
+    "test": "node scripts/test-flows.mjs",
+    "og": "node scripts/og.mjs",
+    "images": "node scripts/check-images.mjs",
+    "check": "npm run build && npm run audit && npm run test && npm run images",
+    "shots:templates": "node scripts/shots-templates.mjs && node scripts/images.mjs",
+    "templates": "node scripts/check-template.mjs",
+    "photo-slots": "node scripts/photo-slots.mjs",
+    "photos": "node scripts/photos.mjs",
+    "collect": "node scripts/collect-downloads.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.9",
+    "tailwindcss": "^3.4.19"
+  }
+}

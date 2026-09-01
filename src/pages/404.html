@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+{{> head }}
+<title>Page not found — {{ brand }}</title>
+<meta name="robots" content="noindex">
+</head>
+<body class="flex min-h-screen flex-col pt-20">
+
+{{> header }}
+
+<main id="main" class="flex flex-1 items-center">
+  <section class="section w-full">
+    <div class="wrap max-w-xl text-center">
+      <p class="text-display-lg font-bold leading-none text-outline-variant">404</p>
+      <h1 class="mt-4 text-headline-lg font-bold tracking-tight text-on-surface">This page does not exist</h1>
+      <p class="mt-3 text-body-lg text-on-surface-variant">
+        The link is probably an old one. Have a look at the designs below, or just message me.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="index.html" class="btn btn-primary">Home</a>
+        <a href="designs.html" class="btn btn-outline">Designs</a>
+        <a href="{{ waNav }}" target="_blank" rel="noopener noreferrer" class="btn btn-wa">{{ waIcon }} WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer }}
+{{> scripts }}
+</body>
+</html>

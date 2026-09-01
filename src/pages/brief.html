@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+{{> head }}
+<title>Send your details — {{ brand }}</title>
+<meta name="description" content="Four short steps. Fill them in and the whole thing arrives on WhatsApp as one message, so you never have to explain it twice.">
+<meta name="robots" content="noindex">
+</head>
+<body class="flex min-h-screen flex-col bg-surface-warm pt-20">
+
+{{> header }}
+
+<main id="main" class="flex-1">
+  <section class="section">
+    <div class="wrap max-w-3xl">
+
+      <div class="text-center">
+        <h1 class="text-display-lg-mobile font-bold tracking-tight text-on-surface">Send your details</h1>
+        <p class="mx-auto mt-3 max-w-xl text-body-lg text-on-surface-variant">
+          Four short steps. At the end it all becomes one message, ready in your WhatsApp — sending it is up to you.
+        </p>
+      </div>
+
+      <!-- progress -->
+      <ol id="briefSteps" class="mt-10 flex items-center justify-between gap-2" aria-label="Progress">
+        <li class="flex flex-1 items-center gap-2" data-step-dot="1">
+          <span class="dot flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-label-md font-semibold text-on-primary">1</span>
+          <span class="hidden text-label-md text-on-surface-variant sm:inline">Business</span>
+          <span class="bar ml-2 hidden h-px flex-1 bg-outline-variant sm:block"></span>
+        </li>
+        <li class="flex flex-1 items-center gap-2" data-step-dot="2">
+          <span class="dot flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-surface-container text-label-md font-semibold text-on-surface-variant">2</span>
+          <span class="hidden text-label-md text-on-surface-variant sm:inline">What you need</span>
+          <span class="bar ml-2 hidden h-px flex-1 bg-outline-variant sm:block"></span>
+        </li>
+        <li class="flex flex-1 items-center gap-2" data-step-dot="3">
+          <span class="dot flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-surface-container text-label-md font-semibold text-on-surface-variant">3</span>
+          <span class="hidden text-label-md text-on-surface-variant sm:inline">Details</span>
+          <span class="bar ml-2 hidden h-px flex-1 bg-outline-variant sm:block"></span>
+        </li>
+        <li class="flex items-center gap-2" data-step-dot="4">
+          <span class="dot flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-surface-container text-label-md font-semibold text-on-surface-variant">4</span>
+          <span class="hidden text-label-md text-on-surface-variant sm:inline">You</span>
+        </li>
+      </ol>
+
+      <form id="briefForm" class="card mt-8 p-6 md:p-9" novalidate>
+
+        <!-- ---------- STEP 1 ---------- -->
+        <section class="brief-step" data-step="1">
+          <h2 class="text-headline-md font-semibold text-on-surface">Your business</h2>
+          <p class="mt-1 text-body-md text-on-surface-variant">First, who is the website for?</p>
+
+          <div class="mt-6 space-y-5">
+            <div class="field-wrap">
+              <label class="label" for="bizName">Name of the business <span class="text-error">*</span></label>
+              <input class="field" id="bizName" name="bizName" required autocomplete="organization" placeholder="For example: Sharma Sweets" aria-describedby="err-bizName">
+              <p class="err" id="err-bizName">Please add the name — it goes right at the top of the website.</p>
+            </div>
+
+            <div class="field-wrap">
+              <label class="label" for="bizType">What kind of business <span class="text-error">*</span></label>
+              <select class="field" id="bizType" name="bizType" required aria-describedby="err-bizType">
+                <option value="">Choose one...</option>
+                <option>Sweets or bakery</option>
+                <option>Restaurant, cafe or dhaba</option>
+                <option>Hotel or guest house</option>
+                <option>Dairy or milk</option>
+                <option>Grocery or general store</option>
+                <option>Clothing or boutique</option>
+                <option>Mobile or electronics</option>
+                <option>Clinic, doctor or lab</option>
+                <option>Salon or parlour</option>
+                <option>Gym or fitness</option>
+                <option>Coaching centre or school</option>
+                <option>Property or builder</option>
+                <option>Photographer or events</option>
+                <option>Online store</option>
+                <option>App, startup or SaaS</option>
+                <option>Personal portfolio</option>
+                <option>Something else</option>
+              </select>
+              <p class="err" id="err-bizType">Please choose a type.</p>
+            </div>
+
+            <div class="field-wrap">
+              <label class="label" for="city">City <span class="text-error">*</span></label>
+              <input class="field" id="city" name="city" required autocomplete="address-level2" placeholder="For example: Mathura" aria-describedby="err-city">
+              <p class="err" id="err-city">Please add your city.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ---------- STEP 2 ---------- -->
+        <section class="brief-step" data-step="2">
+          <h2 class="text-headline-md font-semibold text-on-surface">What you need</h2>
+          <p class="mt-1 text-body-md text-on-surface-variant">Not sure? Choose "I don't know" and I will advise you.</p>
+
+          <div class="mt-6 space-y-5">
+            <fieldset class="field-wrap">
+              <legend class="label">Package</legend>
+              <div id="pkgOptions" class="grid gap-3 sm:grid-cols-2">{{ briefPackages }}</div>
+              <p class="err">Please pick one option.</p>
+            </fieldset>
+
+            <div class="field-wrap">
+              <label class="label" for="design">Any design you liked?</label>
+              <select class="field" id="design" name="design">
+                <option value="">None yet — you suggest one</option>
+                {{ briefDesignOptions }}
+              </select>
+              <p class="help">You can also save designs with ♡ on the Designs page and send them together.</p>
+            </div>
+
+            <fieldset class="field-wrap">
+              <legend class="label">What should the site have</legend>
+              <div class="grid gap-2 sm:grid-cols-2">
+                <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-lg border border-outline-variant/70 px-4 hover:bg-surface-container"><input type="checkbox" name="want" value="Photo gallery" class="h-5 w-5 rounded border-outline text-secondary focus:ring-secondary"><span class="text-body-md">Photo gallery</span></label>
+                <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-lg border border-outline-variant/70 px-4 hover:bg-surface-container"><input type="checkbox" name="want" value="Menu or price list" class="h-5 w-5 rounded border-outline text-secondary focus:ring-secondary"><span class="text-body-md">Menu or price list</span></label>
+                <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-lg border border-outline-variant/70 px-4 hover:bg-surface-container"><input type="checkbox" name="want" value="Enquiry form" class="h-5 w-5 rounded border-outline text-secondary focus:ring-secondary"><span class="text-body-md">Enquiry form</span></label>
+                <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-lg border border-outline-variant/70 px-4 hover:bg-surface-container"><input type="checkbox" name="want" value="Google Map" class="h-5 w-5 rounded border-outline text-secondary focus:ring-secondary"><span class="text-body-md">Google Map</span></label>
+                <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-lg border border-outline-variant/70 px-4 hover:bg-surface-container"><input type="checkbox" name="want" value="WhatsApp order button" class="h-5 w-5 rounded border-outline text-secondary focus:ring-secondary"><span class="text-body-md">WhatsApp order button</span></label>
+                <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-lg border border-outline-variant/70 px-4 hover:bg-surface-container"><input type="checkbox" name="want" value="Online orders or UPI" class="h-5 w-5 rounded border-outline text-secondary focus:ring-secondary"><span class="text-body-md">Online orders or UPI</span></label>
+              </div>
+            </fieldset>
+          </div>
+        </section>
+
+        <!-- ---------- STEP 3 ---------- -->
+        <section class="brief-step" data-step="3">
+          <h2 class="text-headline-md font-semibold text-on-surface">A few details</h2>
+          <p class="mt-1 text-body-md text-on-surface-variant">These tell me how much work it is and how many days it will take.</p>
+
+          <div class="mt-6 space-y-5">
+            <div class="field-wrap">
+              <label class="label" for="items">How many products or menu items</label>
+              <select class="field" id="items" name="items">
+                <option>Not sure</option>
+                <option>Up to 10</option>
+                <option>10 to 25</option>
+                <option>25 to 100</option>
+                <option>More than 100</option>
+              </select>
+            </div>
+
+            <fieldset class="field-wrap">
+              <legend class="label">Do you have photos?</legend>
+              <div class="grid gap-2 sm:grid-cols-3">
+                <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-lg border border-outline-variant/70 px-4 hover:bg-surface-container"><input type="radio" name="photos" value="Yes, good photos" class="h-5 w-5 border-outline text-secondary focus:ring-secondary"><span class="text-body-md">Yes</span></label>
+                <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-lg border border-outline-variant/70 px-4 hover:bg-surface-container"><input type="radio" name="photos" value="A few, taken on a phone" class="h-5 w-5 border-outline text-secondary focus:ring-secondary"><span class="text-body-md">A few</span></label>
+                <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-lg border border-outline-variant/70 px-4 hover:bg-surface-container"><input type="radio" name="photos" value="No photos" class="h-5 w-5 border-outline text-secondary focus:ring-secondary"><span class="text-body-md">None</span></label>
+              </div>
+              <p class="help">No photos is fine — the design can carry the page instead.</p>
+            </fieldset>
+
+            <fieldset class="field-wrap">
+              <legend class="label">Do you want your own domain? (like yourshop.in)</legend>
+              <div class="grid gap-2 sm:grid-cols-3">
+                <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-lg border border-outline-variant/70 px-4 hover:bg-surface-container"><input type="radio" name="domain" value="Yes, my own domain" class="h-5 w-5 border-outline text-secondary focus:ring-secondary"><span class="text-body-md">Yes</span></label>
+                <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-lg border border-outline-variant/70 px-4 hover:bg-surface-container"><input type="radio" name="domain" value="No, the free link is fine" class="h-5 w-5 border-outline text-secondary focus:ring-secondary"><span class="text-body-md">No</span></label>
+                <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-lg border border-outline-variant/70 px-4 hover:bg-surface-container"><input type="radio" name="domain" value="Not sure" class="h-5 w-5 border-outline text-secondary focus:ring-secondary"><span class="text-body-md">Not sure</span></label>
+              </div>
+              <p class="help">A domain costs ₹700-1,000 a year, paid to the domain company, not to me.</p>
+            </fieldset>
+
+            <div class="field-wrap">
+              <label class="label" for="when">When do you need it</label>
+              <select class="field" id="when" name="when">
+                <option>No rush</option>
+                <option>This week</option>
+                <option>Within 15 days</option>
+                <option>Within a month</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- ---------- STEP 4 ---------- -->
+        <section class="brief-step" data-step="4">
+          <h2 class="text-headline-md font-semibold text-on-surface">You</h2>
+          <p class="mt-1 text-body-md text-on-surface-variant">Just this, and the whole message opens in your WhatsApp.</p>
+
+          <div class="mt-6 space-y-5">
+            <div class="field-wrap">
+              <label class="label" for="name">Your name <span class="text-error">*</span></label>
+              <input class="field" id="name" name="name" required autocomplete="name" placeholder="For example: Ramesh Sharma" aria-describedby="err-name">
+              <p class="err" id="err-name">Please add your name.</p>
+            </div>
+
+            <div class="field-wrap">
+              <label class="label" for="wa">Your WhatsApp number <span class="text-error">*</span></label>
+              <input class="field" id="wa" name="wa" required inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="10-digit number" aria-describedby="err-wa">
+              <p class="err" id="err-wa">Please write a valid 10-digit number.</p>
+              <p class="help">This only goes into the message, so that I can call you back.</p>
+            </div>
+
+            <div class="field-wrap">
+              <label class="label" for="note">Anything else</label>
+              <textarea class="field !min-h-[120px] py-3" id="note" name="note" rows="4" maxlength="500" placeholder="For example: I already have an old website, or I want a particular colour..."></textarea>
+              <p class="help"><span id="noteCount">0</span>/500</p>
+            </div>
+          </div>
+
+          <div class="mt-8 rounded-lg border border-outline-variant/70 bg-surface-container-low p-5">
+            <p class="text-label-sm uppercase text-on-surface-variant">This is what goes to WhatsApp</p>
+            <pre id="briefPreview" class="mt-3 whitespace-pre-wrap break-words font-body-md text-body-md text-on-surface"></pre>
+          </div>
+        </section>
+
+        <!-- ---------- NAV ---------- -->
+        <div class="mt-8 flex flex-col-reverse gap-3 border-t border-outline-variant/50 pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <div class="flex items-center gap-3">
+            <button type="button" id="briefBack" class="btn btn-outline">Back</button>
+            <span id="briefSaved" class="hidden text-label-sm text-on-surface-variant">Draft saved</span>
+          </div>
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <button type="button" id="briefNext" class="btn btn-primary">Next {{ arrowIcon }}</button>
+            <a id="briefSend" href="{{ waNav }}" target="_blank" rel="noopener noreferrer" class="btn btn-wa">{{ waIcon }} Send on WhatsApp</a>
+          </div>
+        </div>
+      </form>
+
+      <p class="mt-6 text-center text-label-md text-on-surface-variant">
+        Don't like forms? Just message me on <a class="link" href="{{ waNav }}" target="_blank" rel="noopener noreferrer">WhatsApp</a> —
+        the name of your business and your city is enough.
+      </p>
+    </div>
+  </section>
+</main>
+
+{{> footer }}
+{{> scripts }}
+<script src="assets/js/brief.js" defer></script>
+</body>
+</html>

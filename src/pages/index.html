@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+{{> head }}
+<title>{{ brand }} — websites for small businesses, from {{ starterPrice }}</title>
+<meta name="description" content="A website for your shop, hotel, clinic or coaching centre — live from 3 days. Perfect on phones, fast on 3G, no monthly fee. You see the demo first and pay only if you like it.">
+<meta property="og:title" content="{{ brand }} — websites for small businesses">
+<meta property="og:description" content="Your shop's own website, live from 3 days. Demo first, payment after.">
+</head>
+<body class="flex min-h-screen flex-col pt-20">
+
+{{> header }}
+
+<main id="main" class="flex-1">
+
+  <!-- ================= HERO ================= -->
+  <section class="section">
+    <div class="wrap grid items-center gap-10 lg:grid-cols-[1.05fr_1fr]">
+      <div>
+        <span class="eyebrow">{{ brand }} · WEB STUDIO · {{ city }}</span>
+        <h1 class="mt-5 text-display-lg-mobile font-bold leading-[1.08] tracking-tight text-on-surface md:text-display-lg">
+          Your shop deserves<br>its own website.<br>
+          <span class="text-secondary">Live from 3 days.</span>
+        </h1>
+        <p class="mt-5 max-w-xl text-body-lg text-on-surface-variant">
+          Perfect on a phone, fast on 3G, one big WhatsApp button — and nothing to pay every month.
+          I build the demo first and show it to you. You pay only if you like it.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="designs.html" class="btn btn-primary">See the work {{ arrowIcon }}</a>
+          <a href="{{ waHero }}" target="_blank" rel="noopener noreferrer" class="btn btn-wa">{{ waIcon }} Talk on WhatsApp</a>
+        </div>
+
+        <!-- No invented counters here. Only what is actually true. -->
+        <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-label-md text-on-surface-variant">
+          <span class="flex items-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-success"></span>{{ liveCount }} ready templates you can open right now
+          </span>
+          <span>No paying client yet — which is why the rates are this low</span>
+        </div>
+      </div>
+
+      <!-- One of the real templates in a real browser frame. The caption opens
+           it, so the claim in the hero is one the reader can check in a tap. -->
+      <div class="relative">
+        {{ heroFrame }}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRUST STRIP ================= -->
+  <section class="border-y border-outline-variant/50 bg-surface-container-lowest py-8">
+    <div class="wrap grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {{ trustStrip }}
+    </div>
+  </section>
+
+  <!-- ================= WORK / CATALOGUE ================= -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="text-headline-lg font-bold tracking-tight text-on-surface">Ready templates</h2>
+          <p class="mt-2 max-w-2xl text-body-md text-on-surface-variant">
+            Open any of these and click around — they are real working pages, not pictures.
+            Pick the one closest to your business and it becomes your site: your name, your photos,
+            your prices, your phone number. The layout stays exactly as you see it.
+          </p>
+        </div>
+        <a href="designs.html" class="btn btn-outline">Browse and filter {{ arrowIcon }}</a>
+      </div>
+
+      <div id="designGrid" data-cat="all" class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {{ liveDesigns }}
+      </div>
+      <p id="designEmpty" class="hidden py-10 text-center text-body-md text-on-surface-variant">
+        Nothing matches that. Message me on WhatsApp and I will build it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= PRICING ================= -->
+  <section id="pricing" class="section bg-surface-container-lowest">
+    <div class="wrap">
+      <h2 class="text-headline-lg font-bold tracking-tight text-on-surface">Pricing</h2>
+      <p class="mt-2 max-w-2xl text-body-md text-on-surface-variant">
+        A one-time payment. No monthly fee and no hidden charges. Half is paid only once you have seen the demo and approved it.
+      </p>
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        {{ packages }}
+      </div>
+
+      <div class="card mt-8 p-6 md:p-8">
+        <h3 class="text-headline-md font-semibold text-on-surface">What else it can cost</h3>
+        <div class="mt-4">
+          {{ extras }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section id="process" class="section">
+    <div class="wrap">
+      <h2 class="text-headline-lg font-bold tracking-tight text-on-surface">How it works</h2>
+      <p class="mt-2 max-w-2xl text-body-md text-on-surface-variant">
+        Four steps. You can stop at any of them, and money only changes hands once you say yes.
+      </p>
+      <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {{ process }}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RISK REVERSAL ================= -->
+  <section class="section pt-0">
+    <div class="wrap">
+      <div class="rounded-xl bg-primary px-6 py-12 text-white md:px-12 md:py-16">
+        <div class="grid items-center gap-10 lg:grid-cols-[1.2fr_1fr]">
+          <div>
+            <h2 class="text-headline-lg font-bold tracking-tight">Demo first. Payment after.</h2>
+            <p class="mt-4 max-w-xl text-body-lg text-white/75">
+              Pay nothing up front. I build a demo of your shop's site and send it on WhatsApp.
+              Like it, and you pay half. Don't, and we cancel — nothing owed, no argument.
+            </p>
+            <p class="mt-3 text-label-md text-white/50">
+              I build three free demos a month, because each one takes about two days.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="{{ waDemo }}" target="_blank" rel="noopener noreferrer" class="btn btn-wa">{{ waIcon }} Ask for a free demo</a>
+              <a href="brief.html" class="btn btn-outline !border-white/25 !bg-transparent !text-white hover:!bg-white/10">Send your details</a>
+            </div>
+          </div>
+          <dl class="grid grid-cols-2 gap-6">
+            <div>
+              <dt class="text-label-sm uppercase text-white/50">Up front</dt>
+              <dd class="mt-1 text-headline-lg font-bold">₹0</dd>
+            </div>
+            <div>
+              <dt class="text-label-sm uppercase text-white/50">Cost of the demo</dt>
+              <dd class="mt-1 text-headline-lg font-bold">₹0</dd>
+            </div>
+            <div>
+              <dt class="text-label-sm uppercase text-white/50">Monthly fee</dt>
+              <dd class="mt-1 text-headline-lg font-bold">₹0</dd>
+            </div>
+            <div>
+              <dt class="text-label-sm uppercase text-white/50">If you say no</dt>
+              <dd class="mt-1 text-headline-lg font-bold">₹0</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" class="section bg-surface-container-lowest">
+    <div class="wrap">
+      <h2 class="text-headline-lg font-bold tracking-tight text-on-surface">Questions</h2>
+      <p class="mt-2 text-body-md text-on-surface-variant">Nothing hidden here. Anything else, just ask on WhatsApp.</p>
+      <div class="mt-6 max-w-4xl">
+        {{ faq }}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="section">
+    <div class="wrap text-center">
+      <h2 class="text-headline-lg font-bold tracking-tight text-on-surface">Shall we start today?</h2>
+      <p class="mx-auto mt-3 max-w-xl text-body-lg text-on-surface-variant">
+        Send me the name of your business and your city on WhatsApp. I will ask the rest.
+      </p>
+      <div class="mt-7 flex flex-wrap justify-center gap-3">
+        <a href="{{ waHero }}" target="_blank" rel="noopener noreferrer" class="btn btn-wa">{{ waIcon }} {{ phoneDisplay }}</a>
+        <a href="tel:+{{ phone }}" class="btn btn-outline">{{ phoneIcon }} Call instead</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{> footer }}
+{{> wabar }}
+{{> scripts }}
+</body>
+</html>

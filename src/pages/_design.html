@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+{{> head }}
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ pageDesc }}">
+<meta property="og:title" content="{{ pageTitle }}">
+<meta property="og:description" content="{{ pageDesc }}">
+</head>
+<body class="flex min-h-screen flex-col pt-20">
+
+{{> header }}
+
+<main id="main" class="flex-1">
+  <section class="section">
+    <div class="wrap">
+      <!-- py-3/-my-3 grows the thumb target to 44px without moving the row. -->
+      <nav class="mb-8 flex items-center gap-2 text-label-md text-on-surface-variant" aria-label="Breadcrumb">
+        <a href="index.html" class="-my-3 inline-flex items-center py-3 hover:text-secondary">Home</a>
+        <span>/</span>
+        <a href="designs.html" class="-my-3 inline-flex items-center py-3 hover:text-secondary">Designs</a>
+        <span>/</span>
+        <span class="truncate text-on-surface">{{ designName }}</span>
+      </nav>
+
+      {{ designDetail }}
+    </div>
+  </section>
+
+  <section class="section bg-surface-container-lowest">
+    <div class="wrap">
+      <h2 class="text-headline-lg font-bold tracking-tight text-on-surface">More designs</h2>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {{ moreDesigns }}
+      </div>
+      <div class="mt-8">
+        <a href="designs.html" class="btn btn-outline">See the full catalogue {{ arrowIcon }}</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer }}
+{{> wabar }}
+{{> scripts }}
+</body>
+</html>

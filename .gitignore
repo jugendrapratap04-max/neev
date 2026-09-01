@@ -1,0 +1,14 @@
+node_modules/
+_stitch/
+
+# Raw screenshots: only the .webp conversions ship.
+assets/img/**/*.png
+
+# Your downloaded originals. The converted copies inside
+# templates/<slug>/img/ are what actually ship.
+photos/
+!photos/README.txt
+
+# ...but these two are real, shipped assets.
+!og-image.png
+!favicon*.png

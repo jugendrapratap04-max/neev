@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F6F3ED">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/neev.css">
+<meta property="og:site_name" content="NEEV — neev web studio">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<!-- The link gets pasted into WhatsApp all day; this is the card people see.
+     og:image must be an absolute URL, so it follows CONFIG.siteUrl. -->
+<meta property="og:image" content="https://neev-web.pages.dev/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NEEV — websites for small businesses, live in 3 days, from ₹1,999">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://neev-web.pages.dev/og-image.png">
+
+<title>Templates — NEEV</title>
+<meta name="description" content="Ready website templates for shops, restaurants, hotels, clinics, salons, gyms and startups. Open any one and click through it. From ₹1,999.">
+<meta property="og:title" content="Templates — NEEV">
+<meta property="og:description" content="Ready templates you can open and click through. Pick one and it becomes your site.">
+</head>
+<body class="flex min-h-screen flex-col pt-20">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-3 focus:text-on-primary">Skip to content</a>
+
+<header class="glass-header fixed inset-x-0 top-0 z-50 border-b border-outline-variant/40 bg-surface-warm/85">
+  <div class="wrap flex h-20 items-center justify-between gap-4">
+
+    <a href="index.html" class="flex min-h-[48px] items-center gap-2" aria-label="NEEV home">
+      <span class="text-headline-md font-bold tracking-tight text-on-surface">NEEV</span>
+      <span class="hidden text-label-sm uppercase text-on-surface-variant sm:inline">web studio</span>
+    </a>
+
+    <nav class="hidden items-center gap-1 lg:flex" aria-label="Main">
+      <a href="designs.html" class="btn-ghost btn-sm">Designs</a>
+      <a href="pricing.html" class="btn-ghost btn-sm">Pricing</a>
+      <a href="index.html#process" class="btn-ghost btn-sm">How it works</a>
+      <a href="index.html#faq" class="btn-ghost btn-sm">FAQ</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="shortlist.html" class="btn btn-outline btn-sm !px-3" aria-label="Shortlist">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" class="h-5 w-5" aria-hidden="true"><path d="M10 16.5s-6-3.9-6-7.9a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2c0 4-6 7.9-6 7.9Z" stroke-linejoin="round"/></svg>
+        <span class="js-save-count hidden rounded-full bg-secondary px-1.5 text-label-sm font-semibold text-white"></span>
+      </a>
+      <a href="https://wa.me/918439305810?text=Hello%20Jugendra%2C%20I%20would%20like%20to%20talk%20about%20a%20website." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm hidden sm:inline-flex">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1s-.7 1-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4l-.4-.4ZM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg> WhatsApp
+      </a>
+
+      <!-- <details> so the mobile menu opens even if JavaScript never runs. -->
+      <details class="js-menu relative lg:hidden">
+        <summary class="btn btn-outline btn-sm !px-3 list-none [&::-webkit-details-marker]:hidden" aria-label="Menu">
+          <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5" aria-hidden="true"><path d="M3 5.5A1 1 0 0 1 4 4.5h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm0 4.5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm1 3.5a1 1 0 1 0 0 2h12a1 1 0 1 0 0-2H4Z"/></svg>
+        </summary>
+        <div class="card absolute right-0 top-[calc(100%+8px)] z-50 w-64 p-2">
+          <a href="designs.html" class="btn btn-ghost w-full !justify-start">Designs</a>
+          <a href="pricing.html" class="btn btn-ghost w-full !justify-start">Pricing</a>
+          <a href="index.html#process" class="btn btn-ghost w-full !justify-start">How it works</a>
+          <a href="index.html#faq" class="btn btn-ghost w-full !justify-start">FAQ</a>
+          <a href="brief.html" class="btn btn-ghost w-full !justify-start">Send your details</a>
+          <a href="https://wa.me/918439305810?text=Hello%20Jugendra%2C%20I%20would%20like%20to%20talk%20about%20a%20website." target="_blank" rel="noopener noreferrer" class="btn btn-wa mt-1 w-full"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1s-.7 1-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4l-.4-.4ZM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg> WhatsApp</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+
+<main id="main" class="flex-1">
+  <section class="section">
+    <div class="wrap">
+      <h1 class="text-display-lg-mobile font-bold tracking-tight text-on-surface">Templates</h1>
+      <p class="mt-3 max-w-2xl text-body-lg text-on-surface-variant">
+        <strong class="font-semibold text-on-surface">DEMO</strong> means a finished template you can open and click through right now.
+        It becomes your site with your name, your photos and your prices — the layout stays as you see it.
+        <strong class="font-semibold text-on-surface">MY PROJECT</strong> means something I built for myself, shown so you can judge the range.
+      </p>
+
+      <div class="mt-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div class="relative w-full lg:max-w-sm">
+          <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5" aria-hidden="true"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 3.4 9.8l3.4 3.4a1 1 0 0 0 1.4-1.4l-3.4-3.4A5.5 5.5 0 0 0 9 3.5ZM5.5 9a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0Z" clip-rule="evenodd"/></svg>
+          </span>
+          <label for="designSearch" class="sr-only">Search the designs</label>
+          <input id="designSearch" type="search" autocomplete="off" placeholder="Search — shop, hotel, clinic, gym..." class="field !pl-11">
+        </div>
+        <div class="flex items-center gap-3">
+          <span id="designCount" class="text-label-md text-on-surface-variant">11 designs</span>
+          <label for="designSort" class="sr-only">Sort</label>
+          <select id="designSort" class="field !min-h-[48px] !w-auto !pr-10">
+            <option value="default">Order: default</option>
+            <option value="live">Templates first</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="no-scrollbar mt-5 flex gap-2 overflow-x-auto pb-1">
+        
+          <button type="button" data-cat="all" aria-pressed="true"
+                  class="cat-chip min-h-[44px] shrink-0 rounded-full border border-outline-variant/70 px-4 text-label-md font-medium transition-colors bg-primary text-on-primary border-primary">
+            All
+          </button>
+          <button type="button" data-cat="store" aria-pressed="false"
+                  class="cat-chip min-h-[44px] shrink-0 rounded-full border border-outline-variant/70 px-4 text-label-md font-medium transition-colors bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container">
+            Online Stores
+          </button>
+          <button type="button" data-cat="food" aria-pressed="false"
+                  class="cat-chip min-h-[44px] shrink-0 rounded-full border border-outline-variant/70 px-4 text-label-md font-medium transition-colors bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container">
+            Food &amp; Stay
+          </button>
+          <button type="button" data-cat="services" aria-pressed="false"
+                  class="cat-chip min-h-[44px] shrink-0 rounded-full border border-outline-variant/70 px-4 text-label-md font-medium transition-colors bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container">
+            Clinics, Salons &amp; Gyms
+          </button>
+          <button type="button" data-cat="business" aria-pressed="false"
+                  class="cat-chip min-h-[44px] shrink-0 rounded-full border border-outline-variant/70 px-4 text-label-md font-medium transition-colors bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container">
+            Business &amp; Apps
+          </button>
+          <button type="button" data-cat="personal" aria-pressed="false"
+                  class="cat-chip min-h-[44px] shrink-0 rounded-full border border-outline-variant/70 px-4 text-label-md font-medium transition-colors bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container">
+            Portfolio
+          </button>
+      </div>
+
+      <h2 class="sr-only">All templates</h2>
+      <div id="designGrid" data-cat="all" class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        
+        <article class="design-card card hover-shadow relative flex flex-col overflow-hidden"
+                 data-cat="store" data-badge="demo"
+                 data-name="online store online stores"
+                 data-price="6999">
+          <img src="assets/img/templates/store-desktop.webp" alt="Online store — design preview" loading="lazy" decoding="async"
+               width="1200" height="750" class="aspect-[16/10] w-full bg-surface-container object-cover object-top">
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="badge-live"><span class="h-2 w-2 rounded-full bg-success"></span>DEMO</span>
+              <span class="chip">Online Stores</span>
+            </div>
+            <h3 class="text-headline-md font-semibold leading-snug text-on-surface">
+              <a href="design-store.html"
+                 class="after:absolute after:inset-0 after:content-[''] hover:text-secondary">Online store</a>
+            </h3>
+            <p class="mt-2 flex-1 text-body-md text-on-surface-variant">A product grid with rupee prices, categories and a per-product order button. Orders arrive on your WhatsApp, so there is no payment gateway and no monthly charge.</p>
+            <div class="mt-4 flex items-center justify-between gap-3 border-t border-outline-variant/50 pt-4">
+              <div>
+                <p class="text-label-sm uppercase text-on-surface-variant">Premium from</p>
+                <p class="text-headline-md font-bold text-on-surface">₹6,999</p>
+              </div>
+              <div class="relative z-10 flex items-center gap-2">
+                <button type="button" class="js-save btn btn-outline btn-sm !px-3" data-id="store"
+                        aria-label="Save Online store to shortlist" title="Save to shortlist"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M10 16.5s-6-3.9-6-7.9a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2c0 4-6 7.9-6 7.9Z" stroke-linejoin="round"/></svg></button>
+                <a href="design-store.html" class="btn btn-primary btn-sm" aria-label="View Online store">View</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="design-card card hover-shadow relative flex flex-col overflow-hidden"
+                 data-cat="food" data-badge="demo"
+                 data-name="restaurant or cafe food &amp; stay"
+                 data-price="3999">
+          <img src="assets/img/templates/restaurant-desktop.webp" alt="Restaurant or cafe — design preview" loading="lazy" decoding="async"
+               width="1200" height="750" class="aspect-[16/10] w-full bg-surface-container object-cover object-top">
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="badge-live"><span class="h-2 w-2 rounded-full bg-success"></span>DEMO</span>
+              <span class="chip">Food &amp; Stay</span>
+            </div>
+            <h3 class="text-headline-md font-semibold leading-snug text-on-surface">
+              <a href="design-restaurant.html"
+                 class="after:absolute after:inset-0 after:content-[''] hover:text-secondary">Restaurant or cafe</a>
+            </h3>
+            <p class="mt-2 flex-1 text-body-md text-on-surface-variant">The full menu, priced and grouped by course, built to be read on a phone at the table. Plus specials, a gallery and a table-booking button.</p>
+            <div class="mt-4 flex items-center justify-between gap-3 border-t border-outline-variant/50 pt-4">
+              <div>
+                <p class="text-label-sm uppercase text-on-surface-variant">Business from</p>
+                <p class="text-headline-md font-bold text-on-surface">₹3,999</p>
+              </div>
+              <div class="relative z-10 flex items-center gap-2">
+                <button type="button" class="js-save btn btn-outline btn-sm !px-3" data-id="restaurant"
+                        aria-label="Save Restaurant or cafe to shortlist" title="Save to shortlist"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M10 16.5s-6-3.9-6-7.9a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2c0 4-6 7.9-6 7.9Z" stroke-linejoin="round"/></svg></button>
+                <a href="design-restaurant.html" class="btn btn-primary btn-sm" aria-label="View Restaurant or cafe">View</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="design-card card hover-shadow relative flex flex-col overflow-hidden"
+                 data-cat="food" data-badge="demo"
+                 data-name="hotel or guest house food &amp; stay"
+                 data-price="3999">
+          <img src="assets/img/templates/hotel-desktop.webp" alt="Hotel or guest house — design preview" loading="lazy" decoding="async"
+               width="1200" height="750" class="aspect-[16/10] w-full bg-surface-container object-cover object-top">
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="badge-live"><span class="h-2 w-2 rounded-full bg-success"></span>DEMO</span>
+              <span class="chip">Food &amp; Stay</span>
+            </div>
+            <h3 class="text-headline-md font-semibold leading-snug text-on-surface">
+              <a href="design-hotel.html"
+                 class="after:absolute after:inset-0 after:content-[''] hover:text-secondary">Hotel or guest house</a>
+            </h3>
+            <p class="mt-2 flex-1 text-body-md text-on-surface-variant">Room cards with per-night rates and what each room includes, a booking bar, amenities and directions by landmark. The phone number never leaves the screen.</p>
+            <div class="mt-4 flex items-center justify-between gap-3 border-t border-outline-variant/50 pt-4">
+              <div>
+                <p class="text-label-sm uppercase text-on-surface-variant">Business from</p>
+                <p class="text-headline-md font-bold text-on-surface">₹3,999</p>
+              </div>
+              <div class="relative z-10 flex items-center gap-2">
+                <button type="button" class="js-save btn btn-outline btn-sm !px-3" data-id="hotel"
+                        aria-label="Save Hotel or guest house to shortlist" title="Save to shortlist"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M10 16.5s-6-3.9-6-7.9a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2c0 4-6 7.9-6 7.9Z" stroke-linejoin="round"/></svg></button>
+                <a href="design-hotel.html" class="btn btn-primary btn-sm" aria-label="View Hotel or guest house">View</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="design-card card hover-shadow relative flex flex-col overflow-hidden"
+                 data-cat="services" data-badge="demo"
+                 data-name="clinic or doctor clinics, salons &amp; gyms"
+                 data-price="3999">
+          <img src="assets/img/templates/clinic-desktop.webp" alt="Clinic or doctor — design preview" loading="lazy" decoding="async"
+               width="1200" height="750" class="aspect-[16/10] w-full bg-surface-container object-cover object-top">
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="badge-live"><span class="h-2 w-2 rounded-full bg-success"></span>DEMO</span>
+              <span class="chip">Clinics, Salons &amp; Gyms</span>
+            </div>
+            <h3 class="text-headline-md font-semibold leading-snug text-on-surface">
+              <a href="design-clinic.html"
+                 class="after:absolute after:inset-0 after:content-[''] hover:text-secondary">Clinic or doctor</a>
+            </h3>
+            <p class="mt-2 flex-1 text-body-md text-on-surface-variant">Services, consultation timings day by day, the doctor profile and one clear appointment button. Calm and plain, because that is what a patient wants.</p>
+            <div class="mt-4 flex items-center justify-between gap-3 border-t border-outline-variant/50 pt-4">
+              <div>
+                <p class="text-label-sm uppercase text-on-surface-variant">Business from</p>
+                <p class="text-headline-md font-bold text-on-surface">₹3,999</p>
+              </div>
+              <div class="relative z-10 flex items-center gap-2">
+                <button type="button" class="js-save btn btn-outline btn-sm !px-3" data-id="clinic"
+                        aria-label="Save Clinic or doctor to shortlist" title="Save to shortlist"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M10 16.5s-6-3.9-6-7.9a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2c0 4-6 7.9-6 7.9Z" stroke-linejoin="round"/></svg></button>
+                <a href="design-clinic.html" class="btn btn-primary btn-sm" aria-label="View Clinic or doctor">View</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="design-card card hover-shadow relative flex flex-col overflow-hidden"
+                 data-cat="services" data-badge="demo"
+                 data-name="salon or spa clinics, salons &amp; gyms"
+                 data-price="3999">
+          <img src="assets/img/templates/salon-desktop.webp" alt="Salon or spa — design preview" loading="lazy" decoding="async"
+               width="1200" height="750" class="aspect-[16/10] w-full bg-surface-container object-cover object-top">
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="badge-live"><span class="h-2 w-2 rounded-full bg-success"></span>DEMO</span>
+              <span class="chip">Clinics, Salons &amp; Gyms</span>
+            </div>
+            <h3 class="text-headline-md font-semibold leading-snug text-on-surface">
+              <a href="design-salon.html"
+                 class="after:absolute after:inset-0 after:content-[''] hover:text-secondary">Salon or spa</a>
+            </h3>
+            <p class="mt-2 flex-1 text-body-md text-on-surface-variant">A services price list grouped by category with durations, a stylists strip, a gallery and booking on WhatsApp.</p>
+            <div class="mt-4 flex items-center justify-between gap-3 border-t border-outline-variant/50 pt-4">
+              <div>
+                <p class="text-label-sm uppercase text-on-surface-variant">Business from</p>
+                <p class="text-headline-md font-bold text-on-surface">₹3,999</p>
+              </div>
+              <div class="relative z-10 flex items-center gap-2">
+                <button type="button" class="js-save btn btn-outline btn-sm !px-3" data-id="salon"
+                        aria-label="Save Salon or spa to shortlist" title="Save to shortlist"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M10 16.5s-6-3.9-6-7.9a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2c0 4-6 7.9-6 7.9Z" stroke-linejoin="round"/></svg></button>
+                <a href="design-salon.html" class="btn btn-primary btn-sm" aria-label="View Salon or spa">View</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="design-card card hover-shadow relative flex flex-col overflow-hidden"
+                 data-cat="services" data-badge="demo"
+                 data-name="gym or fitness studio clinics, salons &amp; gyms"
+                 data-price="3999">
+          <img src="assets/img/templates/gym-desktop.webp" alt="Gym or fitness studio — design preview" loading="lazy" decoding="async"
+               width="1200" height="750" class="aspect-[16/10] w-full bg-surface-container object-cover object-top">
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="badge-live"><span class="h-2 w-2 rounded-full bg-success"></span>DEMO</span>
+              <span class="chip">Clinics, Salons &amp; Gyms</span>
+            </div>
+            <h3 class="text-headline-md font-semibold leading-snug text-on-surface">
+              <a href="design-gym.html"
+                 class="after:absolute after:inset-0 after:content-[''] hover:text-secondary">Gym or fitness studio</a>
+            </h3>
+            <p class="mt-2 flex-1 text-body-md text-on-surface-variant">The weekly class timetable, membership plans priced monthly to yearly, trainers and facilities — with a free-trial button that opens WhatsApp.</p>
+            <div class="mt-4 flex items-center justify-between gap-3 border-t border-outline-variant/50 pt-4">
+              <div>
+                <p class="text-label-sm uppercase text-on-surface-variant">Business from</p>
+                <p class="text-headline-md font-bold text-on-surface">₹3,999</p>
+              </div>
+              <div class="relative z-10 flex items-center gap-2">
+                <button type="button" class="js-save btn btn-outline btn-sm !px-3" data-id="gym"
+                        aria-label="Save Gym or fitness studio to shortlist" title="Save to shortlist"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M10 16.5s-6-3.9-6-7.9a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2c0 4-6 7.9-6 7.9Z" stroke-linejoin="round"/></svg></button>
+                <a href="design-gym.html" class="btn btn-primary btn-sm" aria-label="View Gym or fitness studio">View</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="design-card card hover-shadow relative flex flex-col overflow-hidden"
+                 data-cat="business" data-badge="demo"
+                 data-name="startup or service landing page business &amp; apps"
+                 data-price="3999">
+          <img src="assets/img/templates/saas-desktop.webp" alt="Startup or service landing page — design preview" loading="lazy" decoding="async"
+               width="1200" height="750" class="aspect-[16/10] w-full bg-surface-container object-cover object-top">
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="badge-live"><span class="h-2 w-2 rounded-full bg-success"></span>DEMO</span>
+              <span class="chip">Business &amp; Apps</span>
+            </div>
+            <h3 class="text-headline-md font-semibold leading-snug text-on-surface">
+              <a href="design-saas.html"
+                 class="after:absolute after:inset-0 after:content-[''] hover:text-secondary">Startup or service landing page</a>
+            </h3>
+            <p class="mt-2 flex-1 text-body-md text-on-surface-variant">One long page that makes a single promise and ends in a sign-up. Suits a coaching centre, an agency or a small software product.</p>
+            <div class="mt-4 flex items-center justify-between gap-3 border-t border-outline-variant/50 pt-4">
+              <div>
+                <p class="text-label-sm uppercase text-on-surface-variant">Business from</p>
+                <p class="text-headline-md font-bold text-on-surface">₹3,999</p>
+              </div>
+              <div class="relative z-10 flex items-center gap-2">
+                <button type="button" class="js-save btn btn-outline btn-sm !px-3" data-id="saas"
+                        aria-label="Save Startup or service landing page to shortlist" title="Save to shortlist"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M10 16.5s-6-3.9-6-7.9a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2c0 4-6 7.9-6 7.9Z" stroke-linejoin="round"/></svg></button>
+                <a href="design-saas.html" class="btn btn-primary btn-sm" aria-label="View Startup or service landing page">View</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="design-card card hover-shadow relative flex flex-col overflow-hidden"
+                 data-cat="business" data-badge="demo"
+                 data-name="admin dashboard business &amp; apps"
+                 data-price="6999">
+          <img src="assets/img/templates/dashboard-desktop.webp" alt="Admin dashboard — design preview" loading="lazy" decoding="async"
+               width="1200" height="750" class="aspect-[16/10] w-full bg-surface-container object-cover object-top">
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="badge-live"><span class="h-2 w-2 rounded-full bg-success"></span>DEMO</span>
+              <span class="chip">Business &amp; Apps</span>
+            </div>
+            <h3 class="text-headline-md font-semibold leading-snug text-on-surface">
+              <a href="design-dashboard.html"
+                 class="after:absolute after:inset-0 after:content-[''] hover:text-secondary">Admin dashboard</a>
+            </h3>
+            <p class="mt-2 flex-1 text-body-md text-on-surface-variant">One screen showing your own numbers: stat tiles, a revenue chart, recent orders and low stock. On a phone the table becomes cards.</p>
+            <div class="mt-4 flex items-center justify-between gap-3 border-t border-outline-variant/50 pt-4">
+              <div>
+                <p class="text-label-sm uppercase text-on-surface-variant">Premium from</p>
+                <p class="text-headline-md font-bold text-on-surface">₹6,999</p>
+              </div>
+              <div class="relative z-10 flex items-center gap-2">
+                <button type="button" class="js-save btn btn-outline btn-sm !px-3" data-id="dashboard"
+                        aria-label="Save Admin dashboard to shortlist" title="Save to shortlist"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M10 16.5s-6-3.9-6-7.9a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2c0 4-6 7.9-6 7.9Z" stroke-linejoin="round"/></svg></button>
+                <a href="design-dashboard.html" class="btn btn-primary btn-sm" aria-label="View Admin dashboard">View</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="design-card card hover-shadow relative flex flex-col overflow-hidden"
+                 data-cat="store" data-badge="mine"
+                 data-name="mithaas — multi-shop marketplace online stores"
+                 data-price="6999">
+          <img src="assets/img/work/mithaas-desktop.webp" alt="Mithaas — multi-shop marketplace — design preview" loading="lazy" decoding="async"
+               width="1200" height="750" class="aspect-[16/10] w-full bg-surface-container object-cover object-top">
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="badge-design">MY PROJECT</span>
+              <span class="chip">Online Stores</span>
+            </div>
+            <h3 class="text-headline-md font-semibold leading-snug text-on-surface">
+              <a href="design-mithaas.html"
+                 class="after:absolute after:inset-0 after:content-[''] hover:text-secondary">Mithaas — multi-shop marketplace</a>
+            </h3>
+            <p class="mt-2 flex-1 text-body-md text-on-surface-variant">One storefront, many shops, product cards with prices — the pattern behind any catalogue business.</p>
+            <div class="mt-4 flex items-center justify-between gap-3 border-t border-outline-variant/50 pt-4">
+              <div>
+                <p class="text-label-sm uppercase text-on-surface-variant">Premium from</p>
+                <p class="text-headline-md font-bold text-on-surface">₹6,999</p>
+              </div>
+              <div class="relative z-10 flex items-center gap-2">
+                <button type="button" class="js-save btn btn-outline btn-sm !px-3" data-id="mithaas"
+                        aria-label="Save Mithaas — multi-shop marketplace to shortlist" title="Save to shortlist"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M10 16.5s-6-3.9-6-7.9a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2c0 4-6 7.9-6 7.9Z" stroke-linejoin="round"/></svg></button>
+                <a href="design-mithaas.html" class="btn btn-primary btn-sm" aria-label="View Mithaas — multi-shop marketplace">View</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="design-card card hover-shadow relative flex flex-col overflow-hidden"
+                 data-cat="personal" data-badge="mine"
+                 data-name="personal portfolio portfolio"
+                 data-price="1999">
+          <img src="assets/img/work/portfolio-desktop.webp" alt="Personal portfolio — design preview" loading="lazy" decoding="async"
+               width="1200" height="750" class="aspect-[16/10] w-full bg-surface-container object-cover object-top">
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="badge-design">MY PROJECT</span>
+              <span class="chip">Portfolio</span>
+            </div>
+            <h3 class="text-headline-md font-semibold leading-snug text-on-surface">
+              <a href="design-portfolio.html"
+                 class="after:absolute after:inset-0 after:content-[''] hover:text-secondary">Personal portfolio</a>
+            </h3>
+            <p class="mt-2 flex-1 text-body-md text-on-surface-variant">One page that says who you are, what you do, and how to reach you. Nothing else.</p>
+            <div class="mt-4 flex items-center justify-between gap-3 border-t border-outline-variant/50 pt-4">
+              <div>
+                <p class="text-label-sm uppercase text-on-surface-variant">Starter from</p>
+                <p class="text-headline-md font-bold text-on-surface">₹1,999</p>
+              </div>
+              <div class="relative z-10 flex items-center gap-2">
+                <button type="button" class="js-save btn btn-outline btn-sm !px-3" data-id="portfolio"
+                        aria-label="Save Personal portfolio to shortlist" title="Save to shortlist"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M10 16.5s-6-3.9-6-7.9a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2c0 4-6 7.9-6 7.9Z" stroke-linejoin="round"/></svg></button>
+                <a href="design-portfolio.html" class="btn btn-primary btn-sm" aria-label="View Personal portfolio">View</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="design-card card hover-shadow relative flex flex-col overflow-hidden"
+                 data-cat="business" data-badge="demo"
+                 data-name="booking or enquiry form business &amp; apps"
+                 data-price="3999">
+          <img src="assets/img/work/booking-desktop.webp" alt="Booking or enquiry form — design preview" loading="lazy" decoding="async"
+               width="1200" height="750" class="aspect-[16/10] w-full bg-surface-container object-cover object-top">
+          <div class="flex flex-1 flex-col p-5">
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="badge-live"><span class="h-2 w-2 rounded-full bg-success"></span>DEMO</span>
+              <span class="chip">Business &amp; Apps</span>
+            </div>
+            <h3 class="text-headline-md font-semibold leading-snug text-on-surface">
+              <a href="design-booking-form.html"
+                 class="after:absolute after:inset-0 after:content-[''] hover:text-secondary">Booking or enquiry form</a>
+            </h3>
+            <p class="mt-2 flex-1 text-body-md text-on-surface-variant">A long form split into four easy steps, so people actually finish it. Nothing is stored anywhere — the answers arrive as one WhatsApp message.</p>
+            <div class="mt-4 flex items-center justify-between gap-3 border-t border-outline-variant/50 pt-4">
+              <div>
+                <p class="text-label-sm uppercase text-on-surface-variant">Business from</p>
+                <p class="text-headline-md font-bold text-on-surface">₹3,999</p>
+              </div>
+              <div class="relative z-10 flex items-center gap-2">
+                <button type="button" class="js-save btn btn-outline btn-sm !px-3" data-id="booking-form"
+                        aria-label="Save Booking or enquiry form to shortlist" title="Save to shortlist"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M10 16.5s-6-3.9-6-7.9a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2c0 4-6 7.9-6 7.9Z" stroke-linejoin="round"/></svg></button>
+                <a href="design-booking-form.html" class="btn btn-primary btn-sm" aria-label="View Booking or enquiry form">View</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p id="designEmpty" class="hidden py-16 text-center text-body-md text-on-surface-variant">
+        No template by that name. Message me on WhatsApp — I will build one to suit your business.
+      </p>
+
+      <div class="card mt-12 flex flex-col items-start justify-between gap-5 p-6 md:flex-row md:items-center md:p-8">
+        <div>
+          <h2 class="text-headline-md font-semibold text-on-surface">None of these quite fit your business?</h2>
+          <p class="mt-2 max-w-xl text-body-md text-on-surface-variant">
+            That is fine. Tell me what the business is and whose website you like the look of, and I will build something along those lines.
+          </p>
+        </div>
+        <a href="https://wa.me/918439305810?text=Hello%20Jugendra%2C%20I%20would%20like%20to%20talk%20about%20a%20website." target="_blank" rel="noopener noreferrer" class="btn btn-wa shrink-0"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1s-.7 1-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4l-.4-.4ZM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg> Message me</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="mt-16 bg-primary text-white">
+  <div class="wrap">
+
+    <div class="grid gap-8 border-b border-white/10 py-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="text-label-md font-semibold">Perfect on phones</p>
+        <p class="mt-1 text-label-sm text-white/60">Every site is tested on a real phone</p>
+      </div>
+      <div>
+        <p class="text-label-md font-semibold">Fast on 3G</p>
+        <p class="mt-1 text-label-sm text-white/60">A light site that opens in about two seconds</p>
+      </div>
+      <div>
+        <p class="text-label-md font-semibold">Ready for Google</p>
+        <p class="mt-1 text-label-sm text-white/60">Title, description and sitemap set up</p>
+      </div>
+      <div>
+        <p class="text-label-md font-semibold">Monthly fee</p>
+        <p class="mt-1 text-label-sm text-white/60">None — hosting runs on a free plan</p>
+      </div>
+    </div>
+
+    <div class="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="sm:col-span-2 lg:col-span-1">
+        <p class="text-headline-md font-bold tracking-tight">NEEV</p>
+        <p class="mt-3 max-w-xs text-body-md text-white/70">
+          Websites for small businesses. Jugendra Pratap — Mathura, UP. One person, no office, which is why the rates are low.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-label-sm uppercase text-white/50">Site</p>
+        <ul class="mt-4 space-y-2.5 text-body-md">
+          <li><a href="designs.html" class="text-white/80 hover:text-white">Designs</a></li>
+          <li><a href="pricing.html" class="text-white/80 hover:text-white">Pricing</a></li>
+          <li><a href="index.html#work" class="text-white/80 hover:text-white">Templates</a></li>
+          <li><a href="index.html#process" class="text-white/80 hover:text-white">How it works</a></li>
+          <li><a href="index.html#faq" class="text-white/80 hover:text-white">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-label-sm uppercase text-white/50">Get in touch</p>
+        <ul class="mt-4 space-y-2.5 text-body-md">
+          <li><a href="https://wa.me/918439305810?text=Hello%20Jugendra%2C%20I%20would%20like%20to%20talk%20about%20a%20website." target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white">WhatsApp — +91 84393 05810</a></li>
+          <li><a href="tel:+918439305810" class="text-white/80 hover:text-white">Call — +91 84393 05810</a></li>
+          <li><a href="brief.html" class="text-white/80 hover:text-white">Send your details</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-label-sm uppercase text-white/50">Straight talk</p>
+        <p class="mt-4 text-body-md text-white/70">
+          I do not have a paying client yet. Every template here was designed and built by me, and each one
+          opens as a real page you can click through. That is exactly why the rates are this low.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2 border-t border-white/10 py-6 text-label-sm text-white/50 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 NEEV · Jugendra Pratap</p>
+      <p>Built by hand in Mathura, UP</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky bar, phones only. This is the trust device: it stays thumb-sized
+     (56px) and never shrinks into a text link. -->
+<div class="safe-bottom glass-header fixed inset-x-0 bottom-0 z-50 border-t border-outline-variant/60 bg-surface-warm/95 px-4 pt-3 sm:hidden">
+  <div class="flex items-center gap-2">
+    <a href="tel:+918439305810" class="btn btn-outline min-h-[56px] flex-1"><svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M2 4.5A2.5 2.5 0 0 1 4.5 2h1A1.5 1.5 0 0 1 7 3.2l.5 2.3a1.5 1.5 0 0 1-.7 1.6l-.9.5a11 11 0 0 0 4.5 4.5l.5-.9a1.5 1.5 0 0 1 1.6-.7l2.3.5a1.5 1.5 0 0 1 1.2 1.5v1a2.5 2.5 0 0 1-2.5 2.5A13.5 13.5 0 0 1 2 5.5v-1Z"/></svg> Call</a>
+    <a href="https://wa.me/918439305810?text=Hello%20Jugendra%2C%20I%20would%20like%20a%20website%20for%20my%20business.%20My%20business%20is%20______." target="_blank" rel="noopener noreferrer" class="btn btn-wa min-h-[56px] flex-[1.4]"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 shrink-0" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1s-.7 1-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4l-.4-.4ZM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg> WhatsApp</a>
+  </div>
+</div>
+<div class="h-24 sm:hidden" aria-hidden="true"></div>
+
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+
+</body>
+</html>

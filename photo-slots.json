@@ -1,0 +1,622 @@
+[
+  {
+    "slug": "clinic",
+    "id": "clinic-01",
+    "want": "clinic reception and waiting area, wide"
+  },
+  {
+    "slug": "clinic",
+    "id": "clinic-02",
+    "want": "waiting area with seating"
+  },
+  {
+    "slug": "clinic",
+    "id": "clinic-03",
+    "want": "consultation room, doctor's desk"
+  },
+  {
+    "slug": "clinic",
+    "id": "clinic-04",
+    "want": "sample collection counter"
+  },
+  {
+    "slug": "clinic",
+    "id": "clinic-05",
+    "want": "dr. anjali verma, portrait in consultation room"
+  },
+  {
+    "slug": "clinic",
+    "id": "clinic-06",
+    "want": "pathology lab bench with analyser"
+  },
+  {
+    "slug": "clinic",
+    "id": "clinic-07",
+    "want": "digital x-ray room"
+  },
+  {
+    "slug": "clinic",
+    "id": "clinic-08",
+    "want": "dressing and injection room"
+  },
+  {
+    "slug": "clinic",
+    "id": "clinic-09",
+    "want": "clinic entrance and signboard from the road"
+  },
+  {
+    "slug": "clinic",
+    "id": "clinic-10",
+    "want": "hand-drawn map or map screenshot"
+  },
+  {
+    "slug": "clinic",
+    "id": "clinic-11",
+    "want": "pharmacy and billing counter"
+  },
+  {
+    "slug": "dashboard",
+    "id": "dashboard-01",
+    "want": "Shop front, wide daytime shot"
+  },
+  {
+    "slug": "dashboard",
+    "id": "dashboard-02",
+    "want": "Owner portrait"
+  },
+  {
+    "slug": "dashboard",
+    "id": "dashboard-03",
+    "want": "Kaju katli tray"
+  },
+  {
+    "slug": "dashboard",
+    "id": "dashboard-04",
+    "want": "Besan laddoo close-up"
+  },
+  {
+    "slug": "dashboard",
+    "id": "dashboard-05",
+    "want": "Namkeen mix packet"
+  },
+  {
+    "slug": "dashboard",
+    "id": "dashboard-06",
+    "want": "Peda box, top view"
+  },
+  {
+    "slug": "dashboard",
+    "id": "dashboard-07",
+    "want": "Kaju katli tray"
+  },
+  {
+    "slug": "dashboard",
+    "id": "dashboard-08",
+    "want": "Ghee tin, shelf"
+  },
+  {
+    "slug": "dashboard",
+    "id": "dashboard-09",
+    "want": "Gift box packaging"
+  },
+  {
+    "slug": "dashboard",
+    "id": "dashboard-10",
+    "want": "Kaju sack, store room"
+  },
+  {
+    "slug": "gym",
+    "id": "gym-01",
+    "want": "main gym floor, wide shot"
+  },
+  {
+    "slug": "gym",
+    "id": "gym-02",
+    "want": "free weights area with racks"
+  },
+  {
+    "slug": "gym",
+    "id": "gym-03",
+    "want": "cardio deck by the window"
+  },
+  {
+    "slug": "gym",
+    "id": "gym-04",
+    "want": "portrait, Rohit at the rack"
+  },
+  {
+    "slug": "gym",
+    "id": "gym-05",
+    "want": "portrait, Neha in the class hall"
+  },
+  {
+    "slug": "gym",
+    "id": "gym-06",
+    "want": "portrait, Imran on the turf strip"
+  },
+  {
+    "slug": "gym",
+    "id": "gym-07",
+    "want": "portrait, Priya taking a class"
+  },
+  {
+    "slug": "gym",
+    "id": "gym-08",
+    "want": "gym entrance and signboard"
+  },
+  {
+    "slug": "gym",
+    "id": "gym-09",
+    "want": "reception desk"
+  },
+  {
+    "slug": "gym",
+    "id": "gym-10",
+    "want": "changing room and lockers"
+  },
+  {
+    "slug": "gym",
+    "id": "gym-11",
+    "want": "class hall, sprung floor"
+  },
+  {
+    "slug": "gym",
+    "id": "gym-12",
+    "want": "turf strip with sled"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-01",
+    "want": "Front of the building, evening, wide shot"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-02",
+    "want": "Deluxe Double room, bed made, from the doorway"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-03",
+    "want": "Twin-bed room, two single beds, window light"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-04",
+    "want": "Family room, double bed plus extra bed, wide"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-05",
+    "want": "Executive suite, sitting area and balcony"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-06",
+    "want": "Dining hall with tables laid for breakfast"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-07",
+    "want": "Thali being served, close up"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-08",
+    "want": "Owner or manager at the front desk, portrait"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-09",
+    "want": "Reception and lobby, wide"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-10",
+    "want": "Corridor looking towards the rooms"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-11",
+    "want": "Deluxe room, bed detail"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-12",
+    "want": "Bathroom, clean and lit"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-13",
+    "want": "Balcony view over the road"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-14",
+    "want": "Rooftop seating in the evening"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-15",
+    "want": "Courtyard and parking from the gate"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-16",
+    "want": "Breakfast table laid out"
+  },
+  {
+    "slug": "hotel",
+    "id": "hotel-17",
+    "want": "Map screenshot or street view of the entrance"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-01",
+    "want": "signature thali, shot from above, warm evening light"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-02",
+    "want": "tandoor flame close-up, roti on the rod"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-03",
+    "want": "sarson ka saag with makki roti, brass bowl"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-04",
+    "want": "paneer tikka on skewers, char marks, mint chutney"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-05",
+    "want": "ghevar with rabri, silver leaf, sweet counter"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-06",
+    "want": "owner at the kitchen pass, portrait, natural light"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-07",
+    "want": "hands rolling roti at the tandoor, close-up"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-08",
+    "want": "dining hall in the evening, lamps on"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-09",
+    "want": "dal makhani in a copper handi"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-10",
+    "want": "chai being poured into kulhads"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-11",
+    "want": "sweet counter tray, close-up"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-12",
+    "want": "staff at the tandoor, action shot"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-13",
+    "want": "family eating together at a corner table"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-14",
+    "want": "corner table set for four, evening"
+  },
+  {
+    "slug": "restaurant",
+    "id": "restaurant-15",
+    "want": "shop front with the signboard, wide, daytime"
+  },
+  {
+    "slug": "saas",
+    "id": "saas-01",
+    "want": "a batch in session, students at desks, wide"
+  },
+  {
+    "slug": "saas",
+    "id": "saas-02",
+    "want": "parent messaging on a phone, close crop"
+  },
+  {
+    "slug": "saas",
+    "id": "saas-03",
+    "want": "teacher explaining at the board, mid-class"
+  },
+  {
+    "slug": "saas",
+    "id": "saas-04",
+    "want": "admission desk, register and pen"
+  },
+  {
+    "slug": "saas",
+    "id": "saas-05",
+    "want": "portrait of the founder, plain background"
+  },
+  {
+    "slug": "saas",
+    "id": "saas-06",
+    "want": "portrait of the chemistry teacher"
+  },
+  {
+    "slug": "saas",
+    "id": "saas-07",
+    "want": "portrait of the maths teacher"
+  },
+  {
+    "slug": "saas",
+    "id": "saas-08",
+    "want": "classroom, empty, showing seating"
+  },
+  {
+    "slug": "saas",
+    "id": "saas-09",
+    "want": "notice board with the test schedule"
+  },
+  {
+    "slug": "saas",
+    "id": "saas-10",
+    "want": "building entrance from the road"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-01",
+    "want": "salon interior, wide"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-02",
+    "want": "stylist mid-cut, close"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-03",
+    "want": "product shelf detail"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-04",
+    "want": "mirror wall & reception"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-05",
+    "want": "Ritika, portrait"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-06",
+    "want": "pedicure station, wide"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-07",
+    "want": "Ritika, portrait"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-08",
+    "want": "Neha, portrait"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-09",
+    "want": "Farheen, portrait"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-10",
+    "want": "Sunil, portrait"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-11",
+    "want": "grown-out colour, before"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-12",
+    "want": "global colour, after"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-13",
+    "want": "frizzy hair, before"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-14",
+    "want": "smoothened hair, after"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-15",
+    "want": "bare face, before"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-16",
+    "want": "HD bridal look, after"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-17",
+    "want": "dull skin, before"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-18",
+    "want": "hydra glow facial, after"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-19",
+    "want": "shop front from the road"
+  },
+  {
+    "slug": "salon",
+    "id": "salon-20",
+    "want": "street view & signboard"
+  },
+  {
+    "slug": "store",
+    "id": "store-01",
+    "want": "Shop counter, wide"
+  },
+  {
+    "slug": "store",
+    "id": "store-02",
+    "want": "Brass thali close-up"
+  },
+  {
+    "slug": "store",
+    "id": "store-03",
+    "want": "Polishing by hand"
+  },
+  {
+    "slug": "store",
+    "id": "store-04",
+    "want": "Thali & dinner set"
+  },
+  {
+    "slug": "store",
+    "id": "store-05",
+    "want": "Diya & pooja thali"
+  },
+  {
+    "slug": "store",
+    "id": "store-06",
+    "want": "Copper bottles row"
+  },
+  {
+    "slug": "store",
+    "id": "store-07",
+    "want": "Brass idols shelf"
+  },
+  {
+    "slug": "store",
+    "id": "store-08",
+    "want": "Gift box packed"
+  },
+  {
+    "slug": "store",
+    "id": "store-09",
+    "want": "Wedding bulk order"
+  },
+  {
+    "slug": "store",
+    "id": "store-10",
+    "want": "Brass thali set, top view"
+  },
+  {
+    "slug": "store",
+    "id": "store-11",
+    "want": "Copper bottle, standing"
+  },
+  {
+    "slug": "store",
+    "id": "store-12",
+    "want": "Brass urli with flowers"
+  },
+  {
+    "slug": "store",
+    "id": "store-13",
+    "want": "Copper jug and glass"
+  },
+  {
+    "slug": "store",
+    "id": "store-14",
+    "want": "Six brass diyas, lit"
+  },
+  {
+    "slug": "store",
+    "id": "store-15",
+    "want": "Kansa katori set of 4"
+  },
+  {
+    "slug": "store",
+    "id": "store-16",
+    "want": "Pooja thali with bell"
+  },
+  {
+    "slug": "store",
+    "id": "store-17",
+    "want": "Copper handi with lid"
+  },
+  {
+    "slug": "store",
+    "id": "store-18",
+    "want": "Brass Ganesh wall panel"
+  },
+  {
+    "slug": "store",
+    "id": "store-19",
+    "want": "Three-tier lunch box"
+  },
+  {
+    "slug": "store",
+    "id": "store-20",
+    "want": "Brass hanging bell"
+  },
+  {
+    "slug": "store",
+    "id": "store-21",
+    "want": "Gift hamper, open box"
+  },
+  {
+    "slug": "store",
+    "id": "store-22",
+    "want": "Thali set, styled"
+  },
+  {
+    "slug": "store",
+    "id": "store-23",
+    "want": "Copper bottle, held"
+  },
+  {
+    "slug": "store",
+    "id": "store-24",
+    "want": "Urli on floor, diyas"
+  },
+  {
+    "slug": "store",
+    "id": "store-25",
+    "want": "Diya set, close-up"
+  },
+  {
+    "slug": "store",
+    "id": "store-26",
+    "want": "Workshop, wide shot"
+  },
+  {
+    "slug": "store",
+    "id": "store-27",
+    "want": "Hands hammering brass"
+  },
+  {
+    "slug": "store",
+    "id": "store-28",
+    "want": "Owner at the counter"
+  },
+  {
+    "slug": "store",
+    "id": "store-29",
+    "want": "Google map of the shop"
+  }
+]

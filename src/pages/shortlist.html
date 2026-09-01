@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+{{> head }}
+<title>Shortlist — {{ brand }}</title>
+<meta name="description" content="Every design you liked, in one place. Send the whole list to WhatsApp with one button.">
+<meta name="robots" content="noindex">
+</head>
+<body class="flex min-h-screen flex-col pt-20">
+
+{{> header }}
+
+<main id="main" class="flex-1">
+  <section class="section">
+    <div class="wrap max-w-3xl">
+      <h1 class="text-display-lg-mobile font-bold tracking-tight text-on-surface">Your shortlist</h1>
+      <p class="mt-3 text-body-lg text-on-surface-variant">
+        The designs you marked with ♡ stay here — only on your own phone, where nobody else can see them.
+      </p>
+
+      <div id="shortlistBox" class="mt-8 space-y-4"></div>
+
+      <div id="shortlistEmpty" class="card mt-8 p-8 text-center">
+        <p class="text-body-lg text-on-surface-variant">The shortlist is empty right now.</p>
+        <p class="mt-2 text-body-md text-on-surface-variant">
+          Press ♡ on any design you like and it collects here, ready to send in one go.
+        </p>
+        <a href="designs.html" class="btn btn-primary mt-6">See the designs {{ arrowIcon }}</a>
+      </div>
+
+      <div id="shortlistActions" class="mt-8 hidden flex flex-wrap gap-3">
+        <a id="shortlistWa" href="{{ waNav }}" target="_blank" rel="noopener noreferrer" class="btn btn-wa">
+          {{ waIcon }} Send this list on WhatsApp
+        </a>
+        <a href="designs.html" class="btn btn-outline">See more designs</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer }}
+{{> wabar }}
+{{> scripts }}
+</body>
+</html>

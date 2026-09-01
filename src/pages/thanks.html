@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+{{> head }}
+<title>Your message is ready — {{ brand }}</title>
+<meta name="robots" content="noindex">
+</head>
+<body class="flex min-h-screen flex-col bg-surface-warm pt-20">
+
+{{> header }}
+
+<main id="main" class="flex-1">
+  <section class="section">
+    <div class="wrap max-w-2xl text-center">
+      <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-success-container text-success">
+        <svg viewBox="0 0 20 20" fill="currentColor" class="h-9 w-9" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+      </span>
+
+      <h1 class="mt-6 text-display-lg-mobile font-bold tracking-tight text-on-surface">Did WhatsApp open?</h1>
+      <p class="mt-4 text-body-lg text-on-surface-variant">
+        Your message should have opened in WhatsApp, already written — all that is left is to press
+        <strong class="font-semibold text-on-surface">send</strong>. If it did not open, copy it from below and send it yourself.
+      </p>
+
+      <div id="sentBox" class="card mt-8 hidden p-5 text-left">
+        <p class="text-label-sm uppercase text-on-surface-variant">Your message</p>
+        <pre id="sentMsg" class="mt-3 whitespace-pre-wrap break-words text-body-md text-on-surface"></pre>
+        <button type="button" id="copyMsg" class="btn btn-outline mt-4 w-full">Copy it</button>
+      </div>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="{{ waNav }}" target="_blank" rel="noopener noreferrer" class="btn btn-wa">{{ waIcon }} Open WhatsApp</a>
+        <a href="tel:+{{ phone }}" class="btn btn-outline">{{ phoneIcon }} {{ phoneDisplay }}</a>
+      </div>
+
+      <p class="mt-10 text-body-md text-on-surface-variant">
+        I reply the same day. The demo reaches your WhatsApp within two or three days, and it costs nothing.
+      </p>
+
+      <div class="mt-8">
+        <a href="designs.html" class="btn btn-ghost">Look at more designs meanwhile {{ arrowIcon }}</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer }}
+{{> scripts }}
+<script>
+  (function () {
+    var msg = null;
+    try { msg = sessionStorage.getItem('neev.brief.sent'); } catch (e) { /* ignore */ }
+    if (!msg) return;
+    var box = document.getElementById('sentBox');
+    var pre = document.getElementById('sentMsg');
+    var btn = document.getElementById('copyMsg');
+    pre.textContent = msg;
+    box.classList.remove('hidden');
+    btn.addEventListener('click', function () {
+      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy it'; }, 1800); };
+      function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = msg; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) { btn.textContent = 'Could not copy'; }
+        document.body.removeChild(ta);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(msg).then(done, fallback);
+      } else { fallback(); }
+    });
+  })();
+</script>
+</body>
+</html>

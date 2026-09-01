@@ -1,0 +1,65 @@
+<footer class="mt-16 bg-primary text-white">
+  <div class="wrap">
+
+    <div class="grid gap-8 border-b border-white/10 py-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="text-label-md font-semibold">Perfect on phones</p>
+        <p class="mt-1 text-label-sm text-white/60">Every site is tested on a real phone</p>
+      </div>
+      <div>
+        <p class="text-label-md font-semibold">Fast on 3G</p>
+        <p class="mt-1 text-label-sm text-white/60">A light site that opens in about two seconds</p>
+      </div>
+      <div>
+        <p class="text-label-md font-semibold">Ready for Google</p>
+        <p class="mt-1 text-label-sm text-white/60">Title, description and sitemap set up</p>
+      </div>
+      <div>
+        <p class="text-label-md font-semibold">Monthly fee</p>
+        <p class="mt-1 text-label-sm text-white/60">None — hosting runs on a free plan</p>
+      </div>
+    </div>
+
+    <div class="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="sm:col-span-2 lg:col-span-1">
+        <p class="text-headline-md font-bold tracking-tight">{{ brand }}</p>
+        <p class="mt-3 max-w-xs text-body-md text-white/70">
+          Websites for small businesses. {{ owner }} — {{ city }}. One person, no office, which is why the rates are low.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-label-sm uppercase text-white/50">Site</p>
+        <ul class="mt-4 space-y-2.5 text-body-md">
+          <li><a href="designs.html" class="text-white/80 hover:text-white">Designs</a></li>
+          <li><a href="pricing.html" class="text-white/80 hover:text-white">Pricing</a></li>
+          <li><a href="index.html#work" class="text-white/80 hover:text-white">Templates</a></li>
+          <li><a href="index.html#process" class="text-white/80 hover:text-white">How it works</a></li>
+          <li><a href="index.html#faq" class="text-white/80 hover:text-white">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-label-sm uppercase text-white/50">Get in touch</p>
+        <ul class="mt-4 space-y-2.5 text-body-md">
+          <li><a href="{{ waNav }}" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white">WhatsApp — {{ phoneDisplay }}</a></li>
+          <li><a href="tel:+{{ phone }}" class="text-white/80 hover:text-white">Call — {{ phoneDisplay }}</a></li>
+          <li><a href="brief.html" class="text-white/80 hover:text-white">Send your details</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-label-sm uppercase text-white/50">Straight talk</p>
+        <p class="mt-4 text-body-md text-white/70">
+          I do not have a paying client yet. Every template here was designed and built by me, and each one
+          opens as a real page you can click through. That is exactly why the rates are this low.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2 border-t border-white/10 py-6 text-label-sm text-white/50 sm:flex-row sm:items-center sm:justify-between">
+      <p>© {{ year }} {{ brand }} · {{ owner }}</p>
+      <p>Built by hand in {{ city }}</p>
+    </div>
+  </div>
+</footer>

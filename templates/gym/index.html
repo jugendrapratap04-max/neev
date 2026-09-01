@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo · Vajra Strength Co. — Gym &amp; Fitness Studio, Mathura</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23020812%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%226%22%20fill%3D%22none%22%20stroke%3D%22%23F6F3ED%22%20stroke-width%3D%222.5%22%2F%3E%3C%2Fsvg%3E">
+<meta name="robots" content="noindex">
+<meta name="description" content="Vajra Strength Co. is a coached strength and conditioning gym in Mathura. Weekly class timetable, membership plans from ₹1,200 a month, and a free trial session on WhatsApp.">
+<meta name="theme-color" content="#0C0D10">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   VAJRA STRENGTH CO. — NEEV template "gym"
+   Palette : graphite #0C0D10 / carbon #14161B / bone #F3F1EC
+             ember  #FF5C2B  (single accent)
+             amber  #F0A05A  / sand #D9CFC0 (accent tints, timetable only)
+   Type    : Archivo Black (display) + Archivo (headings) + Inter (body)
+   ============================================================ */
+
+:root{
+  --ink:#0C0D10;
+  --ink-2:#101317;
+  --carbon:#15181D;
+  --carbon-2:#1B1F26;
+  --line:rgba(243,241,236,.10);
+  --line-2:rgba(243,241,236,.16);
+  --bone:#F3F1EC;
+  --muted:#9DA2AC;
+  --muted-2:#767C87;
+  --ember:#FF5C2B;
+  --ember-soft:rgba(255,92,43,.14);
+  --amber:#F0A05A;
+  --sand:#D9CFC0;
+  --shadow:0 24px 60px -28px rgba(0,0,0,.85);
+  --r:14px;
+  --r-lg:20px;
+  --pad:clamp(20px,5vw,40px);
+  --maxw:1200px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--bone);
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-family:Archivo,system-ui,sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.02em}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+.section{padding-block:clamp(56px,9vw,110px);position:relative}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ---------- type scale ---------- */
+.display{
+  font-family:"Archivo Black",Archivo,system-ui,sans-serif;
+  font-weight:400;
+  letter-spacing:-.035em;
+  line-height:.94;
+  text-transform:uppercase;
+}
+.h1{font-size:clamp(2.45rem,8.4vw,5.1rem)}
+.h2{font-size:clamp(1.85rem,4.6vw,3.05rem)}
+.h3{font-size:clamp(1.15rem,2.1vw,1.4rem);letter-spacing:-.015em}
+.eyebrow{
+  font-family:Archivo,sans-serif;font-size:.8rem;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--ember);
+  display:flex;align-items:center;gap:12px;margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--ember);flex:none}
+.lede{color:var(--muted);font-size:clamp(1rem,1.4vw,1.12rem);max-width:56ch}
+.section-head{max-width:60ch;margin-bottom:clamp(30px,4.5vw,54px)}
+.section-head .lede{margin-top:18px}
+
+/* ---------- photo placeholders ---------- */
+.ph{
+  position:relative;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;
+  padding:22px 18px;
+  border-radius:var(--r);
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(255,92,43,.10), transparent 62%),
+    linear-gradient(160deg,#191D24 0%,#12151A 55%,#0E1115 100%);
+  box-shadow:inset 0 0 0 1px var(--line);
+  overflow:hidden;
+  color:var(--muted-2);
+  min-height:120px;
+}
+.ph::before{
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(135deg,rgba(243,241,236,.022) 0 2px,transparent 2px 9px);
+  pointer-events:none;
+}
+.ph::after{
+  content:attr(data-ph);
+  position:relative;
+  font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+  font-family:Archivo,sans-serif;font-weight:600;
+  color:var(--muted-2);text-align:center;max-width:26ch;line-height:1.45;
+}
+.ph .ph-i{width:26px;height:26px;position:relative;opacity:.5;color:var(--sand);flex:none}
+.ph-16-9{aspect-ratio:16/9}
+.ph-4-3{aspect-ratio:4/3}
+.ph-1-1{aspect-ratio:1/1}
+.ph-3-4{aspect-ratio:3/4}
+.ph-tall{aspect-ratio:4/5}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:52px;padding:12px 26px;border-radius:999px;
+  font-family:Archivo,sans-serif;font-weight:700;font-size:1rem;
+  letter-spacing:.01em;text-decoration:none;border:1px solid transparent;
+  cursor:pointer;transition:transform .18s ease,background-color .18s ease,border-color .18s ease,color .18s ease;
+}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-primary{background:var(--ember);color:#160603;box-shadow:var(--shadow)}
+.btn-primary:hover{transform:translateY(-2px);background:#FF6E42}
+.btn-ghost{border-color:var(--line-2);color:var(--bone);background:transparent}
+.btn-ghost:hover{transform:translateY(-2px);border-color:var(--bone)}
+.btn-dark{background:#160603;color:#FFE9E0}
+.btn-dark:hover{transform:translateY(-2px);background:#000}
+.btn-block{width:100%}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+
+/* ---------- header ---------- */
+.hdr{
+  position:sticky;top:0;z-index:60;
+  background:rgba(12,13,16,.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.hdr-in{display:flex;align-items:center;gap:18px;min-height:74px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-height:44px;margin-right:auto}
+.brand-mark{width:38px;height:38px;flex:none;color:var(--ember)}
+.brand-name{font-family:"Archivo Black",Archivo,sans-serif;font-size:1.02rem;letter-spacing:-.02em;text-transform:uppercase;line-height:1.05}
+.brand-sub{display:block;font-family:Inter,sans-serif;font-size:.66rem;font-weight:500;letter-spacing:.2em;color:var(--muted-2);text-transform:uppercase;margin-top:3px}
+.nav{display:flex;align-items:center;gap:6px}
+.nav a{
+  display:inline-flex;align-items:center;min-height:44px;padding:0 14px;
+  text-decoration:none;font-size:.95rem;font-weight:500;color:var(--muted);
+  border-radius:10px;transition:color .18s ease,background-color .18s ease;
+}
+.nav a:hover{color:var(--bone);background:rgba(243,241,236,.05)}
+.hdr .btn{min-height:46px;padding:10px 20px;font-size:.94rem}
+@media (max-width:1000px){.nav{display:none}}
+@media (max-width:520px){.hdr .btn-primary{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding-block:clamp(48px,7vw,92px) clamp(52px,8vw,104px)}
+.hero::before{
+  content:"";position:absolute;inset:-30% -10% auto -10%;height:120%;
+  background:radial-gradient(58% 48% at 22% 12%,rgba(255,92,43,.18),transparent 68%);
+  pointer-events:none;
+}
+.hero-grid{display:grid;gap:clamp(34px,5vw,64px);align-items:center;position:relative}
+@media (min-width:940px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+.hero h1{margin-bottom:0}
+.hero h1 .em{color:var(--ember);display:block}
+.hero .lede{margin-top:24px}
+.hero-media{position:relative}
+.hero-media .ph{min-height:300px}
+.hero-badge{
+  position:absolute;left:-6px;bottom:-18px;
+  background:var(--carbon);border:1px solid var(--line-2);border-radius:var(--r);
+  padding:14px 18px;box-shadow:var(--shadow);max-width:min(280px,86%);
+}
+.hero-badge .k{display:block;font-family:Archivo,sans-serif;font-weight:700;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ember)}
+.hero-badge .v{font-size:.98rem;color:var(--bone);margin-top:4px;line-height:1.45}
+@media (max-width:939px){.hero-badge{position:static;max-width:none;margin-top:16px}}
+
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:clamp(40px,6vw,64px)}
+@media (min-width:820px){.facts{grid-template-columns:repeat(4,1fr)}}
+.fact{background:var(--ink-2);padding:22px 20px}
+.fact b{display:block;font-family:"Archivo Black",Archivo,sans-serif;font-size:1.5rem;letter-spacing:-.02em;line-height:1.1}
+.fact span{display:block;font-size:.88rem;color:var(--muted-2);margin-top:6px;letter-spacing:.02em}
+
+/* ---------- generic cards ---------- */
+.card{background:var(--carbon);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(20px,2.6vw,28px)}
+.grid{display:grid;gap:clamp(16px,2.2vw,24px)}
+.g-2{grid-template-columns:1fr}
+.g-3{grid-template-columns:1fr}
+.g-4{grid-template-columns:1fr}
+@media (min-width:640px){.g-3,.g-4{grid-template-columns:repeat(2,1fr)}.g-2{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.g-3{grid-template-columns:repeat(3,1fr)}.g-4{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- facilities ---------- */
+.fac-top{display:grid;gap:clamp(16px,2.2vw,24px);margin-bottom:clamp(16px,2.2vw,24px)}
+@media (min-width:860px){.fac-top{grid-template-columns:1.4fr 1fr}}
+.fac{display:flex;gap:16px;align-items:flex-start}
+.fac-ico{
+  width:44px;height:44px;flex:none;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--ember-soft);color:var(--ember);border:1px solid rgba(255,92,43,.22);
+}
+.fac-ico svg{width:22px;height:22px}
+.fac h3{margin-bottom:6px}
+.fac p{color:var(--muted);font-size:.98rem}
+
+/* ---------- timetable ---------- */
+.tt-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:26px}
+.tt-legend li{display:flex;align-items:center;gap:9px;font-size:.95rem;color:var(--muted)}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.dot-s{background:var(--ember)}
+.dot-c{background:var(--amber)}
+.dot-m{background:var(--sand)}
+
+.tt{display:grid;gap:12px;grid-template-columns:1fr}
+@media (min-width:600px){.tt{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:900px){.tt{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:1160px){.tt{grid-template-columns:repeat(7,1fr);gap:10px}}
+.day{background:var(--carbon);border:1px solid var(--line);border-radius:var(--r);padding:16px 14px;min-width:0}
+.day.rest{background:var(--ink-2)}
+.day-h{
+  font-family:Archivo,sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--bone);padding-bottom:12px;margin-bottom:12px;
+  border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px;
+}
+.day-h em{font-style:normal;font-size:.7rem;letter-spacing:.1em;color:var(--muted-2);font-weight:600;white-space:nowrap}
+@media (min-width:1160px){.day-h em{display:none}}
+.slots{display:flex;flex-direction:column;gap:12px}
+.slot{padding-left:12px;border-left:2px solid var(--line-2);min-width:0}
+.slot.s{border-left-color:var(--ember)}
+.slot.c{border-left-color:var(--amber)}
+.slot.m{border-left-color:var(--sand)}
+.slot .t{display:block;font-family:Archivo,sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.06em;color:var(--muted)}
+.slot .n{display:block;font-size:1rem;font-weight:600;color:var(--bone);margin-top:2px;line-height:1.35}
+.slot .w{display:block;font-size:.86rem;color:var(--muted-2);margin-top:2px}
+.tt-note{margin-top:24px;color:var(--muted);font-size:.98rem;max-width:70ch}
+
+/* ---------- plans ---------- */
+.plans{display:grid;gap:clamp(16px,2.4vw,22px);grid-template-columns:1fr;align-items:start}
+@media (min-width:900px){.plans{grid-template-columns:repeat(3,1fr)}}
+.plan{position:relative;display:flex;flex-direction:column;height:100%}
+.plan.best{border-color:rgba(255,92,43,.42);background:linear-gradient(180deg,rgba(255,92,43,.09),transparent 42%),var(--carbon);box-shadow:var(--shadow)}
+.plan-tag{
+  position:absolute;top:-13px;left:clamp(20px,2.6vw,28px);
+  background:var(--ember);color:#160603;font-family:Archivo,sans-serif;font-weight:700;
+  font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:5px 12px;border-radius:999px;
+}
+.plan h3{font-family:Archivo,sans-serif;font-size:1.02rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.price{display:flex;align-items:baseline;gap:8px;margin:16px 0 4px;flex-wrap:wrap}
+.price b{font-family:"Archivo Black",Archivo,sans-serif;font-size:clamp(2.2rem,4.6vw,2.7rem);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.price span{color:var(--muted-2);font-size:.95rem}
+.plan .sub{color:var(--muted);font-size:.95rem}
+.plan ul{margin:22px 0 26px;display:flex;flex-direction:column;gap:11px;border-top:1px solid var(--line);padding-top:22px}
+.plan li{display:flex;gap:11px;align-items:flex-start;font-size:1rem;color:var(--muted)}
+.tick{width:18px;height:18px;flex:none;margin-top:4px;color:var(--ember)}
+.plan .btn{margin-top:auto}
+.plan-foot{margin-top:26px;color:var(--muted);font-size:.98rem}
+
+/* ---------- trainers ---------- */
+.coach{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.coach .ph{border-radius:0;box-shadow:inset 0 -1px 0 var(--line)}
+.coach-b{padding:20px}
+.coach-b h3{font-size:1.12rem}
+.coach-b .role{display:block;color:var(--ember);font-family:Archivo,sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-top:7px}
+.coach-b p{color:var(--muted);font-size:.95rem;margin-top:11px}
+
+/* ---------- trial band ---------- */
+.trial{background:linear-gradient(135deg,#FF5C2B 0%,#E0431B 58%,#C2360F 100%);color:#1A0703;overflow:hidden;position:relative}
+.trial::before{content:"";position:absolute;inset:auto -12% -60% 40%;height:120%;background:radial-gradient(50% 50% at 50% 50%,rgba(255,255,255,.22),transparent 70%);pointer-events:none}
+.trial-in{position:relative;display:grid;gap:clamp(26px,4vw,48px);align-items:center}
+@media (min-width:900px){.trial-in{grid-template-columns:1.15fr .85fr}}
+.trial .eyebrow{color:#5A1A05}
+.trial .eyebrow::before{background:#5A1A05}
+.trial h2{color:#1A0703}
+.trial p{color:#3D1207;font-size:1.05rem;max-width:52ch;margin-top:18px}
+.trial .btn-ghost{border-color:rgba(26,7,3,.35);color:#1A0703}
+.trial .btn-ghost:hover{border-color:#1A0703;background:rgba(26,7,3,.06)}
+.trial-list{display:flex;flex-direction:column;gap:12px;background:rgba(26,7,3,.10);border:1px solid rgba(26,7,3,.16);border-radius:var(--r-lg);padding:24px}
+.trial-list li{display:flex;gap:12px;align-items:flex-start;color:#2B0D05;font-size:1rem;font-weight:500}
+.trial-list .num{
+  width:26px;height:26px;flex:none;border-radius:50%;background:#1A0703;color:#FF9C74;
+  display:flex;align-items:center;justify-content:center;font-family:Archivo,sans-serif;font-weight:700;font-size:.82rem;
+}
+
+/* ---------- quotes ---------- */
+.quotes-note{
+  display:inline-flex;align-items:center;gap:10px;margin-bottom:26px;
+  border:1px dashed var(--line-2);border-radius:999px;padding:9px 16px;
+  color:var(--muted-2);font-size:1rem;letter-spacing:.05em;text-transform:uppercase;font-family:Archivo,sans-serif;font-weight:600;
+}
+.quote{display:flex;flex-direction:column;gap:16px}
+.quote p{color:var(--sand);font-size:1.02rem;line-height:1.6}
+.quote .who{color:var(--muted-2);font-size:.96rem;margin-top:auto;padding-top:6px;border-top:1px solid var(--line)}
+.qmark{width:26px;height:26px;color:var(--ember);opacity:.75}
+
+/* ---------- timings / visit ---------- */
+.visit{display:grid;gap:clamp(24px,4vw,48px)}
+@media (min-width:940px){.visit{grid-template-columns:1fr 1fr}}
+.hours{border-top:1px solid var(--line)}
+.hours div{display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.hours dt{font-family:Archivo,sans-serif;font-weight:700;font-size:.96rem;letter-spacing:.04em}
+.hours dd{margin:0;color:var(--muted);font-size:1rem;text-align:right;font-variant-numeric:tabular-nums}
+.hours dd.shut{color:var(--muted-2)}
+.addr{margin-top:28px;color:var(--muted);font-size:1rem}
+.addr b{color:var(--bone);display:block;font-family:Archivo,sans-serif;font-size:1.05rem;margin-bottom:6px}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.gal .ph:first-child{grid-column:1 / -1}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--ink-2);border-top:1px solid var(--line);padding-block:clamp(48px,6vw,72px) 32px}
+.ftr-grid{display:grid;gap:clamp(28px,4vw,48px)}
+@media (min-width:760px){.ftr-grid{grid-template-columns:1.4fr 1fr 1fr}}
+.ftr h4{font-family:Archivo,sans-serif;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-2);margin-bottom:14px}
+.ftr-links li a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--muted);font-size:1rem;transition:color .18s ease}
+.ftr-links li a:hover{color:var(--ember)}
+.ftr p{color:var(--muted);font-size:1rem}
+.ftr .brand{margin-right:0}
+.ftr-bot{margin-top:clamp(34px,5vw,52px);padding-top:26px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;align-items:center}
+.ftr-bot p{color:var(--muted-2);font-size:.96rem}
+.ftr-bot a{color:var(--bone);text-decoration:none;border-bottom:1px solid var(--line-2)}
+.ftr-bot a:hover{color:var(--ember);border-color:var(--ember)}
+
+/* ---------- sticky mobile action bar ---------- */
+.bar{display:none}
+@media (max-width:860px){
+  .bar{
+    display:grid;grid-template-columns:1fr 1fr;gap:10px;
+    position:fixed;left:0;right:0;bottom:0;z-index:80;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(12,13,16,.94);backdrop-filter:blur(14px);
+    border-top:1px solid var(--line);
+  }
+  .bar a{
+    display:flex;align-items:center;justify-content:center;gap:9px;
+    min-height:56px;border-radius:12px;text-decoration:none;
+    font-family:Archivo,sans-serif;font-weight:700;font-size:1rem;
+  }
+  .bar .call{background:transparent;border:1px solid var(--line-2);color:var(--bone)}
+  .bar .wa{background:var(--ember);color:#160603}
+  .bar svg{width:19px;height:19px;flex:none}
+  body{padding-bottom:96px}
+}
+
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px;border-radius:6px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important;scroll-behavior:auto !important}
+  .btn:hover{transform:none}
+}
+</style>
+<style>/* photo-filled */
+  [data-ph-id]:has(> img)::before, [data-ph-id]:has(> img)::after { content: none !important; }
+  [data-ph-id]:has(> img) { background-image: none !important; }
+</style>
+</head>
+<body>
+<!-- neev-demo-ribbon: added by scripts/demo-ribbon.mjs, not by hand -->
+<style>
+  .neev-demo-ribbon{position:relative;z-index:2147483647;display:flex;flex-wrap:wrap;align-items:center;
+    justify-content:center;gap:.5rem 1rem;padding:.75rem 1rem;background:#020812;color:#fff;
+    font:500 14px/1.45 Inter,ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif;text-align:center}
+  .neev-demo-ribbon b{background:#0051d5;color:#fff;border-radius:999px;padding:.15rem .55rem;
+    font-size:11px;letter-spacing:.08em;font-weight:700}
+  .neev-demo-ribbon span{opacity:.75}
+  .neev-demo-ribbon a{display:inline-flex;align-items:center;min-height:44px;padding:0 1rem;
+    border-radius:8px;background:#0f7b45;color:#fff;text-decoration:none;font-weight:600}
+  .neev-demo-ribbon a.ghost{background:transparent;border:1px solid rgba(255,255,255,.25)}
+  @media (max-width:520px){.neev-demo-ribbon{font-size:13px}}
+</style>
+<div class="neev-demo-ribbon">
+  <b>DEMO</b>
+  <span>A sample design by NEEV. This is not a real business &mdash; the name, prices and photos are placeholders.</span>
+  <a href="https://wa.me/918439305810?text=Hello%20Jugendra%2C%20I%20like%20this%20demo%20design.%20My%20business%20is%20______.">Get this design</a>
+  <a class="ghost" href="../../index.html">All templates</a>
+</div>
+
+
+
+
+
+
+<!-- shared line-art icons -->
+<svg width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-photo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><circle cx="8.5" cy="10" r="1.6"/><path d="M3 17l5-4.5 4 3.5 3.5-3 5.5 5"/>
+  </symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2 22l5.36-1.4a9.8 9.8 0 0 0 4.68 1.2h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.47 2 12.04 2Zm5.76 14.06c-.24.68-1.4 1.3-1.94 1.34-.5.05-.98.23-3.3-.69-2.78-1.1-4.54-3.94-4.68-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .35 0 .51.01.16.01.38-.06.6.46.23.55.77 1.89.84 2.03.07.13.11.29.02.47-.09.19-.13.3-.27.46-.13.16-.28.35-.4.47-.13.13-.27.28-.12.54.15.27.66 1.09 1.42 1.77.98.87 1.8 1.14 2.06 1.27.26.13.41.11.56-.07.15-.18.65-.76.82-1.02.17-.27.34-.22.57-.13.23.09 1.47.69 1.72.82.25.13.42.19.48.3.06.1.06.62-.18 1.3Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 16.5v2.6a1.9 1.9 0 0 1-2.1 1.9 18.8 18.8 0 0 1-8.2-2.9 18.4 18.4 0 0 1-5.7-5.7A18.8 18.8 0 0 1 2.1 4.1 1.9 1.9 0 0 1 4 2h2.6a1.9 1.9 0 0 1 1.9 1.6c.12.9.34 1.78.65 2.6a1.9 1.9 0 0 1-.43 2L7.7 9.3a15 15 0 0 0 5.7 5.7l1.1-1.03a1.9 1.9 0 0 1 2-.43c.83.31 1.7.53 2.6.65A1.9 1.9 0 0 1 21 16.5Z"/>
+  </symbol>
+  <symbol id="i-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+  <symbol id="i-dumbbell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12"/>
+  </symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 12h4l2-4 3 8 2.5-6 1.8 3H22"/>
+  </symbol>
+  <symbol id="i-shower" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 20V7a3 3 0 0 1 6 0v1M8 12h13M11 16v2M15 15v3M19 16v2"/>
+  </symbol>
+  <symbol id="i-air" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 8h11a3 3 0 1 0-3-3M3 13h15a3 3 0 1 1-3 3M3 18h8"/>
+  </symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M9 8h6M9 12h6M9 16h3"/>
+  </symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="10" width="16" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 1 1 8 0v3"/>
+  </symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 5C6.4 6.4 4.5 9.2 4.5 12.8V19h6.2v-6.2H7.4c0-2.2 1-3.8 3-4.8L9.5 5Zm9.9 0c-3.1 1.4-5 4.2-5 7.8V19h6.2v-6.2h-3.3c0-2.2 1-3.8 3-4.8L19.4 5Z"/></symbol>
+  <symbol id="i-mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 6l12 28L32 6"/><path d="M14 20h12"/>
+  </symbol>
+</svg>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><use href="#i-mark"></use></svg>
+      <span class="brand-name">Vajra Strength Co.<span class="brand-sub">Mathura</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#facilities">Facilities</a>
+      <a href="#timetable">Timetable</a>
+      <a href="#plans">Membership</a>
+      <a href="#coaches">Coaches</a>
+      <a href="#visit">Visit us</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/918439305810?text=Hi%20Vajra%20Strength%20Co.%2C%20I%20want%20to%20book%20my%20free%20trial%20session.">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"></use></svg>
+      Free trial
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Strength &amp; conditioning · Krishna Nagar, Mathura</div>
+          <h1 class="display h1">Train heavy.<span class="em">Live lighter.</span></h1>
+          <p class="lede">A coached gym, not a machine warehouse. Every member gets a written plan, a form check on the big lifts, and a batch that actually starts on time. Morning and evening batches, six days a week.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://wa.me/918439305810?text=Hi%20Vajra%20Strength%20Co.%2C%20I%20want%20to%20book%20my%20free%20trial%20session.%20Which%20batch%20has%20space%3F">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"></use></svg>
+              Book a free trial
+            </a>
+            <a class="btn btn-ghost" href="#plans">See membership plans</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="ph ph-tall" data-ph="main gym floor, wide shot" data-ph-id="gym-01" role="img" aria-label="Photo placeholder: main gym floor, wide shot" style="position:relative">
+            <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
+          <img src="img/gym-01.webp" alt="main gym floor, wide shot" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit"></div>
+          <div class="hero-badge">
+            <span class="k">Today</span>
+            <p class="v">Open 5:30 AM – 10:30 AM and 4:00 PM – 10:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="facts">
+        <div class="fact"><b>4,200</b><span>sq ft training floor</span></div>
+        <div class="fact"><b>4</b><span>coached batches daily</span></div>
+        <div class="fact"><b>6</b><span>days a week, plus Sunday mornings</span></div>
+        <div class="fact"><b>₹1,200</b><span>starting monthly membership</span></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ============ FACILITIES ============ -->
+  <section class="section" id="facilities">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">The floor</div>
+        <h2 class="display h2">Everything you need. Nothing you'll never use.</h2>
+        <p class="lede">Two floors, laid out so the strength area never fights the cardio area. Equipment is wiped down between batches and serviced every month.</p>
+      </div>
+
+      <div class="fac-top">
+        <div class="ph ph-16-9" data-ph="free weights area with racks" data-ph-id="gym-02" role="img" aria-label="Photo placeholder: free weights area with racks">
+          <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
+        </div>
+        <div class="ph ph-4-3" data-ph="cardio deck by the window" data-ph-id="gym-03" role="img" aria-label="Photo placeholder: cardio deck by the window">
+          <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
+        </div>
+      </div>
+
+      <div class="grid g-3">
+        <div class="card fac">
+          <span class="fac-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-dumbbell"></use></svg></span>
+          <div>
+            <h3 class="h3">Strength zone</h3>
+            <p>Four power racks, two Olympic platforms, dumbbells to 50 kg and calibrated plates for the barbell lifts.</p>
+          </div>
+        </div>
+        <div class="card fac">
+          <span class="fac-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-heart"></use></svg></span>
+          <div>
+            <h3 class="h3">Cardio &amp; conditioning</h3>
+            <p>Treadmills, air bikes, rowers and a 20-metre turf strip for sled pushes and sprint work.</p>
+          </div>
+        </div>
+        <div class="card fac">
+          <span class="fac-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-air"></use></svg></span>
+          <div>
+            <h3 class="h3">Air-conditioned hall</h3>
+            <p>The group class hall is fully air-conditioned with a sprung floor for yoga, Zumba and boxing rounds.</p>
+          </div>
+        </div>
+        <div class="card fac">
+          <span class="fac-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-shower"></use></svg></span>
+          <div>
+            <h3 class="h3">Changing rooms</h3>
+            <p>Separate men's and women's changing rooms with hot-water showers, running through the winter months.</p>
+          </div>
+        </div>
+        <div class="card fac">
+          <span class="fac-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-lock"></use></svg></span>
+          <div>
+            <h3 class="h3">Lockers &amp; parking</h3>
+            <p>Day lockers for every member and covered two-wheeler parking right outside the entrance.</p>
+          </div>
+        </div>
+        <div class="card fac">
+          <span class="fac-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-clip"></use></svg></span>
+          <div>
+            <h3 class="h3">Written training plan</h3>
+            <p>Every member starts with a fitness assessment and leaves with a four-week plan on paper, reviewed monthly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ============ TIMETABLE ============ -->
+  <section class="section" id="timetable">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">This week</div>
+        <h2 class="display h2">Class timetable</h2>
+        <p class="lede">Group classes are included in every membership. Turn up five minutes early — batches start on the clock.</p>
+      </div>
+
+      <ul class="tt-legend">
+        <li><span class="dot dot-s"></span>Strength</li>
+        <li><span class="dot dot-c"></span>Conditioning</li>
+        <li><span class="dot dot-m"></span>Mobility &amp; group fitness</li>
+      </ul>
+
+      <div class="tt">
+        <div class="day">
+          <p class="day-h">Monday <em>4 slots</em></p>
+          <ul class="slots">
+            <li class="slot s"><span class="t">6:00 AM</span><span class="n">Barbell Strength</span><span class="w">Rohit</span></li>
+            <li class="slot m"><span class="t">7:15 AM</span><span class="n">Yoga &amp; Mobility</span><span class="w">Neha</span></li>
+            <li class="slot c"><span class="t">5:30 PM</span><span class="n">HIIT Circuit</span><span class="w">Imran</span></li>
+            <li class="slot s"><span class="t">7:00 PM</span><span class="n">Barbell Strength</span><span class="w">Rohit</span></li>
+          </ul>
+        </div>
+        <div class="day">
+          <p class="day-h">Tuesday <em>4 slots</em></p>
+          <ul class="slots">
+            <li class="slot c"><span class="t">6:00 AM</span><span class="n">HIIT Circuit</span><span class="w">Imran</span></li>
+            <li class="slot m"><span class="t">7:15 AM</span><span class="n">Zumba</span><span class="w">Priya</span></li>
+            <li class="slot c"><span class="t">5:30 PM</span><span class="n">Boxing Basics</span><span class="w">Imran</span></li>
+            <li class="slot s"><span class="t">7:00 PM</span><span class="n">Lower Body Strength</span><span class="w">Rohit</span></li>
+          </ul>
+        </div>
+        <div class="day">
+          <p class="day-h">Wednesday <em>4 slots</em></p>
+          <ul class="slots">
+            <li class="slot s"><span class="t">6:00 AM</span><span class="n">Barbell Strength</span><span class="w">Rohit</span></li>
+            <li class="slot m"><span class="t">7:15 AM</span><span class="n">Yoga &amp; Mobility</span><span class="w">Neha</span></li>
+            <li class="slot c"><span class="t">5:30 PM</span><span class="n">HIIT Circuit</span><span class="w">Imran</span></li>
+            <li class="slot m"><span class="t">7:00 PM</span><span class="n">Zumba</span><span class="w">Priya</span></li>
+          </ul>
+        </div>
+        <div class="day">
+          <p class="day-h">Thursday <em>4 slots</em></p>
+          <ul class="slots">
+            <li class="slot c"><span class="t">6:00 AM</span><span class="n">Boxing Basics</span><span class="w">Imran</span></li>
+            <li class="slot m"><span class="t">7:15 AM</span><span class="n">Yoga &amp; Mobility</span><span class="w">Neha</span></li>
+            <li class="slot s"><span class="t">5:30 PM</span><span class="n">Upper Body Strength</span><span class="w">Rohit</span></li>
+            <li class="slot c"><span class="t">7:00 PM</span><span class="n">HIIT Circuit</span><span class="w">Imran</span></li>
+          </ul>
+        </div>
+        <div class="day">
+          <p class="day-h">Friday <em>4 slots</em></p>
+          <ul class="slots">
+            <li class="slot s"><span class="t">6:00 AM</span><span class="n">Barbell Strength</span><span class="w">Rohit</span></li>
+            <li class="slot m"><span class="t">7:15 AM</span><span class="n">Zumba</span><span class="w">Priya</span></li>
+            <li class="slot c"><span class="t">5:30 PM</span><span class="n">Boxing Basics</span><span class="w">Imran</span></li>
+            <li class="slot s"><span class="t">7:00 PM</span><span class="n">Full Body Strength</span><span class="w">Rohit</span></li>
+          </ul>
+        </div>
+        <div class="day">
+          <p class="day-h">Saturday <em>4 slots</em></p>
+          <ul class="slots">
+            <li class="slot c"><span class="t">6:00 AM</span><span class="n">Partner Circuit</span><span class="w">Imran</span></li>
+            <li class="slot m"><span class="t">7:15 AM</span><span class="n">Yoga &amp; Mobility</span><span class="w">Neha</span></li>
+            <li class="slot s"><span class="t">5:30 PM</span><span class="n">Open Gym, coach on floor</span><span class="w">Rohit</span></li>
+            <li class="slot m"><span class="t">7:00 PM</span><span class="n">Zumba</span><span class="w">Priya</span></li>
+          </ul>
+        </div>
+        <div class="day rest">
+          <p class="day-h">Sunday <em>2 slots</em></p>
+          <ul class="slots">
+            <li class="slot m"><span class="t">7:00 AM</span><span class="n">Yoga &amp; Mobility</span><span class="w">Neha</span></li>
+            <li class="slot s"><span class="t">8:15 AM</span><span class="n">Open Gym, coach on floor</span><span class="w">Rohit</span></li>
+            <li class="slot"><span class="t">Evening</span><span class="n">Closed</span><span class="w">Rest day</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="tt-note">Class sizes are capped so everyone gets corrected. If a batch is full we will tell you on WhatsApp and hold the next one for you — no waiting around at the door.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ============ PLANS ============ -->
+  <section class="section" id="plans">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Membership</div>
+        <h2 class="display h2">Straight pricing. No joining fee.</h2>
+        <p class="lede">One price, all equipment, all group classes. Pay by UPI, card or cash at the desk. Longer plans can be paused once for up to 30 days.</p>
+      </div>
+
+      <div class="plans">
+        <div class="card plan">
+          <h3>Monthly</h3>
+          <div class="price"><b>₹1,200</b><span>per month</span></div>
+          <p class="sub">Good for trying us out properly.</p>
+          <ul>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tick"></use></svg>Full gym floor access</li>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tick"></use></svg>All group classes included</li>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tick"></use></svg>Fitness assessment on day one</li>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tick"></use></svg>Locker and parking</li>
+          </ul>
+          <a class="btn btn-ghost btn-block" href="https://wa.me/918439305810?text=Hi%20Vajra%20Strength%20Co.%2C%20I%20want%20the%20monthly%20membership%20at%20%E2%82%B91%2C200.">Enquire on WhatsApp</a>
+        </div>
+
+        <div class="card plan best">
+          <span class="plan-tag">Most picked</span>
+          <h3>Quarterly</h3>
+          <div class="price"><b>₹3,200</b><span>for 3 months</span></div>
+          <p class="sub">Works out to ₹1,067 a month.</p>
+          <ul>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tick"></use></svg>Everything in Monthly</li>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tick"></use></svg>Written 4-week plan, reviewed monthly</li>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tick"></use></svg>Body measurements every 6 weeks</li>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tick"></use></svg>One 15-day pause allowed</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="https://wa.me/918439305810?text=Hi%20Vajra%20Strength%20Co.%2C%20I%20want%20the%20quarterly%20membership%20at%20%E2%82%B93%2C200.">Enquire on WhatsApp</a>
+        </div>
+
+        <div class="card plan">
+          <h3>Yearly</h3>
+          <div class="price"><b>₹9,600</b><span>for 12 months</span></div>
+          <p class="sub">Works out to ₹800 a month.</p>
+          <ul>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tick"></use></svg>Everything in Quarterly</li>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tick"></use></svg>Diet chart from our nutrition coach</li>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tick"></use></svg>Two guest passes for family</li>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-tick"></use></svg>One 30-day pause allowed</li>
+          </ul>
+          <a class="btn btn-ghost btn-block" href="https://wa.me/918439305810?text=Hi%20Vajra%20Strength%20Co.%2C%20I%20want%20the%20yearly%20membership%20at%20%E2%82%B99%2C600.">Enquire on WhatsApp</a>
+        </div>
+      </div>
+
+      <p class="plan-foot">Add-ons: personal training ₹4,500 a month (12 sessions) · couple membership ₹2,000 a month · student membership ₹950 a month with a valid college ID. Ask us on WhatsApp and we will confirm what suits you.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ============ COACHES ============ -->
+  <section class="section" id="coaches">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Your coaches</div>
+        <h2 class="display h2">People on the floor, not behind a desk.</h2>
+        <p class="lede">You will always find a coach on the training floor during batch hours. Ask them anything — that is what they are there for.</p>
+      </div>
+
+      <div class="grid g-4">
+        <div class="card coach">
+          <div class="ph ph-3-4" data-ph="portrait, Rohit at the rack" data-ph-id="gym-04" role="img" aria-label="Photo placeholder: portrait, Rohit at the rack">
+            <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
+          </div>
+          <div class="coach-b">
+            <h3 class="h3">Rohit Chaudhary</h3>
+            <span class="role">Head coach · Strength</span>
+            <p>Runs the barbell batches and writes the training plans. Nine years coaching in Mathura and Agra.</p>
+          </div>
+        </div>
+        <div class="card coach">
+          <div class="ph ph-3-4" data-ph="portrait, Neha in the class hall" data-ph-id="gym-05" role="img" aria-label="Photo placeholder: portrait, Neha in the class hall">
+            <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
+          </div>
+          <div class="coach-b">
+            <h3 class="h3">Neha Sharma</h3>
+            <span class="role">Yoga &amp; mobility</span>
+            <p>Morning yoga and mobility batches, and the go-to coach for stiff backs and desk-job shoulders.</p>
+          </div>
+        </div>
+        <div class="card coach">
+          <div class="ph ph-3-4" data-ph="portrait, Imran on the turf strip" data-ph-id="gym-06" role="img" aria-label="Photo placeholder: portrait, Imran on the turf strip">
+            <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
+          </div>
+          <div class="coach-b">
+            <h3 class="h3">Imran Qureshi</h3>
+            <span class="role">Boxing &amp; conditioning</span>
+            <p>Takes the HIIT circuits and boxing basics. Former state-level amateur boxer, still trains daily.</p>
+          </div>
+        </div>
+        <div class="card coach">
+          <div class="ph ph-3-4" data-ph="portrait, Priya taking a class" data-ph-id="gym-07" role="img" aria-label="Photo placeholder: portrait, Priya taking a class">
+            <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
+          </div>
+          <div class="coach-b">
+            <h3 class="h3">Priya Bansal</h3>
+            <span class="role">Group fitness · Nutrition</span>
+            <p>Zumba batches and the diet charts. Certified sports nutritionist, works in Hindi and English.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FREE TRIAL ============ -->
+  <section class="section trial" id="trial">
+    <div class="wrap trial-in">
+      <div>
+        <div class="eyebrow">Free trial</div>
+        <h2 class="display h2">One session. On us. No card, no forms.</h2>
+        <p>Message us on WhatsApp with the batch you would like to try. Come in shoes you can train in, we will handle the rest — assessment, a full session with a coach, and an honest answer about what your first month should look like.</p>
+        <div class="btn-row">
+          <a class="btn btn-dark" href="https://wa.me/918439305810?text=Hi%20Vajra%20Strength%20Co.%2C%20I%20want%20to%20book%20my%20free%20trial.%20My%20name%20is%3A%20____%20and%20I%20prefer%20the%20____%20batch.">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"></use></svg>
+            Book my free trial
+          </a>
+          <a class="btn btn-ghost" href="tel:+918439305810">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg>
+            Call +91 84393 05810
+          </a>
+        </div>
+      </div>
+      <ul class="trial-list">
+        <li><span class="num">1</span>Send us a WhatsApp with your name and preferred batch time.</li>
+        <li><span class="num">2</span>We confirm a slot the same day and tell you what to bring.</li>
+        <li><span class="num">3</span>Free assessment: height, weight, mobility check and goals.</li>
+        <li><span class="num">4</span>Train the full session with a coach beside you.</li>
+        <li><span class="num">5</span>Join if it fits. If it does not, no follow-up calls. Promise.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ QUOTES (placeholder copy) ============ -->
+  <section class="section" id="members">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">What our members say</div>
+        <h2 class="display h2">Your members, in their own words.</h2>
+      </div>
+      <p class="quotes-note">Sample text — replace with real member quotes</p>
+      <div class="grid g-3">
+        <div class="card quote">
+          <svg class="qmark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-quote"></use></svg>
+          <p>This is placeholder text where a real member's words will go once the gym collects them. Two or three honest lines about the coaching work best here.</p>
+          <p class="who">Member name · plan or batch</p>
+        </div>
+        <div class="card quote">
+          <svg class="qmark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-quote"></use></svg>
+          <p>Another placeholder quote. Ask a member what changed for them in the first three months, and use their answer exactly as they said it.</p>
+          <p class="who">Member name · plan or batch</p>
+        </div>
+        <div class="card quote">
+          <svg class="qmark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-quote"></use></svg>
+          <p>A third placeholder quote. Short is fine. Real names and real photos beat long polished paragraphs every single time.</p>
+          <p class="who">Member name · plan or batch</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ============ VISIT ============ -->
+  <section class="section" id="visit">
+    <div class="wrap visit">
+      <div>
+        <div class="eyebrow">Timings &amp; address</div>
+        <h2 class="display h2">Come and see the floor.</h2>
+        <p class="lede" style="margin-top:18px">Walk in during any open hour and ask for a look around. No appointment needed.</p>
+
+        <dl class="hours">
+          <div><dt>Monday – Friday</dt><dd>5:30 AM – 10:30 AM · 4:00 PM – 10:00 PM</dd></div>
+          <div><dt>Saturday</dt><dd>5:30 AM – 10:30 AM · 4:00 PM – 9:00 PM</dd></div>
+          <div><dt>Sunday</dt><dd>7:00 AM – 11:00 AM only</dd></div>
+          <div><dt>Holi &amp; Diwali</dt><dd class="shut">Closed</dd></div>
+        </dl>
+
+        <p class="addr">
+          <b>Vajra Strength Co.</b>
+          First floor, Radhika Complex, Krishna Nagar Main Road,<br>
+          Mathura, Uttar Pradesh 281004<br>
+          Opposite the SBI ATM, above Gupta Medical Store.
+        </p>
+
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://wa.me/918439305810?text=Hi%20Vajra%20Strength%20Co.%2C%20I%20would%20like%20to%20visit%20the%20gym.%20When%20should%20I%20come%3F">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"></use></svg>
+            Message us
+          </a>
+          <a class="btn btn-ghost" href="tel:+918439305810">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg>
+            +91 84393 05810
+          </a>
+        </div>
+      </div>
+
+      <div class="gal">
+        <div class="ph ph-16-9" data-ph="gym entrance and signboard" data-ph-id="gym-08" role="img" aria-label="Photo placeholder: gym entrance and signboard">
+          <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
+        </div>
+        <div class="ph ph-1-1" data-ph="reception desk" data-ph-id="gym-09" role="img" aria-label="Photo placeholder: reception desk">
+          <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
+        </div>
+        <div class="ph ph-1-1" data-ph="changing room and lockers" data-ph-id="gym-10" role="img" aria-label="Photo placeholder: changing room and lockers">
+          <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
+        </div>
+        <div class="ph ph-1-1" data-ph="class hall, sprung floor" data-ph-id="gym-11" role="img" aria-label="Photo placeholder: class hall, sprung floor">
+          <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
+        </div>
+        <div class="ph ph-1-1" data-ph="turf strip with sled" data-ph-id="gym-12" role="img" aria-label="Photo placeholder: turf strip with sled">
+          <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <a class="brand" href="#top">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><use href="#i-mark"></use></svg>
+          <span class="brand-name">Vajra Strength Co.<span class="brand-sub">Mathura</span></span>
+        </a>
+        <p style="margin-top:16px;max-width:38ch">A coached strength and conditioning gym on Krishna Nagar Main Road. Morning and evening batches, six days a week.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="ftr-links">
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#timetable">Class timetable</a></li>
+          <li><a href="#plans">Membership plans</a></li>
+          <li><a href="#coaches">Coaches</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <ul class="ftr-links">
+          <li><a href="tel:+918439305810">+91 84393 05810</a></li>
+          <li><a href="https://wa.me/918439305810?text=Hi%20Vajra%20Strength%20Co.%2C%20I%20have%20a%20question%20about%20membership.">WhatsApp us</a></li>
+          <li><a href="#visit">Timings &amp; address</a></li>
+          <li><a href="#trial">Book a free trial</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-bot">
+      <p>© 2026 Vajra Strength Co., Mathura. All rights reserved.</p>
+      <p>Website by <a href="https://wa.me/918439305810?text=Hi%20NEEV%2C%20I%20saw%20the%20gym%20template%20and%20want%20a%20website%20for%20my%20business.">NEEV</a></p>
+    </div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a class="call" href="tel:+918439305810">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg>
+    Call
+  </a>
+  <a class="wa" href="https://wa.me/918439305810?text=Hi%20Vajra%20Strength%20Co.%2C%20I%20want%20to%20book%20my%20free%20trial%20session.">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"></use></svg>
+    WhatsApp
+  </a>
+</nav>
+
+<script>
+(function () {
+  'use strict';
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Smooth in-page jumps, offset for the sticky header. */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var id = a.getAttribute('href');
+    if (!id || id === '#') return;
+    var target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    var header = document.querySelector('.hdr');
+    var offset = header ? header.getBoundingClientRect().height + 12 : 0;
+    var top = window.pageYOffset + target.getBoundingClientRect().top - offset;
+    window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>

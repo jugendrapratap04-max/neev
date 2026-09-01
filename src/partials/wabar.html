@@ -1,0 +1,9 @@
+<!-- Sticky bar, phones only. This is the trust device: it stays thumb-sized
+     (56px) and never shrinks into a text link. -->
+<div class="safe-bottom glass-header fixed inset-x-0 bottom-0 z-50 border-t border-outline-variant/60 bg-surface-warm/95 px-4 pt-3 sm:hidden">
+  <div class="flex items-center gap-2">
+    <a href="tel:+{{ phone }}" class="btn btn-outline min-h-[56px] flex-1">{{ phoneIcon }} Call</a>
+    <a href="{{ waHero }}" target="_blank" rel="noopener noreferrer" class="btn btn-wa min-h-[56px] flex-[1.4]">{{ waIcon }} WhatsApp</a>
+  </div>
+</div>
+<div class="h-24 sm:hidden" aria-hidden="true"></div>

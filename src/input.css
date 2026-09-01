@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------
+   NEEV — base. Colours and type come from tailwind.config.js, which was
+   lifted from the chosen template. The three utility classes below
+   (.glass-header/.smooth-shadow/.hover-shadow) are the template's own.
+   ------------------------------------------------------------------ */
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background-color: #F6F3ED;
+    color: #18202B;
+    font-family: Inter, ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  h1, h2, h3 { text-wrap: balance; }
+  :focus-visible { outline: 2px solid #0051d5; outline-offset: 2px; border-radius: 2px; }
+  ::selection { background: #dbe1ff; }
+  img { max-width: 100%; height: auto; }
+}
+
+@layer components {
+  .glass-header { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  .smooth-shadow { box-shadow: 0 4px 20px rgba(24, 32, 43, 0.04); }
+  .hover-shadow { transition: box-shadow .25s ease, transform .25s ease; }
+  .hover-shadow:hover { box-shadow: 0 12px 32px rgba(24, 32, 43, 0.08); }
+
+  .wrap { @apply mx-auto w-full max-w-[1280px] px-4 md:px-10; }
+  .section { @apply py-14 md:py-20; }
+
+  .eyebrow { @apply inline-flex items-center gap-2 rounded-full bg-surface-container px-3 py-1.5 text-label-sm uppercase text-secondary; }
+
+  /* Measured floors, not assumed: primary controls 48px, secondary 44px,
+     the sticky WhatsApp bar 56px. scripts/audit.mjs enforces them. */
+  .btn { @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg px-5 text-label-md font-semibold transition-colors; }
+  .btn-primary { @apply btn bg-primary text-on-primary hover:bg-inverse-surface; }
+  .btn-outline { @apply btn border border-outline-variant bg-surface-container-lowest text-on-surface hover:bg-surface-container; }
+  .btn-wa { @apply btn bg-whatsapp text-white hover:bg-whatsapp-dark; }
+  .btn-ghost { @apply btn text-on-surface-variant hover:bg-surface-container; }
+  .btn-sm { @apply min-h-[44px] px-4 text-label-sm; }
+
+  .card { @apply rounded-xl border border-outline-variant/60 bg-surface-container-lowest smooth-shadow; }
+  .chip { @apply inline-flex items-center rounded-full bg-surface-container px-2.5 py-1 text-label-sm text-on-surface-variant; }
+
+  .badge { @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-label-sm font-semibold; }
+  .badge-live { @apply badge bg-success-container text-success; }
+  .badge-design { @apply badge bg-surface-container text-on-surface-variant; }
+
+  /* The placeholders carry the worked examples, so they must be readable:
+     at 60% alpha they measured 3.04:1, under the 4.5:1 floor. */
+  .field { @apply block w-full min-h-[48px] rounded-lg border-outline-variant bg-surface-container-low px-4 text-body-md text-on-surface placeholder:text-on-surface-variant focus:border-secondary focus:ring-secondary; }
+  .label { @apply mb-2 block text-label-md font-medium text-on-surface; }
+  .help { @apply mt-1.5 text-label-sm text-on-surface-variant; }
+  .err { @apply mt-1.5 hidden text-label-md font-medium text-error; }
+  .field-invalid .err { @apply block; }
+  .field-invalid .field { @apply border-error; }
+
+  .prose-hi p { @apply text-body-md text-on-surface-variant; }
+  .link { @apply text-secondary underline underline-offset-4 hover:text-on-secondary-fixed-variant; }
+}
+
+/* The sticky WhatsApp bar is the trust device on mobile: it must never be
+   smaller than a thumb. 56px, not 16px. */
+@layer utilities {
+  /* Additive, not replacing: a bare padding-bottom here beat the bar's own
+     py-3 in the cascade and silently cost it 11px of height. */
+  .safe-bottom { padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px)); }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* Fixed 80px header: anchor targets must clear it. */
+[id] { scroll-margin-top: 96px; }
+
+/* Respect a reduced-motion preference: the header anchors, the skip link and
+   the wizard's scroll-to-error all use smooth scrolling by default. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

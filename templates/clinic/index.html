@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo · Sanjeevani Clinic &amp; Diagnostic Centre — Dr. Anjali Verma, Mathura</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23020812%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%226%22%20fill%3D%22none%22%20stroke%3D%22%23F6F3ED%22%20stroke-width%3D%222.5%22%2F%3E%3C%2Fsvg%3E">
+<meta name="robots" content="noindex">
+<meta name="description" content="General medicine consultation, pathology lab, ECG, digital X-ray and ultrasound in Krishna Nagar, Mathura. Dr. Anjali Verma, MBBS, MD (General Medicine). Mon–Sat, morning and evening. Book on WhatsApp.">
+<meta name="theme-color" content="#0d3b45">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   NEEV template — clinic
+   Palette: deep teal / mist / slate ink. One accent, one shadow.
+   Type: Newsreader (display) + Inter (text)
+   ============================================================ */
+
+*,*::before,*::after{box-sizing:border-box}
+
+:root{
+  --paper:#ffffff;
+  --mist:#f4f8f8;
+  --mist-2:#eaf2f3;
+  --ink:#0b2027;
+  --slate:#4d666e;
+  --slate-2:#6e858c;
+  --line:#dce7e8;
+  --line-soft:#e9f0f0;
+  --deep:#0d3b45;
+  --deep-2:#092b33;
+  --brand:#12707c;
+  --brand-2:#0d5761;
+  --brand-tint:#e2eff0;
+  --shadow:0 20px 44px -28px rgba(9,45,54,.5);
+  --r-sm:10px;
+  --r:14px;
+  --r-lg:20px;
+  --serif:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+}
+
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--slate);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  overflow-wrap:break-word;
+  padding-bottom:96px; /* room for the mobile call bar */
+}
+@media (min-width:860px){body{padding-bottom:0}}
+
+img{max-width:100%;height:auto}
+
+h1,h2,h3,h4,.display{
+  font-family:var(--serif);
+  color:var(--ink);
+  font-weight:500;
+  line-height:1.12;
+  letter-spacing:-.015em;
+  margin:0;
+}
+h1{font-size:clamp(2.3rem,6.1vw,4rem);line-height:1.03;letter-spacing:-.025em}
+h2{font-size:clamp(1.85rem,3.5vw,2.6rem);letter-spacing:-.02em}
+h3{font-size:1.2rem;line-height:1.25}
+p{margin:0;font-size:1.0625rem;line-height:1.68}
+ul,ol{margin:0;padding:0;list-style:none}
+li{font-size:1.0625rem;line-height:1.6}
+strong{color:var(--ink);font-weight:600}
+
+a{color:var(--brand-2);text-decoration:none}
+a:not(.lnk):not(.btn){display:inline-flex;align-items:center;min-height:44px}
+.lnk{display:inline;color:var(--brand-2);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.lnk:hover{color:var(--ink)}
+
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:4px}
+
+.wrap{width:100%;max-width:1160px;margin-inline:auto;padding-inline:clamp(20px,5vw,48px)}
+.sec{padding-block:clamp(56px,8vw,104px)}
+.sec--mist{background:var(--mist)}
+.rule{height:1px;background:var(--line-soft);border:0;margin:0}
+
+.eyebrow{
+  font-family:var(--sans);
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--brand);
+  margin:0 0 18px;
+}
+.lead{font-size:1.125rem;line-height:1.7;color:var(--slate);max-width:56ch}
+.muted{color:var(--slate-2)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:54px;padding:0 26px;border-radius:999px;
+  font-family:var(--sans);font-size:1rem;font-weight:600;letter-spacing:.005em;
+  text-decoration:none;border:1px solid transparent;cursor:pointer;
+  transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .2s ease;
+}
+.btn svg{flex:none}
+.btn--primary{background:var(--brand);color:#fff}
+.btn--primary:hover{background:var(--brand-2)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--brand);color:var(--brand-2)}
+.btn--light{background:#fff;color:var(--deep)}
+.btn--light:hover{background:var(--brand-tint)}
+.btn--outline-light{background:transparent;color:#e6f1f2;border-color:rgba(255,255,255,.32)}
+.btn--outline-light:hover{border-color:#fff;color:#fff}
+@media (prefers-reduced-motion: no-preference){.btn:active{transform:translateY(1px)}}
+
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* ---------- photo placeholders ---------- */
+.ph{
+  position:relative;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;padding:22px;text-align:center;
+  border-radius:var(--r);
+  background:linear-gradient(155deg,#e5eff0 0%,#d6e7e9 46%,#c5dade 100%);
+  color:#4f6d76;
+  overflow:hidden;
+  min-height:180px;
+}
+.ph::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  border:1px solid rgba(13,59,69,.16);pointer-events:none;
+}
+.ph::after{
+  content:attr(data-ph);
+  font-family:var(--sans);
+  font-size:.8125rem;font-weight:500;line-height:1.45;letter-spacing:.03em;
+  max-width:24ch;color:#4f6d76;
+}
+.ph-i{opacity:.7}
+.ph--tall{aspect-ratio:4/5;min-height:320px}
+.ph--wide{aspect-ratio:16/10;min-height:210px}
+.ph--card{aspect-ratio:4/3;min-height:170px}
+.ph--lg{border-radius:var(--r-lg)}
+.ph--dark{
+  background:linear-gradient(155deg,#12454f 0%,#0e3a44 55%,#0a2f37 100%);
+  color:#8fb3ba;
+}
+.ph--dark::before{border-color:rgba(255,255,255,.14)}
+.ph--dark::after{color:#8fb3ba}
+
+/* ---------- header ---------- */
+.hdr{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.94);
+  -webkit-backdrop-filter:saturate(1.4) blur(10px);
+  backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid transparent;
+  transition:border-color .2s ease;
+}
+.hdr.is-stuck{border-bottom-color:var(--line-soft)}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:74px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:12px;min-height:44px}
+.brand__mark{
+  flex:none;width:40px;height:40px;border-radius:11px;
+  background:var(--deep);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+}
+.brand__txt{display:flex;flex-direction:column;line-height:1.15}
+.brand__name{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.brand__sub{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--slate-2);font-weight:500}
+.nav{display:none;align-items:center;gap:4px}
+.nav a{
+  padding:0 13px;min-height:44px;border-radius:999px;
+  font-size:.95rem;font-weight:500;color:var(--slate);
+  transition:color .18s ease,background-color .18s ease;
+}
+.nav a:hover{color:var(--ink);background:var(--mist-2)}
+.hdr__cta{display:none}
+.hdr__hours{font-size:.8rem;line-height:1.35;color:var(--slate-2);text-align:right;max-width:150px;font-weight:500}
+@media (min-width:900px){
+  .nav{display:flex}
+  .hdr__cta{display:inline-flex}
+  .hdr__hours{display:none}
+}
+@media (min-width:1100px){.nav a{padding:0 16px}}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  background:
+    radial-gradient(1200px 560px at 82% -18%, #e4f0f1 0%, rgba(228,240,241,0) 62%),
+    linear-gradient(180deg,#f6fafa 0%, #eff6f6 100%);
+  border-bottom:1px solid var(--line-soft);
+  padding-block:clamp(44px,6.5vw,86px) clamp(52px,7vw,96px);
+}
+.hero__grid{display:grid;gap:clamp(34px,5vw,60px);align-items:center}
+@media (min-width:900px){.hero__grid{grid-template-columns:1.06fr .94fr}}
+.hero h1{margin-bottom:20px}
+.hero__doc{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;
+  padding:16px 0 18px;margin-bottom:6px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.hero__docname{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.hero__docqual{font-size:.95rem;font-weight:500;color:var(--slate);letter-spacing:.01em}
+.hero .lead{margin-top:18px}
+.hero__note{margin-top:22px;font-size:.95rem;color:var(--slate-2)}
+
+.facts{
+  display:grid;grid-template-columns:1fr;gap:0;
+  margin-top:clamp(36px,5vw,56px);
+  border:1px solid var(--line);border-radius:var(--r);
+  background:rgba(255,255,255,.72);
+  overflow:hidden;
+}
+.facts div{padding:18px 22px;border-bottom:1px solid var(--line)}
+.facts div:last-child{border-bottom:0}
+.facts dt{font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;color:var(--slate-2);font-weight:600;margin-bottom:5px}
+.facts dd{margin:0;font-size:1.0625rem;font-weight:600;color:var(--ink);line-height:1.4}
+@media (min-width:760px){
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .facts div{border-bottom:0;border-right:1px solid var(--line)}
+  .facts div:last-child{border-right:0}
+}
+
+/* ---------- section heads ---------- */
+.head{max-width:62ch;margin-bottom:clamp(34px,4.5vw,52px)}
+.head h2{margin-bottom:16px}
+.head--split{display:grid;gap:20px;max-width:none;align-items:end}
+@media (min-width:900px){
+  .head--split{grid-template-columns:1.2fr .8fr}
+  .head--split .lead{margin-left:auto}
+}
+
+/* ---------- facility strip ---------- */
+.strip{display:grid;gap:16px;grid-template-columns:1fr}
+@media (min-width:640px){.strip{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- service cards ---------- */
+.cards{display:grid;gap:16px;grid-template-columns:1fr}
+@media (min-width:680px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:28px 26px 30px;
+  display:flex;flex-direction:column;
+  transition:border-color .2s ease,box-shadow .2s ease;
+}
+.card:hover{border-color:#c5dadc;box-shadow:var(--shadow)}
+.card__ico{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--brand-tint);color:var(--brand-2);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;
+}
+.card h3{margin-bottom:10px}
+.card p{font-size:1rem;color:var(--slate)}
+.card__price{
+  margin-top:auto;padding-top:18px;
+  font-size:.95rem;font-weight:600;color:var(--brand-2);
+  letter-spacing:.01em;
+}
+.card__price span{display:block;font-weight:400;color:var(--slate-2);font-size:.9rem;margin-top:2px}
+
+/* ---------- charges list ---------- */
+.charges{
+  display:grid;gap:0 44px;grid-template-columns:1fr;
+  border-top:1px solid var(--line);
+}
+@media (min-width:760px){.charges{grid-template-columns:1fr 1fr}}
+.charges li{
+  display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+  padding:15px 2px;border-bottom:1px solid var(--line);
+  font-size:1.0625rem;
+}
+.charges .nm{color:var(--ink);font-weight:500}
+.charges .amt{flex:none;font-weight:600;color:var(--brand-2);font-variant-numeric:tabular-nums}
+.charges .dot{display:none}
+@media (min-width:560px){
+  .charges .dot{display:block;flex:1 1 auto;border-bottom:1px dotted #c4d5d7;transform:translateY(-4px);min-width:16px}
+}
+.note{
+  margin-top:26px;padding:18px 20px;
+  background:var(--brand-tint);border-radius:var(--r-sm);
+  font-size:1rem;color:var(--brand-2);
+}
+
+/* ---------- timings table ---------- */
+.hours{width:100%;border-collapse:collapse;text-align:left}
+.hours caption{
+  caption-side:top;text-align:left;
+  font-size:.95rem;color:var(--slate-2);padding-bottom:16px;
+}
+.hours th,.hours td{text-align:left}
+.hours tbody th{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:1.15rem;letter-spacing:-.01em}
+.hours td{font-size:1.0625rem;color:var(--slate);font-variant-numeric:tabular-nums}
+.hours .closed{color:var(--slate-2)}
+
+@media (max-width:719px){
+  .hours,.hours caption,.hours tbody,.hours tr,.hours tbody th,.hours td{display:block;width:100%}
+  .hours caption{caption-side:unset}
+  .hours thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .hours tr{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+    padding:16px 18px;margin-bottom:10px;
+  }
+  .hours tbody th{padding-bottom:8px;border-bottom:1px solid var(--line-soft);margin-bottom:8px}
+  .hours td{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:5px 0}
+  .hours td::before{content:attr(data-l);color:var(--slate-2);font-size:.95rem;flex:none}
+}
+@media (min-width:720px){
+  .hours{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  .hours thead th{
+    font-family:var(--sans);font-size:.74rem;font-weight:600;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--slate-2);
+    padding:16px 24px;background:var(--mist);border-bottom:1px solid var(--line);
+  }
+  .hours tbody th,.hours td{padding:18px 24px;border-bottom:1px solid var(--line-soft);vertical-align:middle}
+  .hours tbody tr:last-child th,.hours tbody tr:last-child td{border-bottom:0}
+  .hours tbody tr:last-child{background:var(--mist)}
+}
+
+.hours-side{display:grid;gap:16px;align-content:start}
+.side-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+  padding:24px 24px 26px;
+}
+.side-card h3{font-size:1.1rem;margin-bottom:10px}
+.side-card p{font-size:1rem}
+.side-card--deep{background:var(--deep);border-color:var(--deep)}
+.side-card--deep h3{color:#fff}
+.side-card--deep p{color:#b6d0d5}
+.timing-grid{display:grid;gap:clamp(28px,4vw,44px)}
+@media (min-width:1000px){.timing-grid{grid-template-columns:1.55fr 1fr;align-items:start}}
+
+/* ---------- doctor ---------- */
+.doc{display:grid;gap:clamp(32px,5vw,60px);align-items:center}
+@media (min-width:900px){.doc{grid-template-columns:.85fr 1.15fr}}
+.doc h2{margin-bottom:6px}
+.doc__qual{
+  font-size:.95rem;font-weight:600;letter-spacing:.02em;color:var(--brand);
+  margin-bottom:22px;
+}
+.doc p + p{margin-top:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.tags span{
+  display:inline-flex;align-items:center;
+  padding:8px 15px;border-radius:999px;
+  background:var(--brand-tint);color:var(--brand-2);
+  font-size:.9rem;font-weight:500;
+}
+.doc__meta{
+  margin-top:28px;padding-top:22px;border-top:1px solid var(--line);
+  display:grid;gap:14px;
+}
+@media (min-width:600px){.doc__meta{grid-template-columns:1fr 1fr}}
+.doc__meta dt{font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;color:var(--slate-2);font-weight:600;margin-bottom:4px}
+.doc__meta dd{margin:0;font-size:1rem;color:var(--ink);font-weight:500}
+
+/* ---------- patient info ---------- */
+.info{display:grid;gap:16px;grid-template-columns:1fr}
+@media (min-width:760px){.info{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1060px){.info{grid-template-columns:repeat(3,1fr)}}
+.panel{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+  padding:30px 28px 32px;
+}
+.panel h3{margin-bottom:18px}
+.checklist li{
+  position:relative;padding-left:28px;margin-bottom:12px;
+  font-size:1.0625rem;color:var(--slate);
+}
+.checklist li:last-child{margin-bottom:0}
+.checklist li::before{
+  content:"";position:absolute;left:0;top:.62em;
+  width:9px;height:9px;border-radius:50%;
+  border:1.5px solid var(--brand);
+}
+
+/* ---------- directions ---------- */
+.visit{display:grid;gap:clamp(30px,4.5vw,52px)}
+@media (min-width:960px){.visit{grid-template-columns:1fr 1.05fr;align-items:start}}
+.addr{font-style:normal}
+.addr__line{font-size:1.1875rem;line-height:1.55;color:var(--ink);font-weight:500}
+.dirs{margin-top:26px;display:grid;gap:18px}
+.dirs div{display:grid;gap:4px}
+.dirs dt{font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;color:var(--slate-2);font-weight:600}
+.dirs dd{margin:0;font-size:1.0625rem;color:var(--slate)}
+.visit__media{display:grid;gap:16px}
+@media (min-width:520px){.visit__media{grid-template-columns:1fr 1fr}}
+.visit__media .ph:first-child{grid-column:1/-1}
+
+/* ---------- call band ---------- */
+.band{background:var(--deep);color:#cfe2e5}
+.band__in{
+  display:grid;gap:28px;align-items:center;
+  padding-block:clamp(48px,6.5vw,80px);
+}
+@media (min-width:900px){.band__in{grid-template-columns:1.25fr .75fr}}
+.band h2{color:#fff}
+.band p{color:#a9c8ce;margin-top:16px;max-width:48ch}
+.band .btnrow{margin-top:0}
+@media (min-width:900px){.band .btnrow{justify-content:flex-end}}
+
+/* ---------- footer ---------- */
+.ft{background:var(--deep-2);color:#9fbfc6;padding-block:clamp(48px,6vw,72px) 0}
+.ft__grid{display:grid;gap:34px}
+@media (min-width:700px){.ft__grid{grid-template-columns:1.4fr 1fr 1fr}}
+@media (min-width:1000px){.ft__grid{grid-template-columns:1.6fr 1fr 1fr 1.1fr}}
+.ft h4{color:#fff;font-family:var(--sans);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+.ft p{font-size:1rem;color:#9fbfc6;line-height:1.7}
+.ft li{font-size:1rem}
+.ft a{color:#cfe2e5;font-size:1rem}
+.ft a:hover{color:#fff}
+.ft__brand{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.ft__brand .brand__mark{background:rgba(255,255,255,.1)}
+.ft__brand .brand__name{color:#fff}
+.ft__brand .brand__sub{color:#7ea6ae}
+.ft__bar{
+  margin-top:clamp(36px,5vw,56px);
+  border-top:1px solid rgba(255,255,255,.12);
+  padding-block:18px 22px;
+  display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;justify-content:space-between;
+}
+.ft__bar span{font-size:.9rem;color:#7ea6ae}
+.ft__bar a{font-size:.9rem}
+
+/* ---------- mobile call bar ---------- */
+.mbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  display:flex;gap:10px;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));
+  background:rgba(255,255,255,.96);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);
+}
+.mbar a{
+  flex:1 1 0;min-width:0;min-height:56px;
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  border-radius:12px;font-size:1rem;font-weight:600;letter-spacing:.01em;
+}
+.mbar .mbar__call{background:var(--mist-2);color:var(--deep);border:1px solid var(--line)}
+.mbar .mbar__wa{background:var(--brand);color:#fff}
+@media (min-width:860px){.mbar{display:none}}
+
+/* ---------- reveal (opt-in via JS, reduced-motion safe) ---------- */
+.rv-on .rv{opacity:0;transform:translateY(14px)}
+.rv-on .rv.is-in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
+@media (prefers-reduced-motion: reduce){
+  .rv-on .rv{opacity:1;transform:none}
+}
+</style>
+<style>/* photo-filled */
+  [data-ph-id]:has(> img)::before, [data-ph-id]:has(> img)::after { content: none !important; }
+  [data-ph-id]:has(> img) { background-image: none !important; }
+</style>
+</head>
+<body>
+<!-- neev-demo-ribbon: added by scripts/demo-ribbon.mjs, not by hand -->
+<style>
+  .neev-demo-ribbon{position:relative;z-index:2147483647;display:flex;flex-wrap:wrap;align-items:center;
+    justify-content:center;gap:.5rem 1rem;padding:.75rem 1rem;background:#020812;color:#fff;
+    font:500 14px/1.45 Inter,ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif;text-align:center}
+  .neev-demo-ribbon b{background:#0051d5;color:#fff;border-radius:999px;padding:.15rem .55rem;
+    font-size:11px;letter-spacing:.08em;font-weight:700}
+  .neev-demo-ribbon span{opacity:.75}
+  .neev-demo-ribbon a{display:inline-flex;align-items:center;min-height:44px;padding:0 1rem;
+    border-radius:8px;background:#0f7b45;color:#fff;text-decoration:none;font-weight:600}
+  .neev-demo-ribbon a.ghost{background:transparent;border:1px solid rgba(255,255,255,.25)}
+  @media (max-width:520px){.neev-demo-ribbon{font-size:13px}}
+</style>
+<div class="neev-demo-ribbon">
+  <b>DEMO</b>
+  <span>A sample design by NEEV. This is not a real business &mdash; the name, prices and photos are placeholders.</span>
+  <a href="https://wa.me/918439305810?text=Hello%20Jugendra%2C%20I%20like%20this%20demo%20design.%20My%20business%20is%20______.">Get this design</a>
+  <a class="ghost" href="../../index.html">All templates</a>
+</div>
+
+
+
+
+
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="#top" aria-label="Sanjeevani Clinic and Diagnostic Centre, back to top">
+      <span class="brand__mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+      </span>
+      <span class="brand__txt">
+        <span class="brand__name">Sanjeevani</span>
+        <span class="brand__sub">Clinic &amp; Diagnostics</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Sections">
+      <a href="#services">Services</a>
+      <a href="#charges">Charges</a>
+      <a href="#timings">Timings</a>
+      <a href="#doctor">Doctor</a>
+      <a href="#patients">Patients</a>
+      <a href="#visit">Visit</a>
+    </nav>
+
+    <a class="btn btn--primary hdr__cta" href="https://wa.me/918439305810?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Sanjeevani%20Clinic.">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2 22l5.36-1.4a9.8 9.8 0 0 0 4.68 1.2h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.48 2 12.04 2Zm5.76 14.06c-.24.68-1.4 1.3-1.94 1.34-.5.06-1.13.08-1.82-.11a16.5 16.5 0 0 1-1.65-.61c-2.9-1.25-4.79-4.17-4.94-4.37-.14-.2-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.14-.3.3-.13.59.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.3 2.35 1.45.29.14.46.12.63-.07.17-.2.72-.85.92-1.14.19-.29.39-.24.65-.14.26.09 1.67.79 1.96.93.29.15.48.22.55.34.07.12.07.68-.17 1.35Z"/></svg>
+      Book appointment
+    </a>
+
+    <span class="hdr__hours">Mon&ndash;Sat &middot; 8:30 am&ndash;8:30 pm</span>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div>
+          <p class="eyebrow">Krishna Nagar, Mathura &middot; Uttar Pradesh</p>
+          <h1>Sanjeevani Clinic &amp; Diagnostic Centre</h1>
+
+          <div class="hero__doc">
+            <span class="hero__docname">Dr. Anjali Verma</span>
+            <span class="hero__docqual">MBBS, MD (General Medicine) &middot; Consultant Physician</span>
+          </div>
+
+          <p class="lead">General medicine consultation with an in-house pathology lab, ECG, digital X-ray and ultrasound &mdash; so most cases are examined, tested and treated in the same visit. Walk in, or send a message and we will hold a slot for you.</p>
+
+          <div class="btnrow">
+            <a class="btn btn--primary" href="https://wa.me/918439305810?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20Anjali%20Verma.%20Patient%20name%3A%20%0APreferred%20day%20and%20time%3A%20">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2 22l5.36-1.4a9.8 9.8 0 0 0 4.68 1.2h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.48 2 12.04 2Zm5.76 14.06c-.24.68-1.4 1.3-1.94 1.34-.5.06-1.13.08-1.82-.11a16.5 16.5 0 0 1-1.65-.61c-2.9-1.25-4.79-4.17-4.94-4.37-.14-.2-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.14-.3.3-.13.59.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.3 2.35 1.45.29.14.46.12.63-.07.17-.2.72-.85.92-1.14.19-.29.39-.24.65-.14.26.09 1.67.79 1.96.93.29.15.48.22.55.34.07.12.07.68-.17 1.35Z"/></svg>
+              Book appointment
+            </a>
+            <a class="btn btn--ghost" href="tel:+918439305810">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16.9v2.6a1.7 1.7 0 0 1-1.9 1.7 17 17 0 0 1-7.4-2.6 16.7 16.7 0 0 1-5.1-5.1A17 17 0 0 1 4 6.1 1.7 1.7 0 0 1 5.7 4.2h2.6a1.7 1.7 0 0 1 1.7 1.5c.1.9.3 1.7.6 2.5a1.7 1.7 0 0 1-.4 1.8l-1.1 1.1a13.6 13.6 0 0 0 5.1 5.1l1.1-1.1a1.7 1.7 0 0 1 1.8-.4c.8.3 1.6.5 2.5.6a1.7 1.7 0 0 1 1.4 1.6Z"/></svg>
+              Call the clinic
+            </a>
+          </div>
+
+          <p class="hero__note">Phone <a class="lnk" href="tel:+918439305810">+91 84393 05810</a> &middot; reception answers 8:00 am to 9:00 pm</p>
+        </div>
+
+        <div class="ph ph--tall ph--lg rv" data-ph="clinic reception and waiting area, wide" data-ph-id="clinic-01" style="position:relative">
+          <svg class="ph-i" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.4" cy="10" r="1.6"/><path d="M21 16.6l-4.6-4.3a1.6 1.6 0 0 0-2.2 0L5 19"/></svg>
+        <img src="img/clinic-01.webp" alt="clinic reception and waiting area, wide" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit"></div>
+      </div>
+
+      <dl class="facts">
+        <div>
+          <dt>Consultation fee</dt>
+          <dd>&#8377;400 &middot; follow-up &#8377;200</dd>
+        </div>
+        <div>
+          <dt>Lab reports</dt>
+          <dd>Same day by 6:00 pm</dd>
+        </div>
+        <div>
+          <dt>Access</dt>
+          <dd>Ground floor, ramp at entrance</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= FACILITY STRIP ================= -->
+  <section class="sec" style="padding-block:clamp(40px,5vw,64px)">
+    <div class="wrap">
+      <div class="strip">
+        <div class="ph ph--card rv" data-ph="waiting area with seating" data-ph-id="clinic-02">
+          <svg class="ph-i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.4" cy="10" r="1.6"/><path d="M21 16.6l-4.6-4.3a1.6 1.6 0 0 0-2.2 0L5 19"/></svg>
+        </div>
+        <div class="ph ph--card rv" data-ph="consultation room, doctor's desk" data-ph-id="clinic-03">
+          <svg class="ph-i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.4" cy="10" r="1.6"/><path d="M21 16.6l-4.6-4.3a1.6 1.6 0 0 0-2.2 0L5 19"/></svg>
+        </div>
+        <div class="ph ph--card rv" data-ph="sample collection counter" data-ph-id="clinic-04">
+          <svg class="ph-i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.4" cy="10" r="1.6"/><path d="M21 16.6l-4.6-4.3a1.6 1.6 0 0 0-2.2 0L5 19"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="sec sec--mist" id="services">
+    <div class="wrap">
+      <div class="head head--split rv">
+        <div>
+          <p class="eyebrow">What we treat and test</p>
+          <h2>Consultation and diagnostics under one roof</h2>
+        </div>
+        <p class="lead">Examination, samples and imaging happen in the same building, so a diagnosis usually does not need a second appointment somewhere else in the city.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card__ico" aria-hidden="true">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a5 5 0 0 0 10 0V3"/><path d="M4 3h3M15 3h3"/><path d="M11 14v2a5 5 0 0 0 5 5 4 4 0 0 0 4-4v-2"/><circle cx="20" cy="10.5" r="2"/></svg>
+          </span>
+          <h3>General OPD</h3>
+          <p>Fever, cough, throat and chest infection, stomach trouble, body ache, weakness, seasonal illness. Examination, diagnosis and a written prescription.</p>
+          <p class="card__price">&#8377;400 first visit<span>Follow-up within 15 days &#8377;200</span></p>
+        </article>
+
+        <article class="card">
+          <span class="card__ico" aria-hidden="true">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2s6 6.1 6 10a6 6 0 0 1-12 0c0-3.9 6-10 6-10Z"/><path d="M9.4 13.6a2.7 2.7 0 0 0 2.6 2.7"/></svg>
+          </span>
+          <h3>Diabetes &amp; blood pressure clinic</h3>
+          <p>Monthly review with sugar and BP charting, dose adjustment, kidney and eye check reminders, and a simple diet sheet in Hindi.</p>
+          <p class="card__price">&#8377;400 review visit<span>HbA1c &#8377;450 when advised</span></p>
+        </article>
+
+        <article class="card">
+          <span class="card__ico" aria-hidden="true">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3v6.2L4.9 17a2.6 2.6 0 0 0 2.2 4h9.8a2.6 2.6 0 0 0 2.2-4l-4.6-7.8V3"/><path d="M8 3h8"/><path d="M7 15h10"/></svg>
+          </span>
+          <h3>Pathology laboratory</h3>
+          <p>Blood, urine and stool testing on the premises. Samples taken between 7:00 and 11:00 am; reports handed over or sent on WhatsApp the same evening.</p>
+          <p class="card__price">CBC &#8377;250 &middot; Thyroid &#8377;500<span>Home collection &#8377;100 extra in city</span></p>
+        </article>
+
+        <article class="card">
+          <span class="card__ico" aria-hidden="true">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2.2-6 3.4 12L14.2 12H22"/></svg>
+          </span>
+          <h3>ECG &amp; digital X-ray</h3>
+          <p>Twelve-lead ECG taken and read on the spot. Digital X-ray for chest, limbs and spine, with the film and a soft copy given to you.</p>
+          <p class="card__price">ECG &#8377;250 &middot; X-ray from &#8377;350<span>No appointment needed</span></p>
+        </article>
+
+        <article class="card">
+          <span class="card__ico" aria-hidden="true">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19a11 11 0 0 1 14-14"/><path d="M7.5 15.5a7 7 0 0 1 8-8"/><path d="M10 12.2a3 3 0 0 1 3-3"/></svg>
+          </span>
+          <h3>Ultrasound</h3>
+          <p>Whole abdomen, pelvis and antenatal scans by a visiting radiologist. Reported the same day. Please book a slot in advance.</p>
+          <p class="card__price">From &#8377;900<span>Tuesday &amp; Friday, 10:00 am&ndash;1:00 pm</span></p>
+        </article>
+
+        <article class="card">
+          <span class="card__ico" aria-hidden="true">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 3.5 20.5 6.5"/><path d="M15.2 5.8 18.2 8.8"/><path d="M12.6 8.4l3 3"/><path d="M10.2 6.2 17.8 13.8 13.6 18a3.4 3.4 0 0 1-4.8 0l-2.6-2.6a3.4 3.4 0 0 1 0-4.8Z"/><path d="M6.5 17.5 3.5 20.5"/></svg>
+          </span>
+          <h3>Vaccination &amp; injections</h3>
+          <p>Child immunisation as per the national schedule with a printed card, plus adult flu, typhoid and tetanus vaccines. Dressing and injections daily.</p>
+          <p class="card__price">Dressing &#8377;150<span>Vaccine charged at cost + &#8377;100</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CHARGES ================= -->
+  <section class="sec" id="charges">
+    <div class="wrap">
+      <div class="head rv">
+        <p class="eyebrow">Tests and charges</p>
+        <h2>Our rates, written down</h2>
+        <p class="lead">The list below is the whole price list for the tests we do most often. There is no separate registration or file charge.</p>
+      </div>
+
+      <ul class="charges">
+        <li><span class="nm">Complete Blood Count (CBC)</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;250</span></li>
+        <li><span class="nm">Blood sugar &mdash; fasting + post meal</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;120</span></li>
+        <li><span class="nm">HbA1c (three month sugar average)</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;450</span></li>
+        <li><span class="nm">Lipid profile</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;600</span></li>
+        <li><span class="nm">Thyroid profile (T3, T4, TSH)</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;500</span></li>
+        <li><span class="nm">Liver function test</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;650</span></li>
+        <li><span class="nm">Kidney function test</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;650</span></li>
+        <li><span class="nm">Urine routine and microscopy</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;150</span></li>
+        <li><span class="nm">Widal / typhoid test</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;300</span></li>
+        <li><span class="nm">ECG, twelve lead</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;250</span></li>
+        <li><span class="nm">Digital X-ray, single film</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;350</span></li>
+        <li><span class="nm">Ultrasound, whole abdomen</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;900</span></li>
+        <li><span class="nm">Full body health check, 52 parameters</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;1,499</span></li>
+        <li><span class="nm">Home sample collection, Mathura city</span><span class="dot" aria-hidden="true"></span><span class="amt">&#8377;100</span></li>
+      </ul>
+
+      <p class="note">Payment by cash or UPI at the counter. A printed receipt is given for every payment, and for insurance or Ayushman claims we provide a stamped copy of the bill and reports on request.</p>
+    </div>
+  </section>
+
+  <!-- ================= TIMINGS ================= -->
+  <section class="sec sec--mist" id="timings">
+    <div class="wrap">
+      <div class="head rv">
+        <p class="eyebrow">Consultation timings</p>
+        <h2>When the doctor sits</h2>
+      </div>
+
+      <div class="timing-grid">
+        <div>
+          <table class="hours">
+            <caption>Dr. Anjali Verma&rsquo;s OPD hours. Last patient is registered fifteen minutes before closing.</caption>
+            <thead>
+              <tr><th scope="col">Day</th><th scope="col">Morning</th><th scope="col">Evening</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Monday</th><td data-l="Morning">8:30 am &ndash; 1:00 pm</td><td data-l="Evening">5:00 pm &ndash; 8:30 pm</td></tr>
+              <tr><th scope="row">Tuesday</th><td data-l="Morning">8:30 am &ndash; 1:00 pm</td><td data-l="Evening">5:00 pm &ndash; 8:30 pm</td></tr>
+              <tr><th scope="row">Wednesday</th><td data-l="Morning">8:30 am &ndash; 1:00 pm</td><td data-l="Evening">5:00 pm &ndash; 8:30 pm</td></tr>
+              <tr><th scope="row">Thursday</th><td data-l="Morning">8:30 am &ndash; 1:00 pm</td><td data-l="Evening">5:00 pm &ndash; 8:30 pm</td></tr>
+              <tr><th scope="row">Friday</th><td data-l="Morning">8:30 am &ndash; 1:00 pm</td><td data-l="Evening">5:00 pm &ndash; 8:30 pm</td></tr>
+              <tr><th scope="row">Saturday</th><td data-l="Morning">8:30 am &ndash; 1:00 pm</td><td data-l="Evening" class="closed">Closed</td></tr>
+              <tr><th scope="row">Sunday</th><td data-l="All day" class="closed" colspan="2">Closed &mdash; emergency calls attended by phone</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="hours-side">
+          <div class="side-card">
+            <h3>Laboratory hours</h3>
+            <p>Sample collection Monday to Saturday, 7:00 am &ndash; 11:00 am. Reports are ready by 6:00 pm the same day and can be sent to you on WhatsApp.</p>
+          </div>
+          <div class="side-card">
+            <h3>Ultrasound</h3>
+            <p>Tuesday and Friday, 10:00 am &ndash; 1:00 pm, by appointment only. Please message a day earlier so a slot can be kept for you.</p>
+          </div>
+          <div class="side-card side-card--deep">
+            <h3>Holidays</h3>
+            <p>The clinic is closed on Holi, Diwali and 15 August. Closures are put up at the reception a week in advance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DOCTOR ================= -->
+  <section class="sec" id="doctor">
+    <div class="wrap">
+      <div class="doc">
+        <div class="ph ph--tall ph--lg rv" data-ph="dr. anjali verma, portrait in consultation room" data-ph-id="clinic-05">
+          <svg class="ph-i" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.4" cy="10" r="1.6"/><path d="M21 16.6l-4.6-4.3a1.6 1.6 0 0 0-2.2 0L5 19"/></svg>
+        </div>
+
+        <div>
+          <p class="eyebrow">The doctor</p>
+          <h2>Dr. Anjali Verma</h2>
+          <p class="doc__qual">MBBS, MD (General Medicine) &middot; Consultant Physician</p>
+
+          <p>Dr. Verma completed her MBBS from S. N. Medical College, Agra, and her MD in General Medicine from King George&rsquo;s Medical University, Lucknow. She has been practising in Mathura since 2013 and opened Sanjeevani in Krishna Nagar to keep consultation and testing in the same place.</p>
+          <p>Her working style is unhurried: a full history, an examination, and only the tests that will actually change the treatment. Prescriptions are written with the generic name of every medicine alongside the brand, so you can buy whichever your chemist stocks.</p>
+
+          <div class="tags">
+            <span>Diabetes</span>
+            <span>Blood pressure</span>
+            <span>Thyroid</span>
+            <span>Chest infections</span>
+            <span>Anaemia</span>
+            <span>Preventive health checks</span>
+          </div>
+
+          <dl class="doc__meta">
+            <div>
+              <dt>Languages</dt>
+              <dd>Hindi, English, Braj</dd>
+            </div>
+            <div>
+              <dt>Laboratory in-charge</dt>
+              <dd>Mr. Sunil Kaushik, DMLT</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PATIENT INFORMATION ================= -->
+  <section class="sec sec--mist" id="patients">
+    <div class="wrap">
+      <div class="head rv">
+        <p class="eyebrow">Patient information</p>
+        <h2>Before you come in</h2>
+        <p class="lead">Five minutes of preparation saves a second trip. Please read the points that apply to your visit.</p>
+      </div>
+
+      <div class="info">
+        <div class="panel">
+          <h3>What to bring</h3>
+          <ul class="checklist">
+            <li>Previous prescriptions, even old ones</li>
+            <li>Any reports from the last two years</li>
+            <li>A written list of the medicines you take, with doses</li>
+            <li>Aadhaar or any photo identity card</li>
+            <li>Insurance or Ayushman card, if you have one</li>
+            <li>Spectacles, so you can read the prescription</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Before a blood test</h3>
+          <ul class="checklist">
+            <li>Fast for ten to twelve hours for sugar and lipid tests</li>
+            <li>Plain water is allowed and encouraged</li>
+            <li>Take your regular medicines unless the doctor says otherwise</li>
+            <li>Come between 7:00 and 11:00 am with the doctor&rsquo;s slip</li>
+            <li>Tell the technician if you feel faint at the sight of blood</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Fees and payment</h3>
+          <ul class="checklist">
+            <li>First consultation &#8377;400</li>
+            <li>Follow-up within fifteen days &#8377;200</li>
+            <li>Dressing or injection &#8377;150</li>
+            <li>Tests are charged at the rates listed on this page</li>
+            <li>Cash and UPI accepted; receipt given every time</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="strip" style="margin-top:16px">
+        <div class="ph ph--card rv" data-ph="pathology lab bench with analyser" data-ph-id="clinic-06">
+          <svg class="ph-i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.4" cy="10" r="1.6"/><path d="M21 16.6l-4.6-4.3a1.6 1.6 0 0 0-2.2 0L5 19"/></svg>
+        </div>
+        <div class="ph ph--card rv" data-ph="digital x-ray room" data-ph-id="clinic-07">
+          <svg class="ph-i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.4" cy="10" r="1.6"/><path d="M21 16.6l-4.6-4.3a1.6 1.6 0 0 0-2.2 0L5 19"/></svg>
+        </div>
+        <div class="ph ph--card rv" data-ph="dressing and injection room" data-ph-id="clinic-08">
+          <svg class="ph-i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.4" cy="10" r="1.6"/><path d="M21 16.6l-4.6-4.3a1.6 1.6 0 0 0-2.2 0L5 19"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VISIT / DIRECTIONS ================= -->
+  <section class="sec" id="visit">
+    <div class="wrap">
+      <div class="visit">
+        <div>
+          <p class="eyebrow">Finding us</p>
+          <h2>Krishna Nagar Main Road</h2>
+
+          <address class="addr" style="margin-top:22px">
+            <span class="addr__line">Sanjeevani Clinic &amp; Diagnostic Centre<br>24, Krishna Nagar Main Road<br>Opposite Sarvodaya School<br>Mathura, Uttar Pradesh 281004</span>
+          </address>
+
+          <dl class="dirs">
+            <div>
+              <dt>Landmark</dt>
+              <dd>The blue-and-white board is beside Gupta Medical Store, one lane before the Krishna Nagar water tank.</dd>
+            </div>
+            <div>
+              <dt>Getting here</dt>
+              <dd>About six minutes by auto from Mathura Junction, and ten minutes from the Bhuteshwar crossing.</dd>
+            </div>
+            <div>
+              <dt>Parking</dt>
+              <dd>Two-wheelers in front of the clinic. Cars in the lane on the right-hand side of the building.</dd>
+            </div>
+            <div>
+              <dt>Access</dt>
+              <dd>Everything is on the ground floor. There is a ramp at the entrance and a wheelchair at the reception.</dd>
+            </div>
+          </dl>
+
+          <div class="btnrow">
+            <a class="btn btn--primary" href="https://wa.me/918439305810?text=Hello%2C%20please%20share%20the%20location%20of%20Sanjeevani%20Clinic%2C%20Krishna%20Nagar.">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2 22l5.36-1.4a9.8 9.8 0 0 0 4.68 1.2h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.48 2 12.04 2Zm5.76 14.06c-.24.68-1.4 1.3-1.94 1.34-.5.06-1.13.08-1.82-.11a16.5 16.5 0 0 1-1.65-.61c-2.9-1.25-4.79-4.17-4.94-4.37-.14-.2-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.14-.3.3-.13.59.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.3 2.35 1.45.29.14.46.12.63-.07.17-.2.72-.85.92-1.14.19-.29.39-.24.65-.14.26.09 1.67.79 1.96.93.29.15.48.22.55.34.07.12.07.68-.17 1.35Z"/></svg>
+              Ask for the location
+            </a>
+            <a class="btn btn--ghost" href="tel:+918439305810">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16.9v2.6a1.7 1.7 0 0 1-1.9 1.7 17 17 0 0 1-7.4-2.6 16.7 16.7 0 0 1-5.1-5.1A17 17 0 0 1 4 6.1 1.7 1.7 0 0 1 5.7 4.2h2.6a1.7 1.7 0 0 1 1.7 1.5c.1.9.3 1.7.6 2.5a1.7 1.7 0 0 1-.4 1.8l-1.1 1.1a13.6 13.6 0 0 0 5.1 5.1l1.1-1.1a1.7 1.7 0 0 1 1.8-.4c.8.3 1.6.5 2.5.6a1.7 1.7 0 0 1 1.4 1.6Z"/></svg>
+              +91 84393 05810
+            </a>
+          </div>
+        </div>
+
+        <div class="visit__media">
+          <div class="ph ph--wide ph--lg rv" data-ph="clinic entrance and signboard from the road" data-ph-id="clinic-09">
+            <svg class="ph-i" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.4" cy="10" r="1.6"/><path d="M21 16.6l-4.6-4.3a1.6 1.6 0 0 0-2.2 0L5 19"/></svg>
+          </div>
+          <div class="ph ph--card rv" data-ph="hand-drawn map or map screenshot" data-ph-id="clinic-10">
+            <svg class="ph-i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6.4v13.2L9 17l6 2.6 6-2.4V4l-6 2.4Z"/><path d="M9 4v13M15 6.4V19.6"/></svg>
+          </div>
+          <div class="ph ph--card rv" data-ph="pharmacy and billing counter" data-ph-id="clinic-11">
+            <svg class="ph-i" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.4" cy="10" r="1.6"/><path d="M21 16.6l-4.6-4.3a1.6 1.6 0 0 0-2.2 0L5 19"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CALL BAND ================= -->
+  <section class="band">
+    <div class="wrap band__in">
+      <div>
+        <h2>Message us and a slot will be kept</h2>
+        <p>Send the patient&rsquo;s name, age and the day you would like to come. Reception replies between 8:00 am and 9:00 pm. Walk-in patients are always seen as well.</p>
+      </div>
+      <div class="btnrow">
+        <a class="btn btn--light" href="https://wa.me/918439305810?text=Hello%2C%20I%20would%20like%20an%20appointment%20at%20Sanjeevani%20Clinic.%0APatient%20name%3A%20%0AAge%3A%20%0APreferred%20day%20and%20time%3A%20">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2 22l5.36-1.4a9.8 9.8 0 0 0 4.68 1.2h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.48 2 12.04 2Zm5.76 14.06c-.24.68-1.4 1.3-1.94 1.34-.5.06-1.13.08-1.82-.11a16.5 16.5 0 0 1-1.65-.61c-2.9-1.25-4.79-4.17-4.94-4.37-.14-.2-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.14-.3.3-.13.59.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.3 2.35 1.45.29.14.46.12.63-.07.17-.2.72-.85.92-1.14.19-.29.39-.24.65-.14.26.09 1.67.79 1.96.93.29.15.48.22.55.34.07.12.07.68-.17 1.35Z"/></svg>
+          WhatsApp the clinic
+        </a>
+        <a class="btn btn--outline-light" href="tel:+918439305810">Call +91 84393 05810</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__grid">
+      <div>
+        <div class="ft__brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+          <span class="brand__txt">
+            <span class="brand__name">Sanjeevani</span>
+            <span class="brand__sub">Clinic &amp; Diagnostics</span>
+          </span>
+        </div>
+        <p>24, Krishna Nagar Main Road, opposite Sarvodaya School, Mathura, Uttar Pradesh 281004.</p>
+        <p style="margin-top:12px">Dr. Anjali Verma, MBBS, MD (General Medicine).</p>
+      </div>
+
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#charges">Tests &amp; charges</a></li>
+          <li><a href="#timings">Timings</a></li>
+          <li><a href="#doctor">The doctor</a></li>
+          <li><a href="#patients">Patient information</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Timings</h4>
+        <p>Mon&ndash;Fri&nbsp;&nbsp;8:30 am&ndash;1:00 pm<br>and 5:00 pm&ndash;8:30 pm</p>
+        <p style="margin-top:10px">Sat&nbsp;&nbsp;8:30 am&ndash;1:00 pm<br>Sun&nbsp;&nbsp;Closed</p>
+        <p style="margin-top:10px">Lab samples 7:00&ndash;11:00 am</p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+918439305810">+91 84393 05810</a></li>
+          <li><a href="https://wa.me/918439305810?text=Hello%2C%20I%20have%20a%20question%20about%20Sanjeevani%20Clinic.">WhatsApp the clinic</a></li>
+        </ul>
+        <p style="margin-top:10px">Reception answers 8:00 am&ndash;9:00 pm, every day.</p>
+      </div>
+    </div>
+
+    <div class="ft__bar">
+      <span>&copy; <span id="yr">2026</span> Sanjeevani Clinic &amp; Diagnostic Centre. This website is for information only and is not a substitute for medical advice.</span>
+      <a href="https://wa.me/918439305810?text=Hi%20NEEV%2C%20I%20saw%20the%20clinic%20template%20and%20want%20a%20website%20for%20my%20business.">Website by NEEV</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MOBILE CALL BAR ================= -->
+<nav class="mbar" aria-label="Contact the clinic">
+  <a class="mbar__call" href="tel:+918439305810">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16.9v2.6a1.7 1.7 0 0 1-1.9 1.7 17 17 0 0 1-7.4-2.6 16.7 16.7 0 0 1-5.1-5.1A17 17 0 0 1 4 6.1 1.7 1.7 0 0 1 5.7 4.2h2.6a1.7 1.7 0 0 1 1.7 1.5c.1.9.3 1.7.6 2.5a1.7 1.7 0 0 1-.4 1.8l-1.1 1.1a13.6 13.6 0 0 0 5.1 5.1l1.1-1.1a1.7 1.7 0 0 1 1.8-.4c.8.3 1.6.5 2.5.6a1.7 1.7 0 0 1 1.4 1.6Z"/></svg>
+    Call
+  </a>
+  <a class="mbar__wa" href="https://wa.me/918439305810?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Sanjeevani%20Clinic.">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2 22l5.36-1.4a9.8 9.8 0 0 0 4.68 1.2h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.48 2 12.04 2Zm5.76 14.06c-.24.68-1.4 1.3-1.94 1.34-.5.06-1.13.08-1.82-.11a16.5 16.5 0 0 1-1.65-.61c-2.9-1.25-4.79-4.17-4.94-4.37-.14-.2-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.14-.3.3-.13.59.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.3 2.35 1.45.29.14.46.12.63-.07.17-.2.72-.85.92-1.14.19-.29.39-.24.65-.14.26.09 1.67.79 1.96.93.29.15.48.22.55.34.07.12.07.68-.17 1.35Z"/></svg>
+    WhatsApp
+  </a>
+</nav>
+
+<script>
+(function () {
+  'use strict';
+
+  var yr = document.getElementById('yr');
+  if (yr) { yr.textContent = String(new Date().getFullYear()); }
+
+  var hdr = document.querySelector('.hdr');
+  if (hdr) {
+    var stick = function () {
+      if (window.pageYOffset > 8) { hdr.classList.add('is-stuck'); }
+      else { hdr.classList.remove('is-stuck'); }
+    };
+    stick();
+    window.addEventListener('scroll', stick, { passive: true });
+  }
+
+  var reduced = false;
+  if (window.matchMedia) {
+    reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  var items = document.querySelectorAll('.rv');
+  if (!reduced && items.length && typeof window.IntersectionObserver === 'function') {
+    document.documentElement.classList.add('rv-on');
+    var io = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) {
+          entries[i].target.classList.add('is-in');
+          io.unobserve(entries[i].target);
+        }
+      }
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+    for (var j = 0; j < items.length; j++) { io.observe(items[j]); }
+  }
+})();
+</script>
+
+</body>
+</html>

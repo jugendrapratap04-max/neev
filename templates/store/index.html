@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo · Trivedi Brass &amp; Copper — Handmade brass, copper and kansa from Moradabad</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23020812%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%226%22%20fill%3D%22none%22%20stroke%3D%22%23F6F3ED%22%20stroke-width%3D%222.5%22%2F%3E%3C%2Fsvg%3E">
+<meta name="robots" content="noindex">
+<meta name="description" content="Family-run brass and copper shop in Moradabad since 1978. Thalis, urlis, copper bottles, pooja items and gifting sets. Order on WhatsApp. UPI or cash on delivery.">
+<meta name="theme-color" content="#123A32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   NEEV template — "store"
+   Palette : deep pine #123A32 / warm paper #FAF6F0 / copper #A2551F
+   Type    : Fraunces (display)  +  Inter (text)
+   ============================================================ */
+
+:root{
+  --paper:#FAF6F0;
+  --card:#FFFFFF;
+  --ink:#191713;
+  --body:#3E3830;
+  --muted:#6E6558;
+  --line:#E6DCCD;
+  --line-soft:#EFE7DA;
+  --deep:#123A32;
+  --deep-2:#0C2A24;
+  --copper:#A2551F;
+  --copper-dk:#8A4517;
+  --copper-soft:#F5E7D8;
+  --wa:#128C4A;
+
+  --shadow:0 1px 2px rgba(25,23,19,.05), 0 12px 28px -14px rgba(25,23,19,.28);
+  --r:14px;
+  --r-lg:20px;
+  --wrap:1180px;
+  --gut:20px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--body);
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  overflow-wrap:break-word;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+svg{display:block}
+
+h1,h2,h3,h4{
+  font-family:"Fraunces","Georgia",serif;
+  color:var(--ink);
+  font-weight:600;
+  line-height:1.08;
+  letter-spacing:-.015em;
+  margin:0;
+}
+h1{font-size:clamp(2.15rem,7.2vw,4.05rem);letter-spacing:-.03em;font-weight:600}
+h2{font-size:clamp(1.72rem,4.1vw,2.65rem);letter-spacing:-.022em}
+h3{font-size:1.16rem;letter-spacing:-.012em;line-height:1.28}
+p{margin:0 0 1rem}
+p:last-child{margin-bottom:0}
+a{color:inherit}
+
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+.sec{padding-block:clamp(52px,8vw,96px)}
+.sec--tight{padding-block:clamp(40px,6vw,68px)}
+
+.eyebrow{
+  display:inline-block;
+  font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--copper);
+}
+.lede{font-size:clamp(1.02rem,1.6vw,1.18rem);color:var(--muted);max-width:60ch}
+.sec-head{max-width:66ch;margin-bottom:34px}
+.sec-head .eyebrow{margin-bottom:12px}
+.sec-head h2 + p{margin-top:14px}
+
+.skip{
+  position:absolute;left:16px;top:10px;z-index:200;
+  background:var(--deep);color:#fff;border-radius:10px;
+  padding:12px 18px;font-weight:600;text-decoration:none;
+  opacity:0;pointer-events:none;
+}
+.skip:focus{opacity:1;pointer-events:auto}
+
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px;border-radius:8px}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:52px;padding:12px 22px;
+  border-radius:999px;border:1px solid transparent;
+  font:600 16px/1.2 "Inter",system-ui,sans-serif;
+  text-decoration:none;cursor:pointer;
+  transition:background-color .18s ease,border-color .18s ease,color .18s ease;
+}
+.btn svg{width:19px;height:19px;flex:none}
+.btn--wa{background:var(--wa);color:#fff}
+.btn--wa:hover{background:#0E7A40}
+.btn--deep{background:var(--deep);color:#fff}
+.btn--deep:hover{background:var(--deep-2)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--ink)}
+.btn--copper{background:var(--copper);color:#fff}
+.btn--copper:hover{background:var(--copper-dk)}
+.btn--sm{min-height:46px;padding:10px 16px;font-size:15px}
+.btn--block{width:100%}
+
+/* ---------- photo placeholders ---------- */
+.ph{
+  position:relative;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:9px;
+  padding:18px;text-align:center;overflow:hidden;
+  border-radius:var(--r);
+  color:#96876F;
+  background:
+    repeating-linear-gradient(135deg,rgba(255,255,255,.55) 0 2px,rgba(255,255,255,0) 2px 11px),
+    linear-gradient(155deg,#F7F0E5 0%,#EFE5D6 52%,#E6D9C6 100%);
+  box-shadow:inset 0 0 0 1px rgba(25,23,19,.09);
+}
+.ph::after{
+  content:attr(data-ph);
+  font-size:12px;font-weight:600;line-height:1.45;
+  letter-spacing:.1em;text-transform:uppercase;
+  max-width:90%;
+}
+.ph-i{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.25;
+  stroke-linecap:round;stroke-linejoin:round;opacity:.72}
+.ph--sm{padding:12px;gap:6px;border-radius:12px}
+.ph--sm::after{font-size:10.5px;letter-spacing:.08em}
+.ph--sm .ph-i{width:20px;height:20px}
+
+/* ---------- header ---------- */
+.hdr{
+  position:sticky;top:0;z-index:60;
+  background:rgba(250,246,240,.92);
+  backdrop-filter:saturate(1.3) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.hdr__in{display:flex;align-items:center;gap:16px;min-height:72px}
+.brand{
+  display:inline-flex;align-items:center;gap:11px;
+  min-height:48px;text-decoration:none;margin-right:auto;
+}
+.brand__mark{
+  width:38px;height:38px;flex:none;border-radius:11px;
+  background:var(--deep);display:grid;place-items:center;
+}
+.brand__mark svg{width:21px;height:21px;stroke:#E4C79A;fill:none;stroke-width:1.5;
+  stroke-linecap:round;stroke-linejoin:round}
+.brand__txt{display:flex;flex-direction:column;line-height:1.15}
+.brand__name{font-family:"Fraunces",Georgia,serif;font-size:19px;font-weight:600;
+  color:var(--ink);letter-spacing:-.02em}
+.brand__sub{font-size:10.5px;font-weight:600;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--muted)}
+
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{
+  display:inline-flex;align-items:center;min-height:44px;padding:0 13px;
+  font-size:15px;font-weight:500;color:var(--body);text-decoration:none;border-radius:10px;
+  transition:background-color .16s ease,color .16s ease;
+}
+.nav a:hover{background:#F0E8DB;color:var(--ink)}
+
+.cart{
+  position:relative;display:inline-flex;align-items:center;gap:9px;
+  min-height:46px;padding:0 16px;border-radius:999px;
+  background:var(--card);border:1px solid var(--line);
+  font:600 15px/1 "Inter",system-ui,sans-serif;color:var(--ink);cursor:pointer;
+  transition:border-color .16s ease;
+}
+.cart:hover{border-color:var(--ink)}
+.cart svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.6;
+  stroke-linecap:round;stroke-linejoin:round}
+.cart__n{
+  min-width:23px;height:23px;padding:0 6px;border-radius:999px;
+  background:var(--copper);color:#fff;font-size:12.5px;font-weight:700;
+  display:inline-grid;place-items:center;
+}
+.hdr .btn{display:none}
+@media (min-width:1040px){ .hdr .btn{display:inline-flex} }
+@media (max-width:1039px){ .nav{display:none} }
+@media (max-width:520px){
+  .hdr__in{min-height:64px;gap:10px}
+  .brand__mark{width:34px;height:34px;border-radius:10px}
+  .brand__mark svg{width:19px;height:19px}
+  .brand__name{font-size:16px}
+  .brand__sub{display:none}
+}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(38px,5.5vw,72px) clamp(46px,6vw,84px)}
+.hero__grid{display:grid;gap:34px}
+.hero__badge{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--copper-soft);color:var(--copper-dk);
+  border-radius:999px;padding:7px 15px;
+  font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  margin-bottom:20px;
+}
+.hero h1{margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--copper);font-weight:500}
+.hero__lede{font-size:clamp(1.04rem,1.7vw,1.22rem);color:var(--muted);max-width:48ch;margin-bottom:28px}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.hero__facts{
+  display:flex;flex-wrap:wrap;gap:10px 26px;
+  padding-top:22px;border-top:1px solid var(--line);
+}
+.fact{display:flex;flex-direction:column;gap:2px}
+.fact__k{font-family:"Fraunces",Georgia,serif;font-size:19px;font-weight:600;color:var(--ink)}
+.fact__v{font-size:13px;color:var(--muted);letter-spacing:.02em}
+
+.hero__art{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.hero__art .ph:first-child{grid-column:1 / -1;min-height:240px;border-radius:var(--r-lg)}
+.hero__art .ph:not(:first-child){min-height:118px}
+@media (min-width:900px){
+  .hero__grid{grid-template-columns:1.02fr .98fr;align-items:center;gap:56px}
+  .hero__art .ph:first-child{min-height:340px}
+  .hero__art .ph:not(:first-child){min-height:150px}
+}
+
+/* ---------- category strip ---------- */
+.cats{background:var(--card);border-block:1px solid var(--line)}
+.cats__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin-bottom:24px}
+.cats__head h2{font-size:clamp(1.4rem,2.6vw,1.8rem)}
+.cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (min-width:640px){.cat-grid{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:980px){.cat-grid{grid-template-columns:repeat(6,1fr);gap:16px}}
+.cat{
+  display:flex;flex-direction:column;gap:10px;min-height:44px;
+  text-decoration:none;color:var(--ink);
+}
+.cat .ph{aspect-ratio:1/1;border-radius:var(--r)}
+.cat__n{font-size:15px;font-weight:600;line-height:1.3}
+.cat__c{font-size:13px;color:var(--muted);margin-top:-6px}
+.cat:hover .ph{box-shadow:inset 0 0 0 1px rgba(162,85,31,.5)}
+
+/* ---------- product grid ---------- */
+.prod-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media (min-width:760px){.prod-grid{grid-template-columns:repeat(3,1fr);gap:20px}}
+@media (min-width:1040px){.prod-grid{grid-template-columns:repeat(4,1fr);gap:22px}}
+
+.card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r-lg);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:border-color .18s ease,box-shadow .18s ease;
+}
+.card:hover{border-color:#D9CBB4;box-shadow:var(--shadow)}
+.card__media{position:relative;padding:10px 10px 0}
+.card__media .ph{aspect-ratio:4/5;border-radius:12px}
+.tag{
+  position:absolute;top:18px;left:18px;z-index:2;
+  background:var(--deep);color:#fff;border-radius:999px;
+  padding:5px 11px;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+}
+.tag--copper{background:var(--copper)}
+.card__body{padding:14px 14px 16px;display:flex;flex-direction:column;flex:1;gap:4px}
+.card__cat{font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+.card h3{margin-top:2px}
+.card__spec{font-size:16px;color:var(--muted);line-height:1.55}
+.price{display:flex;align-items:baseline;gap:9px;margin:auto 0 14px;padding-top:14px}
+.price__now{font-family:"Fraunces",Georgia,serif;font-size:23px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.price__was{font-size:14.5px;color:var(--muted);text-decoration:line-through}
+.card__act{display:grid;gap:8px}
+.card__act .btn{width:100%;white-space:nowrap;padding-inline:12px}
+
+/* ---------- bestsellers rail ---------- */
+.best{background:var(--deep);color:#EFE7DA}
+.best h2,.best h3{color:#FFF9EF}
+.best .eyebrow{color:#E4C79A}
+.best .lede{color:#B9C9C0}
+.rail{
+  display:grid;grid-auto-flow:column;grid-auto-columns:264px;gap:16px;
+  overflow-x:auto;padding-bottom:14px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+}
+.rail > *{scroll-snap-align:start}
+@media (min-width:1040px){
+  .rail{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible;padding-bottom:0}
+}
+.bcard{
+  background:rgba(255,255,255,.055);border:1px solid rgba(228,199,154,.24);
+  border-radius:var(--r-lg);padding:12px;display:flex;flex-direction:column;gap:12px;
+}
+.bcard .ph{aspect-ratio:1/1}
+.bcard__n{font-family:"Fraunces",Georgia,serif;font-size:17px;font-weight:600;color:#FFF9EF;line-height:1.25}
+.bcard__d{font-size:14px;color:#B9C9C0;margin-top:-6px}
+.bcard__p{font-family:"Fraunces",Georgia,serif;font-size:20px;font-weight:600;color:#E4C79A}
+.bcard .btn{margin-top:auto}
+
+/* ---------- how it works ---------- */
+.steps{display:grid;gap:16px}
+@media (min-width:820px){.steps{grid-template-columns:repeat(3,1fr);gap:22px}}
+.step{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:26px 22px;
+}
+.step__n{
+  width:38px;height:38px;border-radius:11px;background:var(--copper-soft);
+  color:var(--copper-dk);display:grid;place-items:center;
+  font-family:"Fraunces",Georgia,serif;font-size:18px;font-weight:600;margin-bottom:16px;
+}
+.step h3{margin-bottom:8px}
+.step p{font-size:16px;color:var(--muted)}
+
+/* ---------- delivery / payment ---------- */
+.pay-grid{display:grid;gap:16px}
+@media (min-width:820px){.pay-grid{grid-template-columns:1.15fr .85fr;gap:24px}}
+.panel{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:clamp(22px,3.4vw,34px);
+}
+.panel h3{margin-bottom:14px}
+.dlist{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.dlist li{
+  display:grid;grid-template-columns:26px 1fr;gap:13px;align-items:start;
+  font-size:16px;color:var(--body);line-height:1.55;
+}
+.dlist svg{width:22px;height:22px;margin-top:3px;stroke:var(--copper);fill:none;stroke-width:1.5;
+  stroke-linecap:round;stroke-linejoin:round}
+.dlist b{color:var(--ink);font-weight:600}
+.paytags{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.paytag{
+  border:1px solid var(--line);border-radius:10px;background:var(--paper);
+  padding:9px 14px;font-size:14px;font-weight:600;color:var(--ink);
+}
+.note{
+  margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);
+  font-size:15px;color:var(--muted);
+}
+
+/* ---------- about strip ---------- */
+.about{background:var(--card);border-block:1px solid var(--line)}
+.about__grid{display:grid;gap:30px}
+@media (min-width:920px){.about__grid{grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}}
+.about__art{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.about__art .ph{min-height:150px}
+.about__art .ph:first-child{min-height:210px}
+@media (min-width:920px){
+  .about__art .ph{min-height:180px}
+  .about__art .ph:first-child{min-height:250px}
+}
+.about p{font-size:16.5px}
+.sign{
+  margin-top:22px;padding-top:18px;border-top:1px solid var(--line);
+  display:flex;flex-direction:column;gap:2px;
+}
+.sign__n{font-family:"Fraunces",Georgia,serif;font-size:19px;font-weight:600;color:var(--ink)}
+.sign__r{font-size:14px;color:var(--muted)}
+
+/* ---------- bulk band ---------- */
+.band{background:var(--copper-soft)}
+.band__in{display:grid;gap:22px;align-items:center}
+@media (min-width:900px){.band__in{grid-template-columns:1.4fr auto;gap:40px}}
+.band h2{font-size:clamp(1.5rem,2.9vw,2.05rem)}
+.band p{margin-top:12px;color:#6B4A2E;font-size:16.5px;max-width:56ch}
+.band__cta{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- contact ---------- */
+.contact__grid{display:grid;gap:22px}
+@media (min-width:900px){.contact__grid{grid-template-columns:1fr 1fr;gap:32px}}
+.info{display:grid;gap:20px;margin-top:4px}
+.info__row{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start}
+.info__ic{
+  width:42px;height:42px;border-radius:12px;background:var(--copper-soft);
+  display:grid;place-items:center;
+}
+.info__ic svg{width:20px;height:20px;stroke:var(--copper-dk);fill:none;stroke-width:1.5;
+  stroke-linecap:round;stroke-linejoin:round}
+.info__k{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.info__v{font-size:17px;color:var(--ink);line-height:1.5}
+.info__v a{
+  display:inline-flex;align-items:center;min-height:44px;
+  color:var(--copper-dk);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(162,85,31,.35)
+}
+.info__v a:hover{color:var(--copper)}
+.hours{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px;max-width:340px}
+.hours li{display:flex;justify-content:space-between;gap:16px;font-size:16px;
+  padding-bottom:6px;border-bottom:1px dashed var(--line)}
+.map .ph{min-height:300px;border-radius:var(--r-lg)}
+@media (min-width:900px){.map .ph{min-height:100%}}
+.map{display:flex;flex-direction:column;gap:12px}
+.map .btn{align-self:flex-start}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--deep-2);color:#C3D2CB;padding-block:52px 30px}
+.ftr h4{color:#FFF9EF;font-family:"Inter",sans-serif;font-size:12.5px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.ftr__grid{display:grid;gap:32px}
+@media (min-width:760px){.ftr__grid{grid-template-columns:1.5fr 1fr 1fr}}
+@media (min-width:1040px){.ftr__grid{grid-template-columns:1.7fr 1fr 1fr 1.1fr;gap:40px}}
+.ftr .brand__name{color:#FFF9EF}
+.ftr .brand__sub{color:#8FA79D}
+.ftr__blurb{font-size:15.5px;color:#A8BCB4;margin-top:14px;max-width:38ch}
+.ftr ul{list-style:none;margin:0;padding:0}
+.ftr li a{
+  display:inline-flex;align-items:center;min-height:44px;
+  color:#C3D2CB;text-decoration:none;font-size:15.5px;
+}
+.ftr li a:hover{color:#fff}
+.ftr__bot{
+  margin-top:38px;padding-top:20px;border-top:1px solid rgba(255,255,255,.11);
+  display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;
+  font-size:14.5px;color:#8FA79D;
+}
+.ftr__bot a{display:inline-flex;align-items:center;min-height:44px;color:#C3D2CB;text-decoration:none}
+
+/* ---------- sticky mobile bar ---------- */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:80;display:none;
+  gap:10px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.97);
+  border-top:1px solid var(--line);
+  box-shadow:0 -8px 24px -14px rgba(25,23,19,.45);
+}
+.bar .btn{flex:1;min-height:56px;font-size:16px}
+@media (max-width:1039px){
+  .bar{display:flex}
+  body{padding-bottom:88px}
+}
+
+/* ---------- toast ---------- */
+.toast{
+  position:fixed;left:50%;transform:translateX(-50%);
+  bottom:104px;z-index:90;
+  background:var(--deep);color:#FFF9EF;
+  border-radius:999px;padding:11px 20px;font-size:15px;font-weight:600;
+  box-shadow:var(--shadow);opacity:0;pointer-events:none;
+  transition:opacity .2s ease;
+  max-width:calc(100vw - 32px);text-align:center;
+}
+.toast.on{opacity:1}
+@media (min-width:1040px){.toast{bottom:28px}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important}
+}
+</style>
+<style>/* photo-filled */
+  [data-ph-id]:has(> img)::before, [data-ph-id]:has(> img)::after { content: none !important; }
+  [data-ph-id]:has(> img) { background-image: none !important; }
+</style>
+</head>
+<body>
+<!-- neev-demo-ribbon: added by scripts/demo-ribbon.mjs, not by hand -->
+<style>
+  .neev-demo-ribbon{position:relative;z-index:2147483647;display:flex;flex-wrap:wrap;align-items:center;
+    justify-content:center;gap:.5rem 1rem;padding:.75rem 1rem;background:#020812;color:#fff;
+    font:500 14px/1.45 Inter,ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif;text-align:center}
+  .neev-demo-ribbon b{background:#0051d5;color:#fff;border-radius:999px;padding:.15rem .55rem;
+    font-size:11px;letter-spacing:.08em;font-weight:700}
+  .neev-demo-ribbon span{opacity:.75}
+  .neev-demo-ribbon a{display:inline-flex;align-items:center;min-height:44px;padding:0 1rem;
+    border-radius:8px;background:#0f7b45;color:#fff;text-decoration:none;font-weight:600}
+  .neev-demo-ribbon a.ghost{background:transparent;border:1px solid rgba(255,255,255,.25)}
+  @media (max-width:520px){.neev-demo-ribbon{font-size:13px}}
+</style>
+<div class="neev-demo-ribbon">
+  <b>DEMO</b>
+  <span>A sample design by NEEV. This is not a real business &mdash; the name, prices and photos are placeholders.</span>
+  <a href="https://wa.me/918439305810?text=Hello%20Jugendra%2C%20I%20like%20this%20demo%20design.%20My%20business%20is%20______.">Get this design</a>
+  <a class="ghost" href="../../index.html">All templates</a>
+</div>
+
+
+
+
+
+
+<a class="skip" href="#shop">Skip to products</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-photo" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2.5"></rect>
+      <circle cx="8.5" cy="10" r="1.6"></circle>
+      <path d="M3.5 16.5l4.8-4.2a2 2 0 0 1 2.7.05L15 16.2m1.6-2.1a1.8 1.8 0 0 1 2.4 0l1.5 1.4"></path>
+    </symbol>
+    <symbol id="i-shop" viewBox="0 0 24 24">
+      <path d="M4 9.5V19a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9.5"></path>
+      <path d="M3 6.2 4.4 3.6A1 1 0 0 1 5.3 3h13.4a1 1 0 0 1 .9.6L21 6.2a3 3 0 0 1-5 3.1 3 3 0 0 1-4 0 3 3 0 0 1-4 0 3 3 0 0 1-5-3.1Z"></path>
+      <path d="M10 20v-5h4v5"></path>
+    </symbol>
+    <symbol id="i-map" viewBox="0 0 24 24">
+      <path d="M9 3.5 3.5 5.8v14.7L9 18.2l6 2.3 5.5-2.3V3.5L15 5.8 9 3.5Z"></path>
+      <path d="M9 3.5v14.7M15 5.8v14.7"></path>
+    </symbol>
+    <symbol id="i-pot" viewBox="0 0 24 24">
+      <path d="M6 9h12v6.5a4.5 4.5 0 0 1-4.5 4.5h-3A4.5 4.5 0 0 1 6 15.5V9Z"></path>
+      <path d="M4 9h16M8 9V6.5A2.5 2.5 0 0 1 10.5 4h3A2.5 2.5 0 0 1 16 6.5V9"></path>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="#top" aria-label="Trivedi Brass and Copper, home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><use href="#i-pot"></use></svg>
+      </span>
+      <span class="brand__txt">
+        <span class="brand__name">Trivedi Brass &amp; Copper</span>
+        <span class="brand__sub">Moradabad · since 1978</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a href="#shop">Shop</a>
+      <a href="#bestsellers">Bestsellers</a>
+      <a href="#delivery">Delivery &amp; payment</a>
+      <a href="#about">Our workshop</a>
+      <a href="#visit">Visit us</a>
+    </nav>
+
+    <button class="cart" type="button" id="cartBtn" aria-label="Shopping bag">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 8h12l-1 12H7L6 8Z"></path><path d="M9.2 8V6.4a2.8 2.8 0 0 1 5.6 0V8"></path>
+      </svg>
+      <span>Bag</span>
+      <span class="cart__n" id="cartN">0</span>
+    </button>
+
+    <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%20Trivedi%20Brass%20%26%20Copper%2C%20I%20would%20like%20to%20ask%20about%20an%20item.">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.94.52 3.76 1.44 5.32L2 22l4.98-1.6a9.8 9.8 0 0 0 5.06 1.4c5.43 0 9.84-4.4 9.84-9.84C21.88 6.4 17.47 2 12.04 2Zm5.72 13.9c-.24.68-1.4 1.3-1.94 1.34-.5.06-1.12.08-1.8-.12a15.9 15.9 0 0 1-1.64-.6c-2.9-1.26-4.78-4.18-4.92-4.38-.14-.2-1.18-1.56-1.18-2.98s.74-2.12 1-2.4c.26-.3.56-.36.75-.36h.54c.18 0 .42-.06.65.5.24.58.82 2 .9 2.14.06.14.1.3.02.48-.1.2-.14.32-.28.5l-.42.48c-.14.14-.28.3-.12.58.16.28.72 1.18 1.54 1.92 1.06.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.08.16-.2.7-.8.88-1.08.18-.28.36-.24.6-.14.24.1 1.56.74 1.82.87.26.14.44.2.5.32.06.12.06.68-.18 1.34Z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="sec hero">
+    <div class="wrap hero__grid">
+      <div>
+        <span class="hero__badge">Handmade in Peetal Nagri</span>
+        <h1>Brass, copper and kansa for the <em>Indian home</em></h1>
+        <p class="hero__lede">Three generations of Moradabad metalwork — thalis, urlis, water bottles and pooja items, hand-finished in our own workshop. Send us a message, we pack it the same day.</p>
+        <div class="hero__cta">
+          <a class="btn btn--wa" href="https://wa.me/918439305810?text=Hello%2C%20I%20saw%20your%20website.%20Please%20share%20today%27s%20rate%20list.">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.94.52 3.76 1.44 5.32L2 22l4.98-1.6a9.8 9.8 0 0 0 5.06 1.4c5.43 0 9.84-4.4 9.84-9.84C21.88 6.4 17.47 2 12.04 2Zm5.72 13.9c-.24.68-1.4 1.3-1.94 1.34-.5.06-1.12.08-1.8-.12a15.9 15.9 0 0 1-1.64-.6c-2.9-1.26-4.78-4.18-4.92-4.38-.14-.2-1.18-1.56-1.18-2.98s.74-2.12 1-2.4c.26-.3.56-.36.75-.36h.54c.18 0 .42-.06.65.5.24.58.82 2 .9 2.14.06.14.1.3.02.48-.1.2-.14.32-.28.5l-.42.48c-.14.14-.28.3-.12.58.16.28.72 1.18 1.54 1.92 1.06.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.08.16-.2.7-.8.88-1.08.18-.28.36-.24.6-.14.24.1 1.56.74 1.82.87.26.14.44.2.5.32.06.12.06.68-.18 1.34Z"/></svg>
+            Order on WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="#shop">Browse the shop</a>
+        </div>
+        <div class="hero__facts">
+          <div class="fact"><span class="fact__k">Since 1978</span><span class="fact__v">Family workshop</span></div>
+          <div class="fact"><span class="fact__k">Same-day</span><span class="fact__v">Dispatch before 4 pm</span></div>
+          <div class="fact"><span class="fact__k">UPI or COD</span><span class="fact__v">Pay how you like</span></div>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <div class="ph" data-ph="Shop counter, wide" data-ph-id="store-01" style="position:relative"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shop"></use></svg><img src="img/store-01.webp" alt="Shop counter, wide" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit"></div>
+        <div class="ph" data-ph="Brass thali close-up" data-ph-id="store-02"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+        <div class="ph" data-ph="Polishing by hand" data-ph-id="store-03"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="sec--tight cats" aria-labelledby="cat-h">
+    <div class="wrap">
+      <div class="cats__head">
+        <h2 id="cat-h">Shop by category</h2>
+        <span class="eyebrow">Six sections, one counter</span>
+      </div>
+      <div class="cat-grid">
+        <a class="cat" href="#shop">
+          <div class="ph ph--sm" data-ph="Thali &amp; dinner set" data-ph-id="store-04"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          <span class="cat__n">Kitchen &amp; dining</span><span class="cat__c">42 items</span>
+        </a>
+        <a class="cat" href="#shop">
+          <div class="ph ph--sm" data-ph="Diya &amp; pooja thali" data-ph-id="store-05"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          <span class="cat__n">Pooja &amp; decor</span><span class="cat__c">36 items</span>
+        </a>
+        <a class="cat" href="#shop">
+          <div class="ph ph--sm" data-ph="Copper bottles row" data-ph-id="store-06"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          <span class="cat__n">Copper bottles</span><span class="cat__c">18 items</span>
+        </a>
+        <a class="cat" href="#shop">
+          <div class="ph ph--sm" data-ph="Brass idols shelf" data-ph-id="store-07"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          <span class="cat__n">Idols &amp; murti</span><span class="cat__c">27 items</span>
+        </a>
+        <a class="cat" href="#shop">
+          <div class="ph ph--sm" data-ph="Gift box packed" data-ph-id="store-08"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          <span class="cat__n">Gifting sets</span><span class="cat__c">21 items</span>
+        </a>
+        <a class="cat" href="#bulk">
+          <div class="ph ph--sm" data-ph="Wedding bulk order" data-ph-id="store-09"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          <span class="cat__n">Wedding &amp; bulk</span><span class="cat__c">Made to order</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT GRID ============ -->
+  <section class="sec" id="shop" aria-labelledby="shop-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">In stock today</span>
+        <h2 id="shop-h">This week at the counter</h2>
+        <p class="lede">Every piece is weighed and priced openly. Tap <b>Order on WhatsApp</b> and the item name comes with your message — no forms, no account.</p>
+      </div>
+
+      <div class="prod-grid">
+
+        <article class="card">
+          <div class="card__media">
+            <span class="tag tag--copper">Best seller</span>
+            <div class="ph" data-ph="Brass thali set, top view" data-ph-id="store-10"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          </div>
+          <div class="card__body">
+            <span class="card__cat">Kitchen &amp; dining</span>
+            <h3>Brass Thali Set, 12 inch</h3>
+            <p class="card__spec">Thali, 2 katori, glass and spoon. Food-safe kalai lining.</p>
+            <div class="price"><span class="price__now">₹1,450</span><span class="price__was">₹1,750</span></div>
+            <div class="card__act">
+              <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Brass%20Thali%20Set%2012%20inch%20-%20%E2%82%B91%2C450">Order on WhatsApp</a>
+              <button class="btn btn--ghost btn--sm" type="button" data-add="Brass Thali Set">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <div class="ph" data-ph="Copper bottle, standing" data-ph-id="store-11"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          </div>
+          <div class="card__body">
+            <span class="card__cat">Copper bottles</span>
+            <h3>Hammered Copper Bottle, 950 ml</h3>
+            <p class="card__spec">Pure copper, leak-proof cap. Comes in a cotton sleeve.</p>
+            <div class="price"><span class="price__now">₹690</span></div>
+            <div class="card__act">
+              <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Hammered%20Copper%20Bottle%20950%20ml%20-%20%E2%82%B9690">Order on WhatsApp</a>
+              <button class="btn btn--ghost btn--sm" type="button" data-add="Copper Bottle">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <div class="ph" data-ph="Brass urli with flowers" data-ph-id="store-12"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          </div>
+          <div class="card__body">
+            <span class="card__cat">Pooja &amp; decor</span>
+            <h3>Brass Urli Bowl, 10 inch</h3>
+            <p class="card__spec">Antique finish, sits flat. Looks best with water and marigold.</p>
+            <div class="price"><span class="price__now">₹2,190</span></div>
+            <div class="card__act">
+              <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Brass%20Urli%20Bowl%2010%20inch%20-%20%E2%82%B92%2C190">Order on WhatsApp</a>
+              <button class="btn btn--ghost btn--sm" type="button" data-add="Brass Urli Bowl">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <div class="ph" data-ph="Copper jug and glass" data-ph-id="store-13"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          </div>
+          <div class="card__body">
+            <span class="card__cat">Kitchen &amp; dining</span>
+            <h3>Copper Jug with 2 Glasses</h3>
+            <p class="card__spec">1.3 litre jug, hammered body, lacquer-free inside.</p>
+            <div class="price"><span class="price__now">₹1,180</span><span class="price__was">₹1,390</span></div>
+            <div class="card__act">
+              <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Copper%20Jug%20with%202%20Glasses%20-%20%E2%82%B91%2C180">Order on WhatsApp</a>
+              <button class="btn btn--ghost btn--sm" type="button" data-add="Copper Jug">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <span class="tag">Under ₹600</span>
+            <div class="ph" data-ph="Six brass diyas, lit" data-ph-id="store-14"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          </div>
+          <div class="card__body">
+            <span class="card__cat">Pooja &amp; decor</span>
+            <h3>Brass Diya, set of 6</h3>
+            <p class="card__spec">Deep bowl, steady base. Packed in a small gift carton.</p>
+            <div class="price"><span class="price__now">₹520</span></div>
+            <div class="card__act">
+              <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Brass%20Diya%20set%20of%206%20-%20%E2%82%B9520">Order on WhatsApp</a>
+              <button class="btn btn--ghost btn--sm" type="button" data-add="Brass Diya set">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <div class="ph" data-ph="Kansa katori set of 4" data-ph-id="store-15"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          </div>
+          <div class="card__body">
+            <span class="card__cat">Kitchen &amp; dining</span>
+            <h3>Kansa Katori, set of 4</h3>
+            <p class="card__spec">Bell-metal serving bowls, 200 ml each. Hand-buffed rim.</p>
+            <div class="price"><span class="price__now">₹980</span></div>
+            <div class="card__act">
+              <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Kansa%20Katori%20set%20of%204%20-%20%E2%82%B9980">Order on WhatsApp</a>
+              <button class="btn btn--ghost btn--sm" type="button" data-add="Kansa Katori set">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <div class="ph" data-ph="Pooja thali with bell" data-ph-id="store-16"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          </div>
+          <div class="card__body">
+            <span class="card__cat">Pooja &amp; decor</span>
+            <h3>Pooja Thali with Bell</h3>
+            <p class="card__spec">Thali, ghanti, agarbatti stand and two small bowls.</p>
+            <div class="price"><span class="price__now">₹1,340</span></div>
+            <div class="card__act">
+              <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Pooja%20Thali%20with%20Bell%20-%20%E2%82%B91%2C340">Order on WhatsApp</a>
+              <button class="btn btn--ghost btn--sm" type="button" data-add="Pooja Thali">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <div class="ph" data-ph="Copper handi with lid" data-ph-id="store-17"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          </div>
+          <div class="card__body">
+            <span class="card__cat">Kitchen &amp; dining</span>
+            <h3>Copper Handi with Lid,&nbsp;1.5&nbsp;L</h3>
+            <p class="card__spec">Tin-lined inside, serving-safe. Riveted brass handles.</p>
+            <div class="price"><span class="price__now">₹1,760</span></div>
+            <div class="card__act">
+              <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Copper%20Handi%20with%20Lid%201.5%20L%20-%20%E2%82%B91%2C760">Order on WhatsApp</a>
+              <button class="btn btn--ghost btn--sm" type="button" data-add="Copper Handi">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <span class="tag">Made to order</span>
+            <div class="ph" data-ph="Brass Ganesh wall panel" data-ph-id="store-18"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          </div>
+          <div class="card__body">
+            <span class="card__cat">Idols &amp; murti</span>
+            <h3>Brass Ganesh Wall Panel</h3>
+            <p class="card__spec">18 × 12 inch, hand-engraved. Allow 6 working days.</p>
+            <div class="price"><span class="price__now">₹2,850</span></div>
+            <div class="card__act">
+              <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Brass%20Ganesh%20Wall%20Panel%20-%20%E2%82%B92%2C850">Order on WhatsApp</a>
+              <button class="btn btn--ghost btn--sm" type="button" data-add="Brass Ganesh Panel">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <div class="ph" data-ph="Three-tier lunch box" data-ph-id="store-19"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          </div>
+          <div class="card__body">
+            <span class="card__cat">Kitchen &amp; dining</span>
+            <h3>Copper-Steel Tiffin, 3 tier</h3>
+            <p class="card__spec">Steel inside, copper outside. Clip lock, carry handle.</p>
+            <div class="price"><span class="price__now">₹1,090</span></div>
+            <div class="card__act">
+              <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Copper-Steel%20Tiffin%203%20tier%20-%20%E2%82%B91%2C090">Order on WhatsApp</a>
+              <button class="btn btn--ghost btn--sm" type="button" data-add="Copper-Steel Tiffin">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <div class="ph" data-ph="Brass hanging bell" data-ph-id="store-20"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          </div>
+          <div class="card__body">
+            <span class="card__cat">Pooja &amp; decor</span>
+            <h3>Temple Hanging Bell, 8 inch</h3>
+            <p class="card__spec">Solid cast brass with a long, clean ring. Chain included.</p>
+            <div class="price"><span class="price__now">₹1,620</span></div>
+            <div class="card__act">
+              <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Temple%20Hanging%20Bell%208%20inch%20-%20%E2%82%B91%2C620">Order on WhatsApp</a>
+              <button class="btn btn--ghost btn--sm" type="button" data-add="Temple Bell">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <span class="tag tag--copper">Gift packed</span>
+            <div class="ph" data-ph="Gift hamper, open box" data-ph-id="store-21"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          </div>
+          <div class="card__body">
+            <span class="card__cat">Gifting sets</span>
+            <h3>Griha Pravesh Gift Box</h3>
+            <p class="card__spec">Diya pair, small urli and a copper glass in a jute box.</p>
+            <div class="price"><span class="price__now">₹1,890</span><span class="price__was">₹2,150</span></div>
+            <div class="card__act">
+              <a class="btn btn--wa btn--sm" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Griha%20Pravesh%20Gift%20Box%20-%20%E2%82%B91%2C890">Order on WhatsApp</a>
+              <button class="btn btn--ghost btn--sm" type="button" data-add="Griha Pravesh Gift Box">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BESTSELLERS ============ -->
+  <section class="sec best" id="bestsellers" aria-labelledby="best-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Off the shelf fastest</span>
+        <h2 id="best-h">What Moradabad keeps asking for</h2>
+        <p class="lede">The four pieces we re-stock almost every week, at the same counter price.</p>
+      </div>
+      <div class="rail">
+        <div class="bcard">
+          <div class="ph" data-ph="Thali set, styled" data-ph-id="store-22"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          <span class="bcard__n">Brass Thali Set</span>
+          <span class="bcard__d">12 inch, 5 pieces</span>
+          <span class="bcard__p">₹1,450</span>
+          <a class="btn btn--copper btn--sm btn--block" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Brass%20Thali%20Set%20-%20%E2%82%B91%2C450">Order on WhatsApp</a>
+        </div>
+        <div class="bcard">
+          <div class="ph" data-ph="Copper bottle, held" data-ph-id="store-23"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          <span class="bcard__n">Copper Bottle</span>
+          <span class="bcard__d">950 ml, hammered</span>
+          <span class="bcard__p">₹690</span>
+          <a class="btn btn--copper btn--sm btn--block" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Copper%20Bottle%20950%20ml%20-%20%E2%82%B9690">Order on WhatsApp</a>
+        </div>
+        <div class="bcard">
+          <div class="ph" data-ph="Urli on floor, diyas" data-ph-id="store-24"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          <span class="bcard__n">Brass Urli Bowl</span>
+          <span class="bcard__d">10 inch, antique finish</span>
+          <span class="bcard__p">₹2,190</span>
+          <a class="btn btn--copper btn--sm btn--block" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Brass%20Urli%20Bowl%20-%20%E2%82%B92%2C190">Order on WhatsApp</a>
+        </div>
+        <div class="bcard">
+          <div class="ph" data-ph="Diya set, close-up" data-ph-id="store-25"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+          <span class="bcard__n">Brass Diya, set of 6</span>
+          <span class="bcard__d">Gift carton included</span>
+          <span class="bcard__p">₹520</span>
+          <a class="btn btn--copper btn--sm btn--block" href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20to%20order%3A%20Brass%20Diya%20set%20of%206%20-%20%E2%82%B9520">Order on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW ORDERING WORKS ============ -->
+  <section class="sec--tight" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Simple as the shop itself</span>
+        <h2 id="how-h">How ordering works</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__n" aria-hidden="true">1</div>
+          <h3>Send the item on WhatsApp</h3>
+          <p>Tap the button under any product. The name and price are already typed into your message — just press send.</p>
+        </div>
+        <div class="step">
+          <div class="step__n" aria-hidden="true">2</div>
+          <h3>We confirm weight and total</h3>
+          <p>Brass is sold by weight, so we send a photo of the exact piece with its final price and delivery charge.</p>
+        </div>
+        <div class="step">
+          <div class="step__n" aria-hidden="true">3</div>
+          <h3>Pay by UPI, or cash at delivery</h3>
+          <p>Pay the UPI ID we send, or keep cash ready for the delivery boy. Packing photo goes to you before dispatch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DELIVERY & PAYMENT ============ -->
+  <section class="sec" id="delivery" aria-labelledby="del-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">No card gateway, no account</span>
+        <h2 id="del-h">Delivery &amp; payment</h2>
+        <p class="lede">Everything is arranged over WhatsApp and paid the way you already pay at the shop.</p>
+      </div>
+      <div class="pay-grid">
+        <div class="panel">
+          <h3>Where we deliver</h3>
+          <ul class="dlist">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h11V6H3v7Zm11 0h3.4l2.6 3v3h-6v-6Z"></path><circle cx="7" cy="18" r="1.9"></circle><circle cx="17" cy="18" r="1.9"></circle></svg>
+              <span><b>Moradabad city</b> — free home delivery on orders above ₹999, usually the same evening. Below that, ₹60.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h16v11a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-11Z"></path><path d="M8.5 7.5V5.8A1.8 1.8 0 0 1 10.3 4h3.4a1.8 1.8 0 0 1 1.8 1.8v1.7"></path></svg>
+              <span><b>Delhi NCR &amp; western UP</b> — 2 to 3 working days by surface courier. Flat ₹120.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M3.5 12h17M12 3.5c2.4 2.4 2.4 14.6 0 17-2.4-2.4-2.4-14.6 0-17Z"></path></svg>
+              <span><b>Rest of India</b> — 4 to 6 working days. Charge depends on weight; we tell you the exact figure before you pay.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"></path><path d="M4 10h16M8 14h4"></path></svg>
+              <span><b>Bill and warranty slip</b> go inside every parcel. Keep it for polishing and re-kalai service.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>How you can pay</h3>
+          <ul class="dlist">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.5 17 12l-9 7.5"></path><path d="M5.5 8.5 11 12l-5.5 3.5"></path></svg>
+              <span><b>UPI</b> — PhonePe, Google Pay, Paytm or any UPI app. We send a QR and the ID.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7.5h17v9h-17z"></path><circle cx="12" cy="12" r="2.3"></circle></svg>
+              <span><b>Cash on delivery</b> — available across Moradabad and for courier orders up to ₹5,000.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V9l8-5 8 5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18Z"></path><path d="M9.5 19.5v-6h5v6"></path></svg>
+              <span><b>Bank transfer</b> — for wedding and shop orders, NEFT details on request.</span>
+            </li>
+          </ul>
+          <div class="paytags">
+            <span class="paytag">UPI</span>
+            <span class="paytag">Cash on delivery</span>
+            <span class="paytag">NEFT / IMPS</span>
+          </div>
+          <p class="note">We do not take card payments online and we never ask for an OTP. If anyone claiming to be from our shop asks for one, please call us first.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="sec about" id="about" aria-labelledby="about-h">
+    <div class="wrap about__grid">
+      <div class="about__art">
+        <div class="ph" data-ph="Workshop, wide shot" data-ph-id="store-26"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+        <div class="ph" data-ph="Hands hammering brass" data-ph-id="store-27"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+        <div class="ph" data-ph="Owner at the counter" data-ph-id="store-28"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
+      </div>
+      <div>
+        <span class="eyebrow">Our workshop</span>
+        <h2>Forty-seven years on the same lane</h2>
+        <p>My grandfather opened a small stall near Peetal Basti in 1978 with two workers and one furnace. We still cast, hammer and polish in the same lane — the counter in front is only the last step.</p>
+        <p>Because we make what we sell, we can change a size, engrave a name, or match a piece you already own at home. Send a photo on WhatsApp and we will tell you honestly whether we can do it.</p>
+        <div class="sign">
+          <span class="sign__n">Rakesh Trivedi</span>
+          <span class="sign__r">Third generation, Trivedi Brass &amp; Copper</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BULK BAND ============ -->
+  <section class="sec--tight band" id="bulk" aria-labelledby="bulk-h">
+    <div class="wrap band__in">
+      <div>
+        <h2 id="bulk-h">Wedding, temple or shop order?</h2>
+        <p>Fifty thalis for a bhandara, return gifts for a shaadi, or a fresh stock lot for your own shop — tell us the quantity and date, and we will quote a per-piece rate the same day.</p>
+      </div>
+      <div class="band__cta">
+        <a class="btn btn--copper" href="https://wa.me/918439305810?text=Hello%2C%20I%20need%20a%20bulk%20quote.%20Item%3A%20____%20Quantity%3A%20____%20Date%20needed%3A%20____">Get a bulk quote</a>
+        <a class="btn btn--ghost" href="tel:+918439305810">Call the shop</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="sec" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Come and lift it in your hand</span>
+        <h2 id="visit-h">Visit the shop</h2>
+        <p class="lede">Metal is a thing you should feel before buying. Parking is easiest from the Kanth Road side.</p>
+      </div>
+
+      <div class="contact__grid">
+        <div>
+          <div class="info">
+            <div class="info__row">
+              <span class="info__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-map"></use></svg></span>
+              <span>
+                <span class="info__k">Address</span>
+                <span class="info__v">Shop 14, Peetal Market, Lakri Fazalpur Road,<br>Moradabad, Uttar Pradesh 244001</span>
+              </span>
+            </div>
+            <div class="info__row">
+              <span class="info__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4.5h3.2l1.6 4-2 1.5a11.5 11.5 0 0 0 5.2 5.2l1.5-2 4 1.6V18a1.5 1.5 0 0 1-1.6 1.5C10.6 19 5 13.4 4.5 6.1A1.5 1.5 0 0 1 5 4.5Z"></path></svg></span>
+              <span>
+                <span class="info__k">Phone</span>
+                <span class="info__v"><a href="tel:+918439305810">+91 84393 05810</a></span>
+              </span>
+            </div>
+            <div class="info__row">
+              <span class="info__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5.2l3.2 2"></path></svg></span>
+              <span>
+                <span class="info__k">Shop timings</span>
+                <ul class="hours">
+                  <li><span>Monday – Saturday</span><span>10:00 am – 8:30 pm</span></li>
+                  <li><span>Sunday</span><span>11:00 am – 6:00 pm</span></li>
+                  <li><span>Tuesday</span><span>Closed</span></li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="map">
+          <div class="ph" data-ph="Google map of the shop" data-ph-id="store-29"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-map"></use></svg></div>
+          <a class="btn btn--deep" href="https://wa.me/918439305810?text=Hello%2C%20please%20share%20the%20shop%20location%20pin.">Ask for the location pin</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <span class="brand">
+          <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-pot"></use></svg></span>
+          <span class="brand__txt">
+            <span class="brand__name">Trivedi Brass &amp; Copper</span>
+            <span class="brand__sub">Moradabad · since 1978</span>
+          </span>
+        </span>
+        <p class="ftr__blurb">Hand-finished brass, copper and kansa for the kitchen, the mandir and the gift table.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#shop">Kitchen &amp; dining</a></li>
+          <li><a href="#shop">Pooja &amp; decor</a></li>
+          <li><a href="#shop">Copper bottles</a></li>
+          <li><a href="#shop">Gifting sets</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#delivery">Delivery &amp; payment</a></li>
+          <li><a href="#bulk">Bulk &amp; wedding orders</a></li>
+          <li><a href="#visit">Shop timings</a></li>
+          <li><a href="#about">Our workshop</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Talk to us</h4>
+        <ul>
+          <li><a href="tel:+918439305810">+91 84393 05810</a></li>
+          <li><a href="https://wa.me/918439305810?text=Hello%2C%20I%20have%20a%20question%20about%20an%20item.">Message on WhatsApp</a></li>
+          <li><a href="#visit">Shop 14, Peetal Market</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__bot">
+      <span>© 2026 Trivedi Brass &amp; Copper, Moradabad. All rights reserved.</span>
+      <span>Website by <a href="https://wa.me/918439305810?text=Hello%2C%20I%20want%20a%20website%20like%20this%20one%20for%20my%20shop.">NEEV</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE BAR ============ -->
+<div class="bar" role="group" aria-label="Contact the shop">
+  <a class="btn btn--deep" href="tel:+918439305810">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4.5h3.2l1.6 4-2 1.5a11.5 11.5 0 0 0 5.2 5.2l1.5-2 4 1.6V18a1.5 1.5 0 0 1-1.6 1.5C10.6 19 5 13.4 4.5 6.1A1.5 1.5 0 0 1 5 4.5Z"></path></svg>
+    Call
+  </a>
+  <a class="btn btn--wa" href="https://wa.me/918439305810?text=Hello%2C%20I%20saw%20your%20website%20and%20want%20to%20order.">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.94.52 3.76 1.44 5.32L2 22l4.98-1.6a9.8 9.8 0 0 0 5.06 1.4c5.43 0 9.84-4.4 9.84-9.84C21.88 6.4 17.47 2 12.04 2Zm5.72 13.9c-.24.68-1.4 1.3-1.94 1.34-.5.06-1.12.08-1.8-.12a15.9 15.9 0 0 1-1.64-.6c-2.9-1.26-4.78-4.18-4.92-4.38-.14-.2-1.18-1.56-1.18-2.98s.74-2.12 1-2.4c.26-.3.56-.36.75-.36h.54c.18 0 .42-.06.65.5.24.58.82 2 .9 2.14.06.14.1.3.02.48-.1.2-.14.32-.28.5l-.42.48c-.14.14-.28.3-.12.58.16.28.72 1.18 1.54 1.92 1.06.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.08.16-.2.7-.8.88-1.08.18-.28.36-.24.6-.14.24.1 1.56.74 1.82.87.26.14.44.2.5.32.06.12.06.68-.18 1.34Z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  var n = 0;
+  var badge = document.getElementById('cartN');
+  var toast = document.getElementById('toast');
+  var timer = null;
+
+  function say(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('on');
+    clearTimeout(timer);
+    timer = setTimeout(function () { toast.classList.remove('on'); }, 2200);
+  }
+
+  document.querySelectorAll('[data-add]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      n += 1;
+      if (badge) badge.textContent = String(n);
+      say(btn.getAttribute('data-add') + ' added to your bag');
+    });
+  });
+
+  var cartBtn = document.getElementById('cartBtn');
+  if (cartBtn) {
+    cartBtn.addEventListener('click', function () {
+      say(n === 0
+        ? 'Your bag is empty — tap Add on any item'
+        : 'Send your bag of ' + n + ' item(s) to us on WhatsApp');
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
