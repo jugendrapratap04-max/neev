@@ -2,7 +2,7 @@
 <html lang="en" class="light">
 <head>
 {{> head }}
-<title>{{ brand }} — websites for small businesses, from {{ starterPrice }}</title>
+<title>{{ brand }} — websites for small businesses</title>
 <meta name="description" content="A website for your shop, hotel, clinic or coaching centre — live from 3 days. Perfect on phones, fast on 3G, no monthly fee. You see the demo first and pay only if you like it.">
 <meta property="og:title" content="{{ brand }} — websites for small businesses">
 <meta property="og:description" content="Your shop's own website, live from 3 days. Demo first, payment after.">
@@ -80,23 +80,10 @@
     </div>
   </section>
 
-  <!-- ================= PRICING ================= -->
-  <section id="pricing" class="section bg-surface-container-lowest">
+  <!-- ================= CUSTOM WORK ================= -->
+  <section id="custom" class="section bg-surface-container-lowest">
     <div class="wrap">
-      <h2 class="text-headline-lg font-bold tracking-tight text-on-surface">Pricing</h2>
-      <p class="mt-2 max-w-2xl text-body-md text-on-surface-variant">
-        A one-time payment. No monthly fee and no hidden charges. Half is paid only once you have seen the demo and approved it.
-      </p>
-      <div class="mt-10 grid gap-6 lg:grid-cols-3">
-        {{ packages }}
-      </div>
-
-      <div class="card mt-8 p-6 md:p-8">
-        <h3 class="text-headline-md font-semibold text-on-surface">What else it can cost</h3>
-        <div class="mt-4">
-          {{ extras }}
-        </div>
-      </div>
+      {{ custom }}
     </div>
   </section>
 
@@ -126,6 +113,10 @@
             </p>
             <p class="mt-3 text-label-md text-white/50">
               I build three free demos a month, because each one takes about two days.
+            </p>
+            <p class="mt-3 text-label-md text-white/60">
+              Want the numbers before you message?
+              <a class="underline underline-offset-4 hover:text-white" href="pricing.html">See the full rate list</a>.
             </p>
             <div class="mt-8 flex flex-wrap gap-3">
               <a href="{{ waDemo }}" target="_blank" rel="noopener noreferrer" class="btn btn-wa">{{ waIcon }} Ask for a free demo</a>

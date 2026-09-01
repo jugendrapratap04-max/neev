@@ -85,8 +85,11 @@ function designCard(d) {
             <p class="mt-2 flex-1 text-body-md text-on-surface-variant">${esc(d.blurb)}</p>
             <div class="mt-4 flex items-center justify-between gap-3 border-t border-outline-variant/50 pt-4">
               <div>
-                <p class="text-label-sm uppercase text-on-surface-variant">${esc(pkg.name)} from</p>
-                <p class="text-headline-md font-bold text-on-surface">${D.inr(pkg.price)}</p>
+                ${D.CONFIG.showPrices
+                  ? `<p class="text-label-sm uppercase text-on-surface-variant">${esc(pkg.name)} from</p>
+                <p class="text-headline-md font-bold text-on-surface">${D.inr(pkg.price)}</p>`
+                  : `<p class="text-label-sm uppercase text-on-surface-variant">Ready in</p>
+                <p class="text-headline-md font-bold text-on-surface">${esc(pkg.days)}</p>`}
               </div>
               <div class="relative z-10 flex items-center gap-2">
                 <button type="button" class="js-save btn btn-outline btn-sm !px-3" data-id="${attr(d.id)}"
@@ -138,6 +141,30 @@ function renderExtras() {
             <span class="text-body-md font-semibold text-on-surface">${esc(e.value)}</span>
             ${e.note ? `<p class="w-full text-label-sm text-on-surface-variant">${esc(e.note)}</p>` : ''}
           </div>`).join('');
+}
+
+/* A buyer whose trade is not in the catalogue assumes he cannot help them and
+   leaves. This says otherwise, in the two places that thought occurs. */
+function renderCustom() {
+  const c = D.CUSTOM;
+  return `
+        <div class="card flex flex-col gap-8 p-6 md:flex-row md:items-center md:p-10">
+          <div class="flex-1">
+            <span class="eyebrow">${esc(c.eyebrow)}</span>
+            <h2 class="mt-4 text-headline-lg font-bold tracking-tight text-on-surface">${esc(c.title)}</h2>
+            <p class="mt-3 max-w-2xl text-body-md text-on-surface-variant">${esc(c.body)}</p>
+            <ul class="mt-5 grid gap-2.5 sm:grid-cols-2">
+              ${c.points.map((p) => `<li class="flex items-start gap-2.5"><span class="mt-1 text-secondary">${icon.check}</span><span class="text-body-md text-on-surface-variant">${esc(p)}</span></li>`).join('')}
+            </ul>
+          </div>
+          <div class="flex shrink-0 flex-col gap-3">
+            <a class="btn btn-wa" target="_blank" rel="noopener noreferrer"
+               href="${attr(wa('Hello Jugendra, I want something different from the templates. My business is ______ and I would like ______.'))}">
+              ${icon.wa} ${esc(c.cta)}
+            </a>
+            <a class="btn btn-outline" href="brief.html">${icon.arrow} Send your details instead</a>
+          </div>
+        </div>`;
 }
 
 function renderProcess() {
@@ -201,9 +228,16 @@ function renderDesignDetail(d) {
                 ${d.bullets.map((b) => `<li class="flex items-start gap-2.5"><span class="mt-1 text-secondary">${icon.check}</span><span class="text-body-md text-on-surface-variant">${esc(b)}</span></li>`).join('')}
               </ul>
               <div class="mt-6 rounded-lg bg-surface-container p-4">
-                <p class="text-label-sm uppercase text-on-surface-variant">${esc(pkg.name)} package</p>
+                ${D.CONFIG.showPrices
+                  ? `<p class="text-label-sm uppercase text-on-surface-variant">${esc(pkg.name)} package</p>
                 <p class="mt-1 text-display-lg-mobile font-bold leading-none text-on-surface">${D.inr(pkg.price)}</p>
-                <p class="mt-2 text-label-md text-on-surface-variant">${D.inr(D.half(pkg.price))} now &middot; ${D.inr(pkg.price - D.half(pkg.price))} when it goes live &middot; ${esc(pkg.days)}</p>
+                <p class="mt-2 text-label-md text-on-surface-variant">${D.inr(D.half(pkg.price))} now &middot; ${D.inr(pkg.price - D.half(pkg.price))} when it goes live &middot; ${esc(pkg.days)}</p>`
+                  : `<p class="text-label-sm uppercase text-on-surface-variant">${esc(pkg.name)} package</p>
+                <p class="mt-1 text-headline-lg font-bold leading-tight text-on-surface">Ready in ${esc(pkg.days)}</p>
+                <p class="mt-2 text-label-md text-on-surface-variant">
+                  You see a free demo of your own version first, and pay nothing until you like it.
+                  <a class="link" href="pricing.html">See what it costs</a>
+                </p>`}
               </div>
               <a class="btn btn-wa mt-5 w-full" target="_blank" rel="noopener noreferrer" href="${attr(wa(waText))}">
                 ${icon.wa} I want this design
@@ -293,6 +327,7 @@ const commonSlots = {
   designCount: String(D.DESIGNS.length),
   packages: renderPackages(),
   extras: renderExtras(),
+  custom: renderCustom(),
   process: renderProcess(),
   faq: renderFaq(),
   starterPrice: D.inr(D.PACKAGES[0].price),

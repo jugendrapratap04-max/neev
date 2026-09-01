@@ -3,7 +3,7 @@
 <head>
 {{> head }}
 <title>Templates — {{ brand }}</title>
-<meta name="description" content="Ready website templates for shops, restaurants, hotels, clinics, salons, gyms and startups. Open any one and click through it. From {{ starterPrice }}.">
+<meta name="description" content="Ready website templates for shops, restaurants, hotels, clinics, salons, gyms and startups. Open any one and click through it, then pick the one closest to your business.">
 <meta property="og:title" content="Templates — {{ brand }}">
 <meta property="og:description" content="Ready templates you can open and click through. Pick one and it becomes your site.">
 </head>
@@ -54,14 +54,8 @@
         No template by that name. Message me on WhatsApp — I will build one to suit your business.
       </p>
 
-      <div class="card mt-12 flex flex-col items-start justify-between gap-5 p-6 md:flex-row md:items-center md:p-8">
-        <div>
-          <h2 class="text-headline-md font-semibold text-on-surface">None of these quite fit your business?</h2>
-          <p class="mt-2 max-w-xl text-body-md text-on-surface-variant">
-            That is fine. Tell me what the business is and whose website you like the look of, and I will build something along those lines.
-          </p>
-        </div>
-        <a href="{{ waNav }}" target="_blank" rel="noopener noreferrer" class="btn btn-wa shrink-0">{{ waIcon }} Message me</a>
+      <div class="mt-12">
+        {{ custom }}
       </div>
     </div>
   </section>

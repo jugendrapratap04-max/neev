@@ -20,6 +20,15 @@ const CONFIG = {
   city: 'Mathura, UP',
   siteUrl: 'https://neev-5h1.pages.dev',
   waBase: 'https://wa.me/918439305810',
+
+  /* Price is deliberately kept OFF the catalogue cards and the design pages.
+     A number that arrives before the buyer has seen any work makes them close
+     the tab instead of opening a demo — and opening a demo is the whole job of
+     those pages. The Pricing page still carries the full list and sits in the
+     nav, one click away: the price is moved back, never hidden, because being
+     straight about money is the main advantage a new seller has.
+     Flip this to true to put prices back on the cards. */
+  showPrices: false,
   /* Which template fills the browser frame in the homepage hero. */
   heroDesign: 'restaurant',
 };
@@ -271,6 +280,20 @@ const DESIGNS = [
   },
 ];
 
+/* Shown wherever someone might conclude "my business is not on this list".
+   Without it, a buyer whose trade is missing simply leaves. */
+const CUSTOM = {
+  eyebrow: 'Not from the list',
+  title: 'Want something built just for you?',
+  body: 'These templates are the quick way, not the only way. If you have a design in mind, or a website you like the look of, or your trade is not on this list at all — say so and I will build it from scratch for you. It costs a little more and takes a few more days, and I will tell you exactly how much before starting.',
+  points: [
+    'Any kind of business, even one not shown here',
+    'Your own design, or one modelled on a site you like',
+    'A written price before any work starts',
+  ],
+  cta: 'Tell me what you need',
+};
+
 const PROCESS = [
   {
     n: '1', title: 'Talk',
@@ -335,7 +358,7 @@ const TRUST = [
 const half = (p) => Math.ceil(p / 2);
 const inr = (n) => '₹' + Number(n).toLocaleString('en-IN');
 
-const DATA = { CONFIG, PACKAGES, EXTRAS, CATS, DESIGNS, PROCESS, FAQ, TRUST };
+const DATA = { CONFIG, PACKAGES, EXTRAS, CATS, DESIGNS, CUSTOM, PROCESS, FAQ, TRUST };
 
 if (typeof module !== 'undefined' && module.exports) module.exports = { ...DATA, half, inr };
 if (typeof window !== 'undefined') { window.NEEV = { ...DATA, half, inr }; }
