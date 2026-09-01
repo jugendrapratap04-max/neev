@@ -11,24 +11,10 @@
 
 name: Deploy to Cloudflare Pages
 
-# Manual only, on purpose. The CLOUDFLARE_API_TOKEN secret is not set, so
-# running this on every push would just email a failure each time. The site is
-# already live and stays live without any of this — automatic deploys are a
-# convenience, not a requirement.
-#
-# To switch it on later: create a Cloudflare token with
-# Account -> Cloudflare Pages -> Edit (and Account Resources set to the
-# account), then `gh secret set CLOUDFLARE_API_TOKEN`, then put back:
-#
-#   push:
-#     branches: [main]
-#
-# Until then, deploys are run by hand:
-#   npm run build
-#   CLOUDFLARE_API_TOKEN=... CLOUDFLARE_ACCOUNT_ID=... \
-#     npx wrangler@3 pages deploy dist --project-name=neev --branch=main --commit-dirty=true
 on:
-  workflow_dispatch:        # only when you press the button in the Actions tab
+  push:
+    branches: [main]
+  workflow_dispatch:        # also runnable by hand from the Actions tab
 
 jobs:
   deploy:
