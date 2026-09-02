@@ -20,7 +20,8 @@
     "photo-slots": "node scripts/photo-slots.mjs",
     "photos": "node scripts/photos.mjs",
     "collect": "node scripts/collect-downloads.mjs",
-    "dist": "node scripts/dist.js"
+    "dist": "node scripts/dist.js",
+    "new-client": "node scripts/new-client.mjs"
   },
   "devDependencies": {
     "@tailwindcss/container-queries": "^0.1.1",

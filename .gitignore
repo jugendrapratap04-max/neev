@@ -16,3 +16,6 @@ photos/
 # leftover from a wrangler login attempt
 .wrangler-login.log
 .wrangler/
+
+# client folders are per-customer work, not part of the shop
+clients/
