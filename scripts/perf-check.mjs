@@ -82,7 +82,7 @@ for (const p of PATHS) {
   if (failures.length) console.log(`      ${failures.length} request(s) failed: ${failures.slice(0, 2).join(', ')}`);
 }
 
-console.log('\n  The site claims "opens in about two seconds" on 3G. Anything above');
-console.log('  roughly 400 KB on a phone makes that claim untrue.');
+console.log('\n  The site claims every page is under 400 KB. Anything above that line');
+console.log('  makes the claim on the homepage untrue.');
 
 ws.close(); proc.kill();

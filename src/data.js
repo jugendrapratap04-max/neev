@@ -354,7 +354,12 @@ const FAQ = [
 
 const TRUST = [
   { title: 'Perfect on phones', note: 'Every site is tested on a real phone' },
-  { title: 'Fast on 3G', note: 'About 200 KB a page, so it opens on a 3G phone too' },
+  /* Measured with scripts/perf-check.mjs on throttled Fast 3G, not guessed:
+     this site's own pages come in at 71-276 KB and the template demos at
+     347-383 KB. "About 200 KB" was true of the marketing pages but not of the
+     thing being sold, which is the number that matters. Re-measure before
+     changing this line. */
+  { title: 'Fast on 3G', note: 'Under 400 KB a page, so it opens on a cheap phone too' },
   { title: 'Ready for Google', note: 'Title, description and sitemap set up' },
   { title: 'WhatsApp button', note: 'Customers reach you in one tap' },
 ];
