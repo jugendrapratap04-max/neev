@@ -34,11 +34,11 @@ if (!slots.length) {
 const byId = new Map(slots.map((s) => [s.id, s]));
 
 /* Measured, not guessed: hero slots render about 500px wide (see
-   scripts/measure-heroes.mjs), so 1200px covers a 2x screen with room to
-   spare. Shipping the full 1536px original was costing ~130KB per hero for
-   pixels nobody ever sees, on a site that promises to be fast on 3G. */
-const widthFor = (id) => (/-0?1$/.test(id) ? 1200 : 900);
-const QUALITY = 76;
+   scripts/measure-heroes.mjs), so 1000px still covers a 2x screen. The full
+   1536px original cost ~130KB per hero for pixels nobody could see, on a site
+   whose own pitch is that it loads fast on 3G. */
+const widthFor = (id) => (/-0?1$/.test(id) ? 1000 : 800);
+const QUALITY = 74;
 
 /* Two ways to hand images in, so nothing has to be renamed by hand:
 
