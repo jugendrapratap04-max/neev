@@ -349,7 +349,7 @@ const FAQ = [
 
 const TRUST = [
   { title: 'Perfect on phones', note: 'Every site is tested on a real phone' },
-  { title: 'Fast on 3G', note: 'A light site that opens in about two seconds' },
+  { title: 'Fast on 3G', note: 'About 200 KB a page, so it opens on a 3G phone too' },
   { title: 'Ready for Google', note: 'Title, description and sitemap set up' },
   { title: 'WhatsApp button', note: 'Customers reach you in one tap' },
 ];
