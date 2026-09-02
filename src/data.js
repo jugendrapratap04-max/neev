@@ -269,7 +269,12 @@ const DESIGNS = [
     name: 'Booking or enquiry form',
     url: 'brief.html',
     note: 'This is the enquiry form on this very site — open it and fill it in yourself.',
-    blurb: 'A long form split into four easy steps, so people actually finish it. Nothing is stored anywhere — the answers arrive as one WhatsApp message.',
+    /* This used to say "Nothing is stored anywhere". That was false: the wizard
+       writes a draft to localStorage on every keystroke, name and phone number
+       included, and the very next bullet says "saved as the customer types".
+       A false privacy claim about a stranger's phone number is the most
+       expensive kind of wrong on a site whose whole pitch is straightness. */
+    blurb: "A long form split into four easy steps, so people actually finish it. Half-filled answers stay on the customer's own phone and reach no server — the finished form arrives as one WhatsApp message.",
     bullets: [
       'Four steps, saved as the customer types',
       'A half-filled form cannot be sent',

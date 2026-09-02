@@ -107,7 +107,14 @@ for (const [slug, items] of ready) {
   for (const it of items) {
     const re = new RegExp(`(<div\\b[^>]*data-ph-id="${it.id}"[^>]*>)([\\s\\S]*?)(</div>)`);
     if (!re.test(s)) { console.log(`  ! ${it.id} not found in ${slug}/index.html`); continue; }
-    const img = `<img src="${it.rel}" alt="${escapeAttr(it.want)}" loading="lazy" decoding="async" `
+    /* Slot 01 is the hero: the largest image above the fold and the one frame
+       a lead judges the template on after clicking "Open the demo". lazy tells
+       the browser to defer it until layout has run, so it misses the preload
+       scan and lands a beat late on exactly the screen that has to land.
+       Everything further down the page stays lazy, which is right for it. */
+    const isHero = /-0?1$/.test(it.id);
+    const loadHint = isHero ? 'fetchpriority="high"' : 'loading="lazy"';
+    const img = `<img src="${it.rel}" alt="${escapeAttr(it.want)}" ${loadHint} decoding="async" `
       + `style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit">`;
     s = s.replace(re, (m, open, inner, close) => {
       const cleaned = inner.replace(/<img\b[^>]*>/g, '');   // replace, never stack

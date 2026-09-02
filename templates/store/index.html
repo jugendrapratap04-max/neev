@@ -563,7 +563,7 @@ a{color:inherit}
       </div>
 
       <div class="hero__art">
-        <div class="ph" data-ph="Shop counter, wide" data-ph-id="store-01" style="position:relative"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shop"></use></svg><img src="img/store-01.webp" alt="Shop counter, wide" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit"></div>
+        <div class="ph" data-ph="Shop counter, wide" data-ph-id="store-01" style="position:relative"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shop"></use></svg><img src="img/store-01.webp" alt="Shop counter, wide" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit"></div>
         <div class="ph" data-ph="Brass thali close-up" data-ph-id="store-02"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
         <div class="ph" data-ph="Polishing by hand" data-ph-id="store-03"><svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo"></use></svg></div>
       </div>
@@ -1009,7 +1009,7 @@ a{color:inherit}
               <span>
                 <span class="info__k">Shop timings</span>
                 <ul class="hours">
-                  <li><span>Monday – Saturday</span><span>10:00 am – 8:30 pm</span></li>
+                  <li><span>Monday, Wednesday – Saturday</span><span>10:00 am – 8:30 pm</span></li>
                   <li><span>Sunday</span><span>11:00 am – 6:00 pm</span></li>
                   <li><span>Tuesday</span><span>Closed</span></li>
                 </ul>
@@ -1092,7 +1092,12 @@ a{color:inherit}
 
 <script>
 (function () {
-  var n = 0;
+  /* The bag used to be a number that only went up: nothing could be removed,
+     and tapping it promised to "send your bag on WhatsApp" — the one action
+     the page told the shopper to take, and the only one it did not do. It now
+     holds what was added, empties after sending, and really does compose the
+     order, the way every other template already does. */
+  var bag = [];
   var badge = document.getElementById('cartN');
   var toast = document.getElementById('toast');
   var timer = null;
@@ -1105,20 +1110,31 @@ a{color:inherit}
     timer = setTimeout(function () { toast.classList.remove('on'); }, 2200);
   }
 
+  function render() {
+    if (badge) badge.textContent = String(bag.length);
+  }
+
   document.querySelectorAll('[data-add]').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      n += 1;
-      if (badge) badge.textContent = String(n);
-      say(btn.getAttribute('data-add') + ' added to your bag');
+      var item = btn.getAttribute('data-add');
+      bag.push(item);
+      render();
+      say(item + ' added to your bag');
     });
   });
 
   var cartBtn = document.getElementById('cartBtn');
   if (cartBtn) {
     cartBtn.addEventListener('click', function () {
-      say(n === 0
-        ? 'Your bag is empty — tap Add on any item'
-        : 'Send your bag of ' + n + ' item(s) to us on WhatsApp');
+      if (!bag.length) { say('Your bag is empty — tap Add on any item'); return; }
+      var NL = String.fromCharCode(10);
+      var msg = 'Hello Trivedi Brass & Copper, I would like to order:' + NL
+        + bag.map(function (i) { return '- ' + i; }).join(NL);
+      /* A button, not a link, so open it inside the real click gesture. */
+      window.open('https://wa.me/918439305810?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+      bag = [];
+      render();
+      say('Your bag is on WhatsApp — press send there');
     });
   }
 })();

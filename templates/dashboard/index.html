@@ -130,9 +130,8 @@ p:last-child{margin-bottom:0}
 .dot{position:absolute;top:10px;right:11px;width:7px;height:7px;border-radius:50%;background:var(--accent);border:2px solid var(--surface)}
 .user-chip{
   display:flex;align-items:center;gap:10px;min-height:46px;padding:5px 14px 5px 5px;
-  border:1px solid var(--line);background:var(--surface);border-radius:30px;cursor:pointer;text-align:left;font:inherit;color:inherit;
+  border:1px solid var(--line);background:var(--surface);border-radius:30px;text-align:left;font:inherit;color:inherit;
 }
-.user-chip:hover{background:var(--surface-2)}
 .avatar{width:36px;height:36px;flex:0 0 36px;border-radius:50%;background:var(--ink);color:#FFF;display:grid;place-items:center;font-size:13px;font-weight:600;letter-spacing:.02em}
 .user-name{font-size:14.5px;font-weight:600;line-height:1.15}
 .user-role{font-size:11.5px;color:var(--muted);line-height:1.2;margin-top:1px}
@@ -440,6 +439,14 @@ footer{border-top:1px solid var(--line);padding:22px var(--gutter) 34px;display:
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none !important;animation:none !important;scroll-behavior:auto !important}
 }
+
+  /* Set after the media blocks on purpose. That block turns table rows into
+     display:block for the phone layout, and an author rule beats the browser's
+     own [hidden]{display:none} — so hiding a row needs a class that outranks
+     it, or the search would silently do nothing on exactly the phones his
+     leads use. */
+  tbody tr.is-filtered { display: none !important; }
+  tr.no-match td { padding: 22px 16px; color: #6b7280; text-align: center; }
 </style>
 <style>/* photo-filled */
   [data-ph-id]:has(> img)::before, [data-ph-id]:has(> img)::after { content: none !important; }
@@ -531,13 +538,13 @@ footer{border-top:1px solid var(--line);padding:22px var(--gutter) 34px;display:
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8.5a6 6 0 1 0-12 0c0 5-2 6.5-2 6.5h16s-2-1.5-2-6.5Z"/><path d="M10.5 19a1.8 1.8 0 0 0 3 0"/></svg>
           <span class="dot" aria-hidden="true"></span>
         </a>
-        <button class="user-chip" type="button" aria-label="Account menu for Rakesh Anand">
+        <div class="user-chip">
           <span class="avatar" aria-hidden="true">RA</span>
           <span class="user-text">
             <span class="user-name">Rakesh Anand</span>
             <span class="user-role">Owner &middot; Mathura</span>
           </span>
-        </button>
+        </div>
       </div>
     </div>
 
@@ -567,7 +574,7 @@ footer{border-top:1px solid var(--line);padding:22px var(--gutter) 34px;display:
         <div class="store-cover">
           <div class="ph" data-ph="Shop front, wide daytime shot" data-ph-id="dashboard-01" style="position:relative">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18l-1.2 11H4.2z"/><path d="M3 9 5 4h14l2 5"/><path d="M9.5 20v-6h5v6"/></svg>
-          <img src="img/dashboard-01.webp" alt="Shop front, wide daytime shot" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit"></div>
+          <img src="img/dashboard-01.webp" alt="Shop front, wide daytime shot" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit"></div>
         </div>
         <div class="store-body">
           <div class="store-owner">
@@ -1081,6 +1088,34 @@ footer{border-top:1px solid var(--line);padding:22px var(--gutter) 34px;display:
 <script>
 (function () {
   'use strict';
+
+  /* ---- orders search ----
+     There is exactly one <table> on this page (Recent orders). "Best sellers"
+     and "Running low" are lists, not tables, so this touches only that tbody. */
+  var q = document.getElementById('q');
+  var tbody = document.querySelector('tbody');
+  if (q && tbody) {
+    var empty = null;
+    q.addEventListener('input', function () {
+      var term = q.value.trim().toLowerCase();
+      var rows = tbody.querySelectorAll('tr:not(.no-match)');
+      var shown = 0;
+      Array.prototype.forEach.call(rows, function (row) {
+        var hit = !term || row.textContent.toLowerCase().indexOf(term) !== -1;
+        row.classList.toggle('is-filtered', !hit);
+        if (hit) shown++;
+      });
+      /* An empty table body reads as broken too, so say why it is empty. */
+      if (!empty) {
+        var first = tbody.querySelector('tr');
+        empty = document.createElement('tr');
+        empty.className = 'no-match is-filtered';
+        empty.innerHTML = '<td colspan="' + (first ? first.children.length : 1) + '">No order matches that.</td>';
+        tbody.appendChild(empty);
+      }
+      empty.classList.toggle('is-filtered', shown !== 0);
+    });
+  }
 
   /* ---- mobile sidebar ---- */
   var sidebar = document.getElementById('sidebar');
