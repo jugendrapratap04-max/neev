@@ -412,6 +412,53 @@ span.booking-small{font-size:.95rem}
     border-radius:8px;background:#0f7b45;color:#fff;text-decoration:none;font-weight:600}
   .neev-demo-ribbon a.ghost{background:transparent;border:1px solid rgba(255,255,255,.25)}
   @media (max-width:520px){.neev-demo-ribbon{font-size:13px}}
+
+
+/* neev:panels */
+/* Tint the section's own background rather than painting over it. The first
+   version laid a white gradient on top, which was fine on the seven light
+   templates and turned the gym's coach cards into glaring white slabs on a
+   black page — the dark override keyed on .ph--dark, and those slots do not
+   carry it. Mixing currentColor into transparent needs no knowledge of the
+   palette and gets both cases right on its own. */
+.ph--panel{
+  background:linear-gradient(158deg,
+    color-mix(in srgb,currentColor 24%,transparent) 0%,
+    color-mix(in srgb,currentColor 11%,transparent) 55%,
+    color-mix(in srgb,currentColor 18%,transparent) 100%);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,currentColor 24%,transparent);
+}
+@supports not (background:color-mix(in srgb,red 50%,transparent)){
+  .ph--panel{background:linear-gradient(158deg,rgba(128,128,128,.20),rgba(128,128,128,.11))}
+}
+/* The monogram replaces the caption: the person's name is already printed
+   directly beneath the slot, so repeating it inside would say it twice. */
+.ph--mono::after{content:none}
+.ph--mono{gap:0}
+.pnl-mono{
+  display:flex;align-items:center;justify-content:center;
+  width:100%;height:100%;
+  font-weight:700;letter-spacing:.06em;
+  font-size:clamp(26px,26cqw,54px);
+  line-height:1;opacity:.62;
+  font-variant-ligatures:none;
+}
+.ph--mono{container-type:inline-size}
+@supports not (font-size:1cqw){ .pnl-mono{font-size:34px} }
+/* Before/after keeps its own label and icon — the treatment is only there so a
+   sample slot reads as designed rather than missing. */
+.ph--swatch.is-before{filter:saturate(.55)}
+.ph--swatch.is-after::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(118deg,transparent 34%,rgba(255,255,255,.30) 50%,transparent 66%);
+}
+.ph--map{padding:0}
+.ph--map::after{
+  position:absolute;left:0;right:0;bottom:9px;
+  opacity:.72;font-size:10.5px;
+}
+.pnl-map{position:absolute;inset:0;width:100%;height:100%;border-radius:inherit}
+.ph--map .ph-i,.ph--map .ph-ico{display:none}
 </style>
 <div class="neev-demo-ribbon">
   <b>DEMO</b>
@@ -694,9 +741,7 @@ span.booking-small{font-size:.95rem}
           <div class="ph" data-ph="Thali being served, close up" data-ph-id="hotel-07">
             <svg aria-hidden="true"><use href="#i-photo"/></svg>
           </div>
-          <div class="ph" data-ph="Owner or manager at the front desk, portrait" data-ph-id="hotel-08">
-            <svg aria-hidden="true"><use href="#i-photo"/></svg>
-          </div>
+          <div class="ph ph--panel ph--mono" data-ph="Owner or manager at the front desk, portrait" data-ph-id="hotel-08"><span class="pnl-mono">SR</span></div>
         </div>
         <div>
           <div class="eyebrow">The house &amp; the kitchen</div>
@@ -789,9 +834,31 @@ span.booking-small{font-size:.95rem}
           </div>
         </div>
         <div class="loc-map">
-          <div class="ph" data-ph="Map screenshot or street view of the entrance" data-ph-id="hotel-17">
-            <svg aria-hidden="true"><use href="#i-map"/></svg>
-          </div>
+          <div class="ph ph--panel ph--map" data-ph="Hotel location" data-ph-id="hotel-17"><svg class="pnl-map" viewBox="0 0 320 200" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+<g fill="currentColor">
+<rect x="0" y="0" width="320" height="200" opacity=".07"/>
+<rect x="14" y="16" width="86" height="52" rx="3" opacity=".13"/>
+<rect x="14" y="80" width="86" height="40" rx="3" opacity=".11"/>
+<rect x="14" y="132" width="86" height="52" rx="3" opacity=".13"/>
+<rect x="122" y="16" width="70" height="40" rx="3" opacity=".11"/>
+<rect x="122" y="132" width="70" height="52" rx="3" opacity=".13"/>
+<rect x="214" y="16" width="92" height="52" rx="3" opacity=".13"/>
+<rect x="214" y="80" width="92" height="40" rx="3" opacity=".10"/>
+<rect x="214" y="132" width="92" height="52" rx="3" opacity=".12"/>
+</g>
+<g stroke="currentColor" fill="none" stroke-linecap="round">
+<path d="M0 74 H320" stroke-width="11" opacity=".22"/>
+<path d="M0 126 H320" stroke-width="7" opacity=".16"/>
+<path d="M108 0 V200" stroke-width="9" opacity=".20"/>
+<path d="M200 0 V200" stroke-width="6" opacity=".14"/>
+<path d="M0 74 H320" stroke-width="1.5" opacity=".28" stroke-dasharray="7 9"/>
+</g>
+<g transform="translate(154 88)">
+<path d="M0 26 C0 26 13 11 13 1 A13 13 0 1 0 -13 1 C-13 11 0 26 0 26 Z"
+      fill="currentColor" opacity=".85"/>
+<circle cy="0" r="4.6" fill="#fff" opacity=".95"/>
+</g>
+</svg></div>
         </div>
       </div>
     </div>

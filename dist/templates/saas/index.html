@@ -452,6 +452,53 @@ body{padding-bottom:88px;}
     border-radius:8px;background:#0f7b45;color:#fff;text-decoration:none;font-weight:600}
   .neev-demo-ribbon a.ghost{background:transparent;border:1px solid rgba(255,255,255,.25)}
   @media (max-width:520px){.neev-demo-ribbon{font-size:13px}}
+
+
+/* neev:panels */
+/* Tint the section's own background rather than painting over it. The first
+   version laid a white gradient on top, which was fine on the seven light
+   templates and turned the gym's coach cards into glaring white slabs on a
+   black page — the dark override keyed on .ph--dark, and those slots do not
+   carry it. Mixing currentColor into transparent needs no knowledge of the
+   palette and gets both cases right on its own. */
+.ph--panel{
+  background:linear-gradient(158deg,
+    color-mix(in srgb,currentColor 24%,transparent) 0%,
+    color-mix(in srgb,currentColor 11%,transparent) 55%,
+    color-mix(in srgb,currentColor 18%,transparent) 100%);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,currentColor 24%,transparent);
+}
+@supports not (background:color-mix(in srgb,red 50%,transparent)){
+  .ph--panel{background:linear-gradient(158deg,rgba(128,128,128,.20),rgba(128,128,128,.11))}
+}
+/* The monogram replaces the caption: the person's name is already printed
+   directly beneath the slot, so repeating it inside would say it twice. */
+.ph--mono::after{content:none}
+.ph--mono{gap:0}
+.pnl-mono{
+  display:flex;align-items:center;justify-content:center;
+  width:100%;height:100%;
+  font-weight:700;letter-spacing:.06em;
+  font-size:clamp(26px,26cqw,54px);
+  line-height:1;opacity:.62;
+  font-variant-ligatures:none;
+}
+.ph--mono{container-type:inline-size}
+@supports not (font-size:1cqw){ .pnl-mono{font-size:34px} }
+/* Before/after keeps its own label and icon — the treatment is only there so a
+   sample slot reads as designed rather than missing. */
+.ph--swatch.is-before{filter:saturate(.55)}
+.ph--swatch.is-after::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(118deg,transparent 34%,rgba(255,255,255,.30) 50%,transparent 66%);
+}
+.ph--map{padding:0}
+.ph--map::after{
+  position:absolute;left:0;right:0;bottom:9px;
+  opacity:.72;font-size:10.5px;
+}
+.pnl-map{position:absolute;inset:0;width:100%;height:100%;border-radius:inherit}
+.ph--map .ph-i,.ph--map .ph-ico{display:none}
 </style>
 <div class="neev-demo-ribbon">
   <b>DEMO</b>
@@ -715,9 +762,7 @@ body{padding-bottom:88px;}
 
       <div class="faculty">
         <article class="person">
-          <div class="ph ph--tall" data-ph="portrait of the founder, plain background" data-ph-id="saas-05">
-            <svg class="ph-i" aria-hidden="true"><use href="#i-photo"></use></svg>
-          </div>
+          <div class="ph ph--tall ph--panel ph--mono" data-ph="portrait of the founder, plain background" data-ph-id="saas-05"><span class="pnl-mono">PS</span></div>
           <div class="meta">
             <span class="role">Physics · Founder</span>
             <h3>Prabhat Kumar Sharma</h3>
@@ -725,9 +770,7 @@ body{padding-bottom:88px;}
           <p>M.Sc. Physics, Agra. Teaches classes 11 and 12, and takes the Sunday doubt clinic himself.</p>
         </article>
         <article class="person">
-          <div class="ph ph--tall" data-ph="portrait of the chemistry teacher" data-ph-id="saas-06">
-            <svg class="ph-i" aria-hidden="true"><use href="#i-photo"></use></svg>
-          </div>
+          <div class="ph ph--tall ph--panel ph--mono" data-ph="portrait of the chemistry teacher" data-ph-id="saas-06"><span class="pnl-mono">AV</span></div>
           <div class="meta">
             <span class="role">Chemistry</span>
             <h3>Anjali Verma</h3>
@@ -735,9 +778,7 @@ body{padding-bottom:88px;}
           <p>M.Sc. Chemistry. Runs the class 9 and 10 science batches and writes the chapter booklets.</p>
         </article>
         <article class="person">
-          <div class="ph ph--tall" data-ph="portrait of the maths teacher" data-ph-id="saas-07">
-            <svg class="ph-i" aria-hidden="true"><use href="#i-photo"></use></svg>
-          </div>
+          <div class="ph ph--tall ph--panel ph--mono" data-ph="portrait of the maths teacher" data-ph-id="saas-07"><span class="pnl-mono">RC</span></div>
           <div class="meta">
             <span class="role">Mathematics</span>
             <h3>Rohit Chaudhary</h3>

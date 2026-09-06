@@ -372,6 +372,53 @@ ul,ol{margin:0;padding:0;list-style:none}
     border-radius:8px;background:#0f7b45;color:#fff;text-decoration:none;font-weight:600}
   .neev-demo-ribbon a.ghost{background:transparent;border:1px solid rgba(255,255,255,.25)}
   @media (max-width:520px){.neev-demo-ribbon{font-size:13px}}
+
+
+/* neev:panels */
+/* Tint the section's own background rather than painting over it. The first
+   version laid a white gradient on top, which was fine on the seven light
+   templates and turned the gym's coach cards into glaring white slabs on a
+   black page — the dark override keyed on .ph--dark, and those slots do not
+   carry it. Mixing currentColor into transparent needs no knowledge of the
+   palette and gets both cases right on its own. */
+.ph--panel{
+  background:linear-gradient(158deg,
+    color-mix(in srgb,currentColor 24%,transparent) 0%,
+    color-mix(in srgb,currentColor 11%,transparent) 55%,
+    color-mix(in srgb,currentColor 18%,transparent) 100%);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,currentColor 24%,transparent);
+}
+@supports not (background:color-mix(in srgb,red 50%,transparent)){
+  .ph--panel{background:linear-gradient(158deg,rgba(128,128,128,.20),rgba(128,128,128,.11))}
+}
+/* The monogram replaces the caption: the person's name is already printed
+   directly beneath the slot, so repeating it inside would say it twice. */
+.ph--mono::after{content:none}
+.ph--mono{gap:0}
+.pnl-mono{
+  display:flex;align-items:center;justify-content:center;
+  width:100%;height:100%;
+  font-weight:700;letter-spacing:.06em;
+  font-size:clamp(26px,26cqw,54px);
+  line-height:1;opacity:.62;
+  font-variant-ligatures:none;
+}
+.ph--mono{container-type:inline-size}
+@supports not (font-size:1cqw){ .pnl-mono{font-size:34px} }
+/* Before/after keeps its own label and icon — the treatment is only there so a
+   sample slot reads as designed rather than missing. */
+.ph--swatch.is-before{filter:saturate(.55)}
+.ph--swatch.is-after::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(118deg,transparent 34%,rgba(255,255,255,.30) 50%,transparent 66%);
+}
+.ph--map{padding:0}
+.ph--map::after{
+  position:absolute;left:0;right:0;bottom:9px;
+  opacity:.72;font-size:10.5px;
+}
+.pnl-map{position:absolute;inset:0;width:100%;height:100%;border-radius:inherit}
+.ph--map .ph-i,.ph--map .ph-ico{display:none}
 </style>
 <div class="neev-demo-ribbon">
   <b>DEMO</b>
@@ -700,9 +747,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 
       <div class="grid g-4">
         <div class="card coach">
-          <div class="ph ph-3-4" data-ph="portrait, Rohit at the rack" data-ph-id="gym-04" role="img" aria-label="Photo placeholder: portrait, Rohit at the rack">
-            <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
-          </div>
+          <div class="ph ph-3-4 ph--panel ph--mono" data-ph="portrait, Rohit at the rack" data-ph-id="gym-04" role="img" aria-label="Photo placeholder: portrait, Rohit at the rack"><span class="pnl-mono">RC</span></div>
           <div class="coach-b">
             <h3 class="h3">Rohit Chaudhary</h3>
             <span class="role">Head coach · Strength</span>
@@ -710,9 +755,7 @@ ul,ol{margin:0;padding:0;list-style:none}
           </div>
         </div>
         <div class="card coach">
-          <div class="ph ph-3-4" data-ph="portrait, Neha in the class hall" data-ph-id="gym-05" role="img" aria-label="Photo placeholder: portrait, Neha in the class hall">
-            <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
-          </div>
+          <div class="ph ph-3-4 ph--panel ph--mono" data-ph="portrait, Neha in the class hall" data-ph-id="gym-05" role="img" aria-label="Photo placeholder: portrait, Neha in the class hall"><span class="pnl-mono">NS</span></div>
           <div class="coach-b">
             <h3 class="h3">Neha Sharma</h3>
             <span class="role">Yoga &amp; mobility</span>
@@ -720,9 +763,7 @@ ul,ol{margin:0;padding:0;list-style:none}
           </div>
         </div>
         <div class="card coach">
-          <div class="ph ph-3-4" data-ph="portrait, Imran on the turf strip" data-ph-id="gym-06" role="img" aria-label="Photo placeholder: portrait, Imran on the turf strip">
-            <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
-          </div>
+          <div class="ph ph-3-4 ph--panel ph--mono" data-ph="portrait, Imran on the turf strip" data-ph-id="gym-06" role="img" aria-label="Photo placeholder: portrait, Imran on the turf strip"><span class="pnl-mono">IQ</span></div>
           <div class="coach-b">
             <h3 class="h3">Imran Qureshi</h3>
             <span class="role">Boxing &amp; conditioning</span>
@@ -730,9 +771,7 @@ ul,ol{margin:0;padding:0;list-style:none}
           </div>
         </div>
         <div class="card coach">
-          <div class="ph ph-3-4" data-ph="portrait, Priya taking a class" data-ph-id="gym-07" role="img" aria-label="Photo placeholder: portrait, Priya taking a class">
-            <svg class="ph-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-photo"></use></svg>
-          </div>
+          <div class="ph ph-3-4 ph--panel ph--mono" data-ph="portrait, Priya taking a class" data-ph-id="gym-07" role="img" aria-label="Photo placeholder: portrait, Priya taking a class"><span class="pnl-mono">PB</span></div>
           <div class="coach-b">
             <h3 class="h3">Priya Bansal</h3>
             <span class="role">Group fitness · Nutrition</span>

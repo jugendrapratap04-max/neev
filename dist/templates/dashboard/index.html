@@ -466,6 +466,53 @@ footer{border-top:1px solid var(--line);padding:22px var(--gutter) 34px;display:
     border-radius:8px;background:#0f7b45;color:#fff;text-decoration:none;font-weight:600}
   .neev-demo-ribbon a.ghost{background:transparent;border:1px solid rgba(255,255,255,.25)}
   @media (max-width:520px){.neev-demo-ribbon{font-size:13px}}
+
+
+/* neev:panels */
+/* Tint the section's own background rather than painting over it. The first
+   version laid a white gradient on top, which was fine on the seven light
+   templates and turned the gym's coach cards into glaring white slabs on a
+   black page — the dark override keyed on .ph--dark, and those slots do not
+   carry it. Mixing currentColor into transparent needs no knowledge of the
+   palette and gets both cases right on its own. */
+.ph--panel{
+  background:linear-gradient(158deg,
+    color-mix(in srgb,currentColor 24%,transparent) 0%,
+    color-mix(in srgb,currentColor 11%,transparent) 55%,
+    color-mix(in srgb,currentColor 18%,transparent) 100%);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,currentColor 24%,transparent);
+}
+@supports not (background:color-mix(in srgb,red 50%,transparent)){
+  .ph--panel{background:linear-gradient(158deg,rgba(128,128,128,.20),rgba(128,128,128,.11))}
+}
+/* The monogram replaces the caption: the person's name is already printed
+   directly beneath the slot, so repeating it inside would say it twice. */
+.ph--mono::after{content:none}
+.ph--mono{gap:0}
+.pnl-mono{
+  display:flex;align-items:center;justify-content:center;
+  width:100%;height:100%;
+  font-weight:700;letter-spacing:.06em;
+  font-size:clamp(26px,26cqw,54px);
+  line-height:1;opacity:.62;
+  font-variant-ligatures:none;
+}
+.ph--mono{container-type:inline-size}
+@supports not (font-size:1cqw){ .pnl-mono{font-size:34px} }
+/* Before/after keeps its own label and icon — the treatment is only there so a
+   sample slot reads as designed rather than missing. */
+.ph--swatch.is-before{filter:saturate(.55)}
+.ph--swatch.is-after::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(118deg,transparent 34%,rgba(255,255,255,.30) 50%,transparent 66%);
+}
+.ph--map{padding:0}
+.ph--map::after{
+  position:absolute;left:0;right:0;bottom:9px;
+  opacity:.72;font-size:10.5px;
+}
+.pnl-map{position:absolute;inset:0;width:100%;height:100%;border-radius:inherit}
+.ph--map .ph-i,.ph--map .ph-ico{display:none}
 </style>
 <div class="neev-demo-ribbon">
   <b>DEMO</b>
@@ -578,9 +625,7 @@ footer{border-top:1px solid var(--line);padding:22px var(--gutter) 34px;display:
         </div>
         <div class="store-body">
           <div class="store-owner">
-            <div class="ph ph--sm ph--round" data-ph="Owner portrait" data-ph-id="dashboard-02">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
-            </div>
+            <div class="ph ph--sm ph--round ph--panel ph--mono" data-ph="Owner portrait" data-ph-id="dashboard-02"><span class="pnl-mono">RA</span></div>
             <div>
               <h2>Shree Anand Sweets &amp; Namkeen</h2>
               <div class="meta-v">Rakesh Anand &middot; Owner since 1998</div>
